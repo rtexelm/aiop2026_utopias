@@ -1,0 +1,139 @@
+@use "constants" as *;
+
+nav.top {
+  position: fixed;
+  top: 0;
+  transition: top 0.3s ease-in-out;
+  width: calc(100% - 3rem);
+  z-index: 100;
+  padding: 0 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind the nav content */
+  }
+
+  a#skip-content {
+    position: absolute;
+    top: -4rem;
+    &:focus {
+      padding: 1.5rem;
+      text-align: center;
+      background: $navyBlue;
+      color: white;
+      left: 9rem;
+      top: 0px;
+    }
+  }
+
+  .nav-bar-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a#home {
+    margin: 1rem 0 5px 5px;
+    display: inline-block;
+    img#aiopLogo {
+      width: 5rem;
+      z-index: 11;
+    }
+  }
+
+  a#menuToggleAnchor {
+    margin: auto;
+    width: auto;
+    height: auto;
+    z-index: 14;
+  }
+
+  .menuVisible {
+    display: none;
+  }
+
+  .menuFull {
+    padding-top: 1rem;
+    z-index: 12;
+    position: fixed;
+    // top: 0;
+    left: 0;
+    // left: 140vw;
+    width: 100%;
+    height: 100dvh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.66s ease, opacity 0.3s ease;
+    // transition: all 0.66s;
+    transform: translateX(140vw); /* Off-screen initially */
+    opacity: 0;
+    pointer-events: none;
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      background: $pink;
+      top: -10%;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+
+    ul {
+      margin: 0px;
+      padding: 0px;
+      &#menu-full-navigation {
+        li {
+          // position: relative;
+          display: block;
+          list-style: none;
+          font-size: 1.8rem;
+          border-top: 1px solid $black;
+          &:hover {
+            // background-color: $deepCoral;
+            a {
+              color: $white;
+            }
+          }
+          a {
+            padding: 1rem 1.5rem;
+            margin-bottom: 0;
+            display: block;
+            font-variation-settings: "opsz" 40;
+            font-family: $primary-type;
+            font-weight: 400;
+            &:focus {
+              background-color: $deepCoral;
+            }
+          }
+        }
+        .submenu {
+          &:not(.submenu ~ .submenu) {
+            margin-top: -0.2rem;
+          }
+          font-size: 1.4rem;
+          display: block;
+          list-style: none;
+          margin: 0.6rem 1.5rem;
+        }
+      }
+    }
+  }
+}

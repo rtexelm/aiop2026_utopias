@@ -1,0 +1,56 @@
+@use "constants" as *;
+
+div#donate-bg {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: $beige;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+  //   mix-blend-mode: multiply;
+  //   background-size: 60%;
+  //   opacity: 0.3;
+  // }
+}
+.donate-bg-ripple {
+  overflow-x: hidden;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.6;
+  &#donate-ripple-1 {
+    height: 100vw;
+    top: -12vw;
+    img {
+      position: absolute;
+      height: 100%;
+      left: 18vw;
+    }
+  }
+}
+main.donate {
+  padding: 4rem 1.5rem;
+  color: $black;
+  h2 {
+    color: $black;
+  }
+
+  div.payment-method {
+    border-top: 1px solid $black;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    p {
+      margin: 1rem 0;
+    }
+  }
+}

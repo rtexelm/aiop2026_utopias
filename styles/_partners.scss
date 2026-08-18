@@ -1,0 +1,30 @@
+@use "constants" as *;
+
+main.partners {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+  .page-title {
+    color: $coal;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $coal;
+    margin-bottom: 2rem;
+  }
+  .partner_images {
+    margin: 1rem 0;
+    img.sreenshot {
+      width: 100%;
+      margin-bottom: -3rem;
+    }
+  }
+  .partner {
+    margin-bottom: 3rem;
+    img.logo {
+      width: 6rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

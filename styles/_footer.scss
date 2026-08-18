@@ -1,0 +1,53 @@
+@use "constants" as *;
+
+footer {
+  box-sizing: border-box;
+  background: $darkBlue;
+  color: $white;
+  z-index: 10;
+  padding: 3rem 1.5rem;
+  p,
+  p a {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    font-family: $primary-type;
+  }
+
+  a {
+    font-weight: 500;
+    color: tint($brightBlue, 60);
+    text-decoration: none;
+    svg path {
+      fill: white;
+    }
+    &:hover {
+      color: $black;
+      svg path {
+        fill: $black;
+      }
+    }
+    img {
+      width: 8rem;
+    }
+  }
+
+  .footer-col {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .social {
+    margin-top: 0.5rem;
+    .social-icon {
+      display: inline-block;
+      margin: 0 0.5rem 0.5rem 0;
+      svg {
+        width: 2rem;
+        height: auto;
+      }
+    }
+  }
+}

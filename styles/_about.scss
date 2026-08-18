@@ -1,0 +1,339 @@
+@use "constants" as *;
+
+div#about-background {
+  background: $mustard;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  z-index: -10;
+}
+
+main.about {
+  position: relative;
+
+  p,
+  .p1 {
+    color: $black;
+  }
+
+  .dress {
+    padding: 4rem 1.5rem;
+    min-height: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    .c-statement {
+      h2 {
+        margin-bottom: 1rem;
+        color: $white;
+      }
+    }
+  }
+
+  .festival {
+    position: relative;
+    margin: -1.1vh 0 0;
+    padding: 4rem 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    & > * {
+      z-index: 10;
+    }
+
+    .mission {
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .history {
+      margin-top: 2rem;
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .people {
+    position: relative;
+    padding: 4rem 1.5rem;
+
+    & > * {
+      z-index: 10;
+    }
+
+    a {
+      color: $black;
+      &:visited {
+        color: #443f43;
+      }
+    }
+    h2 {
+      color: $white;
+      margin-bottom: 1rem;
+    }
+    .staff-item {
+      .staff-name {
+        color: $black;
+      }
+    }
+    .thinkers {
+      margin-top: 3rem;
+      .thinkers-title {
+        color: $white;
+        margin-bottom: 0.5rem;
+      }
+      .thinker-item {
+        .thinker-name {
+          color: $black;
+        }
+        .thinker-links {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+
+    color: $black;
+
+    .staff-item,
+    .thinker-item {
+      margin-bottom: 1rem;
+      border-top: 1px solid $beige;
+      padding-top: 0.5rem;
+    }
+
+    #blog-button {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .partners {
+    position: relative;
+    padding: 4rem 1.5rem;
+
+    &::before {
+      content: "";
+
+      // Z-index on children causing glitch with body background, necessitates a z-index on ::before
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    // The following works on every other section
+
+    // & > * {
+    //   z-index: 10;
+    // }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+    .partner-container {
+      border-top: 1px solid $beige;
+      margin-bottom: 3rem;
+      .partner {
+        &:last-child {
+          // Set no margin on the last partner area
+          margin-bottom: 0;
+        }
+      }
+    }
+    .partner-logo {
+      margin-bottom: 1.5rem;
+      max-width: 100%;
+    }
+    .button {
+      margin-top: 1rem;
+    }
+  }
+
+  .support {
+    position: relative;
+    padding: 4rem 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.25;
+    }
+
+    & > * {
+      z-index: 10;
+    }
+
+    a {
+      color: $black;
+      &:visited {
+        color: #443f43;
+      }
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+    .dedication {
+      margin-bottom: 2rem;
+    }
+    .thanks {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .scrolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    padding: 0.5em 0 0.5em;
+    &.no-border-top {
+      border-top: none;
+    }
+  }
+
+  .scrolling-text span {
+    display: inline-block;
+  }
+
+  .about-bg-ripple {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 0.6;
+    &#about-ripple-1 {
+      height: 108vw;
+      top: -28vw;
+      img {
+        right: 29vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-2 {
+      height: 50vw;
+      img {
+        right: 10vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-3 {
+      height: 104vw;
+      img {
+        left: 39vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-4 {
+      height: 90vw;
+      top: 76vw;
+      img {
+        right: 35vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-5 {
+      height: 100vw;
+      top: -14vw;
+      img {
+        left: 37vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-6 {
+      height: 24vw;
+      // top: 76vw;
+      img {
+        right: 9vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#about-ripple-7 {
+      height: 60vw;
+      bottom: -36vw;
+      img {
+        left: -12vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+  }
+
+  // Use the class for constants and id's for unique elements
+
+  // #container1 {
+  //   position: absolute;
+  //   z-index: -2;
+  //   width: 400vw;
+  //   height: 10vw;
+  //   border-radius: 20vw;
+  //   background-color: $dadbod-yellow;
+  // }
+  // #container2 {
+  //   position: absolute;
+  //   z-index: -2;
+  //   right: 60;
+  //   width: 25vw;
+  //   height: 25vw;
+  //   border-radius: 20vw;
+  //   background-color: $darkBlue;
+  // }
+  // #container3 {
+  //   position: absolute;
+  //   z-index: -4;
+  //   right: 100;
+  //   width: 60vw;
+  //   height: 60vw;
+  //   border-radius: 20vw;
+  //   background-color: $lavender;
+  // }
+  // #container4 {
+  //   position: absolute;
+  //   z-index: -2;
+  //   width: 20vw;
+  //   height: 20vw;
+  //   border-radius: 20vw;
+  //   background-color: $dadbod-yellow;
+  // }
+  // #container5 {
+  //   position: absolute;
+  //   z-index: -3;
+  //   width: 45vw;
+  //   height: 45vw;
+  //   border-radius: 20vw;
+  //   background-color: $brightBlue;
+  // }
+}

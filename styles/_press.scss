@@ -1,0 +1,50 @@
+@use "constants" as *;
+
+#press-bg {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  width: 100%;
+  height: 100%;
+  background: $pink;
+  z-index: -10;
+  &::before {
+    content: "";
+    position: absolute;
+    // background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+    // mix-blend-mode: multiply;
+    // background-size: 35%;
+    opacity: 0.3;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+main.press {
+  color: $black;
+  section.press-posts {
+    padding: 4rem 1.5rem;
+    .press-container {
+      border-top: 1px solid $white;
+      margin: 2rem 0;
+      .press-publication {
+        padding: 1rem 0 0.5rem 0;
+      }
+      p.press-title {
+        padding: 0.5rem 0;
+      }
+      p.press-date {
+        padding: 0.5rem 0;
+        // border-top: 1px dashed $primary-magenta;
+        margin-bottom: 0.5rem;
+      }
+      a.button {
+        margin-top: 1rem;
+        color: $black;
+      }
+    }
+  }
+}

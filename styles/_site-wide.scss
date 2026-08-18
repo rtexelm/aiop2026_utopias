@@ -1,0 +1,381 @@
+@use "constants" as *;
+
+// Stop overscroll on all but Safari
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+body {
+  background: $navyBlue;
+  color: $white;
+  padding: 0;
+  margin: 0;
+}
+
+#spacer {
+  position: relative;
+  top: 0;
+  height: 46px;
+  // background-color: $neon-yellow;
+  transition: top 0.3s ease-in-out;
+}
+
+.d1,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  display: block;
+  font-family: $primary-type;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0px;
+  color: $white;
+}
+
+.d1 {
+  font-size: 3.5rem;
+  font-variation-settings: "wght" 400, "opsz" 72, "ital" 0; //display
+  line-height: 0.8em;
+}
+
+.d2 {
+  font-size: 2.2rem;
+  padding-bottom: 0.5em;
+  font-variation-settings: "wght" 400, "opsz" 72, "ital" 0; //display
+  line-height: 0.8em;
+}
+
+h1,
+.h1 {
+  font-size: 3rem;
+  font-variation-settings: "wght" 400, "opsz" 72;
+  line-height: 0.8em;
+  margin-bottom: 0.5rem;
+}
+h2,
+.h2 {
+  font-size: 2.2rem;
+  font-variation-settings: "wght" 400, "opsz" 72;
+}
+h3,
+.h3 {
+  font-size: 1.5rem;
+  font-variation-settings: "wght" 300, "opsz" 40;
+  line-height: 1.5rem;
+}
+h4,
+.h4 {
+  font-size: 1rem;
+  font-variation-settings: "wght" 400, "opsz" 20;
+  line-height: normal;
+}
+
+p,
+a {
+  font-family: $primary-type;
+  font-variation-settings: "wght" 300, "opsz" 6;
+  margin: 0;
+  margin-bottom: 0.25em;
+
+  span.italic,
+  .italic {
+    font-variation-settings: "ital" 1;
+  }
+}
+
+.p1,
+span.p1,
+.p1r {
+  font-size: 1.2rem;
+  line-height: 1.1em;
+  font-variation-settings: "wght" 300, "opsz" 12;
+}
+
+span.highlight {
+  font-size: 5rem;
+}
+
+.lh-8em {
+  line-height: 0.8em;
+}
+
+.f-weight-250 {
+  font-variation-settings: "wght" 250;
+}
+
+h1.hidden {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+a.button,
+div.button {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  &::after {
+    content: url(assets/arrow-right-dark.svg);
+    margin-left: 0.5rem;
+    transition: all 500ms;
+  }
+
+  padding: 0.2rem 0.5rem 0.13rem 0.88rem;
+  border-radius: 1.875rem;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-variation-settings: "wght" 400;
+  line-height: 1.125rem;
+  width: fit-content;
+  height: fit-content;
+
+  box-shadow: 0rem 0rem #00000000;
+  transition: all 500ms;
+  &:focus {
+    border: 1px solid $white;
+    box-shadow: 0.4rem 0.4rem #000000ff;
+    outline: none;
+    &::after {
+      margin-left: 1rem;
+    }
+  }
+
+  &.primary-orange {
+    background: $primary-orange;
+    border: 1px solid $primary-orange;
+    color: $black;
+    &:hover {
+      background: $deepCoral;
+      border-color: $deepCoral;
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &.deep-coral {
+    background: $deepCoral;
+    border: 1px solid $deepCoral;
+    color: $black;
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      background: $pink;
+      border-color: $pink;
+      // color: white;
+    }
+  }
+
+  &.down-arrow {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  &.up-arrow {
+    &::after {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &.light-coral {
+    border: 1px solid $lightCoral;
+    background: $lightCoral;
+    color: $black;
+
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      border-color: $deepCoral;
+      background: $deepCoral;
+    }
+  }
+  &.pink {
+    border: 1px solid $pink;
+    background: $pink;
+    color: $black;
+
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      border-color: $mustard;
+      background: $mustard;
+    }
+  }
+  &.beige {
+    border: 1px solid $beige;
+    background: $beige;
+    color: $black;
+
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      border-color: $mustard;
+      background: $mustard;
+    }
+  }
+  &.bright-blue {
+    border: 1px solid $brightBlue;
+    background: $brightBlue;
+    color: $black;
+
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      border-color: $darkBlue;
+      background: $darkBlue;
+    }
+  }
+  &.mustard {
+    border: 1px solid $mustard;
+    background: $mustard;
+    color: $black;
+
+    &:hover {
+      &::after {
+        // content: url(assets/arrow-right-light.svg);
+        margin-left: 1rem;
+      }
+      border-color: $deepCoral;
+      background: $deepCoral;
+      // color: white;
+    }
+  }
+
+  &.inline {
+    padding: 0 0 0.25rem 0;
+    border-radius: 0;
+    color: $white;
+    &::after {
+      // content: url(assets/arrow-right-light.svg);
+      margin-left: 1rem;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+div.button p {
+  display: inline-block;
+}
+
+// Stitches positions
+.stitches-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.stitches-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+// Flex classes
+.flex-container {
+  display: flex;
+}
+
+.just-flex-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-base {
+  align-items: baseline;
+}
+
+.flex-col-nw {
+  flex-flow: column nowrap;
+}
+
+.flex-col-left {
+  align-self: flex-start;
+}
+
+.flex-col-right {
+  align-self: flex-end;
+}
+
+.flex-col-center {
+  align-self: center;
+}
+
+// Grid Classes
+
+.grid-container-12 {
+  @include twelve-col-grid;
+}
+
+// For positioning children absolute
+
+.positioner {
+  position: relative;
+  width: 100%;
+}
+
+// Stop mobile scrolling on menu view
+.stopScrollMenu {
+  height: 100vh;
+  overflow: hidden;
+}
+
+// Shade body under menu when menu open
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+}

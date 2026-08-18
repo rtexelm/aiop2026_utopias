@@ -1,0 +1,142 @@
+@use "constants" as *;
+
+// Styles
+
+#schedule-background {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: $lightCoral;
+}
+main.schedule {
+  margin: 4rem 0;
+  div.day {
+    width: calc(100% - 3rem);
+    margin: 4rem 1.5rem 0 1.5rem;
+    .day-nav {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    &#saturday,
+    &#sunday {
+      margin-top: 3rem;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pp-container {
+      h3,
+      h4 {
+        color: $black;
+      }
+      position: relative;
+      a.program-link {
+        display: none;
+      }
+
+      border-top: 1px solid $deepCoral;
+      padding-top: 0.5rem;
+      margin-bottom: 2rem;
+      .button {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .artist-container {
+      h3,
+      h4,
+      p {
+        color: $black;
+      }
+      position: relative;
+      a.schedule-link {
+        display: none;
+      }
+
+      border-top: 1px solid $deepCoral;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0;
+
+      .button {
+        margin-top: 0.5rem;
+      }
+
+      .schedule-thumb {
+        display: none;
+      }
+    }
+  }
+
+  .schedule-bg-element {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 0.8;
+    &#schedule-bg-element1 {
+      height: 130vw;
+      bottom: -40vw;
+      img {
+        right: -60%;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#schedule-bg-element2 {
+      height: 42vw;
+      top: 200vh;
+      img {
+        left: 10%;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#schedule-bg-element3 {
+      height: 200vw;
+      top: -92vw;
+      img {
+        right: -10vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#schedule-bg-element4 {
+      height: 130vw;
+      bottom: 150vh;
+      img {
+        right: -26vw;
+        position: absolute;
+        height: 100%;
+      }
+    }
+    &#schedule-bg-element5 {
+      height: 68vw;
+      bottom: 8vw;
+      img {
+        left: 15%;
+        position: absolute;
+        height: 100%;
+      }
+    }
+  }
+  // .schedule-bg-element2 {
+  //   overflow-x: hidden;
+  //   position: absolute;
+  //   z-index: -1;
+  //   width: 100%;
+  //   height: 200vw;
+  //   opacity: 0.8;
+  //   top: -92vw;
+  //   img {
+  //     right: -10vw;
+  //     position: absolute;
+  //     height: 100%;
+  //   }
+  // }
+}

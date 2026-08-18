@@ -1,0 +1,117 @@
+@use "constants" as *;
+
+@media screen and (min-width: 1400px) {
+  h1,
+  .h1,
+  span.h1 {
+    font-size: 5rem;
+  }
+
+  // h2,
+  // .h2 {
+  //   font-size: 4rem;
+  // }
+
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.1rem;
+  }
+
+  // h5,
+  // .h5 {
+  //   font-size: 1.125rem;
+  // }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .p1,
+  span.p1,
+  .p1r,
+  .p1 p {
+    font-size: 2rem;
+  }
+
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.5rem;
+  }
+
+  a,
+  a.button {
+    font-size: 1.5rem;
+  }
+
+  // Nav ####################################################################
+
+  nav.top .menuFull ul#menu-full-navigation {
+    li a {
+      font-size: 2.5rem;
+    }
+    .submenu a {
+      font-size: 2rem;
+    }
+  }
+
+  // Front page ############################################################
+
+  main.home {
+    #dates,
+    #about,
+    #artists {
+      padding-bottom: 10rem;
+    }
+  }
+
+  // About ###################################################################
+
+  // main.about {
+  // }
+
+  // Schedule ################################################################
+  main.schedule {
+    div.day {
+      .public-program {
+        min-height: 16rem;
+      }
+    }
+  }
+
+  // Aritsts Listing #################################################
+
+  #artists-background {
+    &::before {
+      background-size: 30%;
+    }
+  }
+
+  // Donate #################################################################
+  // main.donate {
+  // }
+
+  // Public Programs ########################################################
+
+  #program-background {
+    &::before {
+      background-size: 9%;
+    }
+  }
+  // Press #################################################################
+
+  #press-bg {
+    &::before {
+      background-size: 20%;
+    }
+  }
+
+  // main.press {
+  // }
+}
