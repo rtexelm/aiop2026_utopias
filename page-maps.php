@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-artist
  *
  * @package WordPress
- * @subpackage AiOP_2024
+ * @subpackage AiOP_2026
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0

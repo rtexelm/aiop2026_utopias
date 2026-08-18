@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-artist
  *
  * @package WordPress
- * @subpackage AiOP_2024
+ * @subpackage AiOP_2026
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
@@ -61,7 +61,7 @@ foreach ($all_posts->posts as $key => $value) {
 		global $thisID;
 
 		$is_group				= get_field('is_group', $thisID);
-		$first_name				 = get_field('first_name', $thisID);
+		$first_name				= get_field('first_name', $thisID);
 		$last_name 				= get_field('last_name', $thisID);
 		$group_name 			= get_field('group_name', $thisID);
 		$additional_names 		= get_field('group_artists', $thisID);
