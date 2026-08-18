@@ -24,8 +24,8 @@ get_header();
             <h1>
                 <span id="title-1">Art in</span>
                 <span id="title-2">Odd Places</span>
-                <span id="title-3">2024</span>
-                <span id="title-4">CARE</span>
+                <span id="title-3">2026</span>
+                <span id="title-4">UTOPIAS</span>
             </h1>
         </article>
     </section>
@@ -44,7 +44,7 @@ get_header();
                 Programs</a>
         </div>
         <div class="date-care">
-            <p class="p1"><span class="italic">Art in Odd Places 2024: CARE</span> features visual and performance
+            <p class="p1"><span class="italic">Art in Odd Places 2024: UTOPIAS</span> features visual and performance
                 artists on 14th Street from Avenue A to the Hudson River, October 18&ndash;20, 2024.</p>
         </div>
     </section>
