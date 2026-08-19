@@ -2,8 +2,7 @@
 
 footer {
   box-sizing: border-box;
-  background: $darkBlue;
-  color: $white;
+  background: $deepPurple;
   z-index: 10;
   padding: 3rem 1.5rem;
   p,
@@ -11,6 +10,12 @@ footer {
     margin: 0 0 0.5rem 0;
     font-weight: 500;
     font-family: $primary-type;
+  }
+
+  #footer-festival {
+    svg {
+      padding: 1rem 0;
+    }
   }
 
   a {
@@ -21,9 +26,9 @@ footer {
       fill: white;
     }
     &:hover {
-      color: $black;
+      color: $brightBlue;
       svg path {
-        fill: $black;
+        fill: $brightBlue;
       }
     }
     img {

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The main template file
  *
@@ -10,7 +11,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage AiOP_2026
+ * @subpackage AiOP_2025
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
@@ -18,23 +19,21 @@
 
 get_header();
 
-if ( have_posts() ) {
+if (have_posts()) {
 
 	// Load posts loop.
-	while ( have_posts() ) {
+	while (have_posts()) {
 		the_post();
 
-		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+		get_template_part('template-parts/content/content', get_theme_mod('display_excerpt_or_full_post', 'excerpt'));
 	}
 
 	// Previous/next page navigation.
 	twenty_twenty_one_the_posts_navigation();
-
 } else {
 
 	// If no content, include the "No posts found" template.
-	get_template_part( 'template-parts/content/content-none' );
-
+	get_template_part('template-parts/content/content-none');
 }
 
 get_footer();

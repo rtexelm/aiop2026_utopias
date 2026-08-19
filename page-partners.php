@@ -1,35 +1,38 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-artist
  *
  * @package WordPress
- * @subpackage AiOP_2026
+ * @subpackage AiOP_2025
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
  */
 
 get_header();
-	
+
 ?>
 
 <?php
-    wp_reset_query();
+wp_reset_query();
 
 ?>
 
 <main class="site-content partners" id="main-content">
+    <div id="fullpage-texture"></div>
 
     <h1 class="hidden">PARTNERS</h1>
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    <?php while (have_posts()) : the_post(); ?>
 
     <div class="partner_images popwalk">
     </div>
     <div class="partner popwalk">
-        <img src="<?php bloginfo('template_url'); ?>/assets/about/Partners_popwalk-logo.png" alt="Popwalk logo" class="logo">
+        <img src="<?php bloginfo('template_url'); ?>/assets/about/Partners_popwalk-logo.png" alt="Popwalk logo"
+            class="logo">
         <p class="h2">Popwalk</p>
         <p class=""><?php the_field('partners_popwalk'); ?></p>
         <div class="links">
@@ -56,7 +59,8 @@ get_header();
 
     </section>
 
-    <?php endwhile; // end of the loop. ?>
+    <?php endwhile; // end of the loop. 
+    ?>
 </main><!-- #primary -->
 
 <?php get_footer(); ?>

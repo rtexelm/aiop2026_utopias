@@ -1,38 +1,22 @@
 @use "constants" as *;
 
-#artists-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: $beige;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(assets/dress/textures/fabric-texture_fine-woven.jpg);
-    mix-blend-mode: multiply;
-    background-size: 40%;
-    opacity: 0.3;
-    width: 100%;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-  }
-}
 main.artist-listing {
-  padding: 4rem 1.5rem;
-  section.artists {
-    span.page-title {
-      margin-bottom: 2rem;
+  background: linear-gradient($lightestBlue, $lightBlue 100%);
+  padding: 6rem 1.5rem;
+  .page-title {
+    svg {
+      width: 100%;
+      height: auto;
     }
+    padding-bottom: 2rem;
+  }
+  section.artists {
     span.artist-letter {
+      color: $darkBlue;
       margin-bottom: 1rem;
     }
     .artist-container {
-      border-top: 1px solid $mustard;
+      border-top: 1px solid $brightBlue;
       padding: 1rem 0;
       .button {
         margin-top: 0.5rem;
@@ -43,7 +27,7 @@ main.artist-listing {
       .artist-copy {
         h3,
         h4 {
-          color: $black;
+          color: $darkBlue;
           margin-top: 0.5rem;
         }
       }

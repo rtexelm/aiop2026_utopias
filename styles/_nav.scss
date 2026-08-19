@@ -2,21 +2,14 @@
 
 nav.top {
   position: fixed;
-  top: 0;
+  top: 18px;
+  left: 0.5rem;
   transition: top 0.3s ease-in-out;
-  width: calc(100% - 3rem);
+  width: calc(100% - 4rem);
   z-index: 100;
   padding: 0 1.5rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Behind the nav content */
-  }
+  background-color: #0b0050;
+  border-radius: 27px;
 
   a#skip-content {
     position: absolute;
@@ -34,6 +27,7 @@ nav.top {
   .nav-bar-flex {
     display: flex;
     flex-flow: row nowrap;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
   }
@@ -62,16 +56,13 @@ nav.top {
     padding-top: 1rem;
     z-index: 12;
     position: fixed;
-    // top: 0;
     left: 0;
-    // left: 140vw;
     width: 100%;
     height: 100dvh;
     max-height: 100%;
     display: flex;
     flex-direction: column;
     transition: transform 0.66s ease, opacity 0.3s ease;
-    // transition: all 0.66s;
     transform: translateX(140vw); /* Off-screen initially */
     opacity: 0;
     pointer-events: none;
@@ -84,15 +75,15 @@ nav.top {
       content: "";
       z-index: -1;
       position: absolute;
-      background: $pink;
-      top: -10%;
+      background: $lightBlue;
+      top: -72px;
       right: 0px;
       bottom: 0px;
       left: 0px;
     }
 
     a {
-      color: $black;
+      color: $darkBlue;
       text-decoration: none;
     }
 
@@ -101,15 +92,13 @@ nav.top {
       padding: 0px;
       &#menu-full-navigation {
         li {
-          // position: relative;
           display: block;
           list-style: none;
           font-size: 1.8rem;
-          border-top: 1px solid $black;
+          border-top: 1px solid $darkBlue;
           &:hover {
-            // background-color: $deepCoral;
             a {
-              color: $white;
+              color: $brightBlue;
             }
           }
           a {
@@ -120,7 +109,7 @@ nav.top {
             font-family: $primary-type;
             font-weight: 400;
             &:focus {
-              background-color: $deepCoral;
+              background-color: $lightestBlue;
             }
           }
         }

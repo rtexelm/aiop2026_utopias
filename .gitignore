@@ -1,2 +1,6 @@
 /assets/
 .DS_Store
+package.json
+package-lock.json
+node_modules
+.stylelintrc.json

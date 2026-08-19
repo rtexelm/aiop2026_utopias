@@ -1,25 +1,37 @@
+// Constant Colors
+$coal: #2c2c2c;
+$white: #fff;
+$black: #000;
+$dadbod-yellow: #dadb0d;
+$lavender: #c7a1d8;
+
 // 2023 Colors
 $primary-orange: #f74500;
 $primary-magenta: #810061;
-$lavender: #c7a1d8;
 $pink: #ff779c;
 $neon-yellow: #f0fa00;
-$dadbod-yellow: #dadb0d;
 $deep-green: #05633e;
-$coal: #2c2c2c;
 $beige: #f4d4a0;
-$white: #fff;
-$black: #000;
 
 // 2024 Colors
-$darkBlue: #207dca;
-$brightBlue: #50b0c9;
+$darkBlueOld: #207dca;
+$brightBlueOld: #50b0c9;
 $navyBlue: #004056;
 $deepCoral: #f96e47;
 $lightCoral: #ff9676;
 $mustard: #e7a542;
 $pink: #ffa3bc;
 $beige: #f2dec4;
+
+// 2025 Colors
+$lightestBlue: #d2eff5;
+$brightBlue: #0fa5dc;
+$deepBlue: #0a008e;
+$darkBlue: #0b0050;
+$deepPurple: #320784;
+$brightPurple: #7d30be;
+$lightPurple: #cd44e8;
+$lightBlue: #a9efff;
 
 $primary-type: "degular-variable", sans-serif;
 $display-type: "degular-variable", sans-serif;
@@ -54,9 +66,16 @@ $seciton-padding-720: 5.5rem;
   max-width: 100%;
 }
 
+@mixin four-col-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  max-width: 100%;
+}
+
 @mixin title-display {
   font: 15vw $display-type;
-  font-variation-settings: "wght" 400, "opsz" 72, "ital" 0; //display
+  font-variation-settings: "wght" 550, "opsz" 72, "ital" 0; //display
   line-height: 0.8em;
 }
 

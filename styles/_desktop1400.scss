@@ -51,7 +51,6 @@
   }
 
   // Nav ####################################################################
-
   nav.top .menuFull ul#menu-full-navigation {
     li a {
       font-size: 2.5rem;
@@ -73,8 +72,20 @@
 
   // About ###################################################################
 
-  // main.about {
-  // }
+  main.about {
+    .cloud {
+      &#cloud-01 {
+        top: -18vw;
+        left: -24vw;
+        height: 26vw;
+      }
+      &#cloud-02 {
+        height: 15vw;
+        top: 16vw;
+        left: -7vw;
+      }
+    }
+  }
 
   // Schedule ################################################################
   main.schedule {

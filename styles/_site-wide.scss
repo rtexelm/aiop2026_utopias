@@ -8,18 +8,16 @@ body {
 }
 
 body {
-  background: $navyBlue;
-  color: $white;
+  color: $lightestBlue;
   padding: 0;
   margin: 0;
 }
 
-#spacer {
-  position: relative;
-  top: 0;
-  height: 46px;
-  // background-color: $neon-yellow;
-  transition: top 0.3s ease-in-out;
+ol,
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .d1,
@@ -38,7 +36,7 @@ h5,
   font-weight: normal;
   line-height: 1em;
   margin: 0px;
-  color: $white;
+  color: $lightestBlue;
 }
 
 .d1 {
@@ -57,19 +55,19 @@ h5,
 h1,
 .h1 {
   font-size: 3rem;
-  font-variation-settings: "wght" 400, "opsz" 72;
+  font-variation-settings: "wght" 550, "opsz" 72;
   line-height: 0.8em;
   margin-bottom: 0.5rem;
 }
 h2,
 .h2 {
   font-size: 2.2rem;
-  font-variation-settings: "wght" 400, "opsz" 72;
+  font-variation-settings: "wght" 600, "opsz" 72;
 }
 h3,
 .h3 {
   font-size: 1.5rem;
-  font-variation-settings: "wght" 300, "opsz" 40;
+  font-variation-settings: "wght" 600, "opsz" 40;
   line-height: 1.5rem;
 }
 h4,
@@ -80,11 +78,13 @@ h4,
 }
 
 p,
-a {
+a,
+.p {
   font-family: $primary-type;
   font-variation-settings: "wght" 300, "opsz" 6;
   margin: 0;
   margin-bottom: 0.25em;
+  line-height: 1.1em;
 
   span.italic,
   .italic {
@@ -110,6 +110,14 @@ span.highlight {
 
 .f-weight-250 {
   font-variation-settings: "wght" 250;
+}
+
+.bold {
+  font-variation-settings: "wght" 600;
+}
+
+.semi-bold {
+  font-variation-settings: "wght" 500;
 }
 
 h1.hidden {
@@ -161,34 +169,6 @@ div.button {
     }
   }
 
-  &.primary-orange {
-    background: $primary-orange;
-    border: 1px solid $primary-orange;
-    color: $black;
-    &:hover {
-      background: $deepCoral;
-      border-color: $deepCoral;
-      &::after {
-        margin-left: 1rem;
-      }
-    }
-  }
-
-  &.deep-coral {
-    background: $deepCoral;
-    border: 1px solid $deepCoral;
-    color: $black;
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-      background: $pink;
-      border-color: $pink;
-      // color: white;
-    }
-  }
-
   &.down-arrow {
     &::after {
       transform: rotate(90deg);
@@ -200,9 +180,31 @@ div.button {
     }
   }
 
-  &.light-coral {
-    border: 1px solid $lightCoral;
-    background: $lightCoral;
+  &.lightblue {
+    background: $lightBlue;
+    border: 1px solid $lightBlue;
+    color: $black;
+    &:hover {
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &.lightpurple {
+    background: $lightPurple;
+    border: 1px solid $lightPurple;
+    color: $black;
+    &:hover {
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &.brightblue {
+    background: $brightBlue;
+    border: 1px solid $brightBlue;
     color: $black;
 
     &:hover {
@@ -210,10 +212,25 @@ div.button {
         // content: url(assets/arrow-right-light.svg);
         margin-left: 1rem;
       }
-      border-color: $deepCoral;
-      background: $deepCoral;
+      border-color: $darkBlue;
+      // background: $darkBlue;
     }
   }
+
+  &.brightpurple {
+    border: 1px solid $brightPurple;
+    background: $brightPurple;
+    color: $lightestBlue;
+    &:after {
+      content: url(assets/arrow-right-light.svg);
+    }
+    &:hover {
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+  }
+
   &.pink {
     border: 1px solid $pink;
     background: $pink;
@@ -228,6 +245,7 @@ div.button {
       background: $mustard;
     }
   }
+
   &.beige {
     border: 1px solid $beige;
     background: $beige;
@@ -242,20 +260,7 @@ div.button {
       background: $mustard;
     }
   }
-  &.bright-blue {
-    border: 1px solid $brightBlue;
-    background: $brightBlue;
-    color: $black;
 
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-      border-color: $darkBlue;
-      background: $darkBlue;
-    }
-  }
   &.mustard {
     border: 1px solid $mustard;
     background: $mustard;
@@ -284,29 +289,21 @@ div.button {
       opacity: 0.8;
     }
   }
+
+  &.black {
+    color: $black;
+    &::after {
+      content: url(assets/arrow-right-dark.svg);
+    }
+  }
 }
 
 div.button p {
   display: inline-block;
 }
 
-// Stitches positions
-.stitches-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-}
-
-.stitches-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
+.display-none {
+  display: none;
 }
 
 // Flex classes
@@ -378,4 +375,22 @@ div.button p {
     pointer-events: all;
     display: block;
   }
+}
+
+// Texture on all pages mobile style
+#fullpage-texture {
+  position: relative;
+  &::before {
+    content: "";
+    mix-blend-mode: color-dodge;
+    position: fixed;
+    background: url(assets/Overlay_Mobile.jpg);
+    background-size: cover;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+  }
+  z-index: 11;
+  pointer-events: none;
 }

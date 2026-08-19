@@ -18,7 +18,7 @@ add_action('init', 'wpb_custom_new_menu');
 if (function_exists('add_theme_support')) {
 	add_theme_support('post-thumbnails');
 	// additional image sizes
-	add_image_size('listings-thumb', 309, 9999); // 300 pixels wide (and unlimited height)
+	// add_image_size('listings-thumb', 309, 9999); // 300 pixels wide (and unlimited height)
 }
 
 
@@ -28,7 +28,7 @@ function register_artists()
 
 	$labels = array(
 		'name'				=> _x('Projects', 'Post type general name', 'textdomain'),
-		'singular_name'		=> _x('Project', 'Post type singular name', 'textdomain'),
+		'singular_name'		=> _x('Artist', 'Post type singular name', 'textdomain'),
 		'menu_name'			=> _x('Artists', 'Admin Menu text', 'textdomain'),
 		'name_admin_bar'	=> _x('Artist', 'Add New on Toolbar', 'textdomain'),
 		'add_new_item'		=> __('Add New Project', 'textdomain'),
@@ -111,6 +111,12 @@ function create_sortable_name($post_id, $post)
 		update_post_meta($post_id, 'sortable_name', $sortable_name);
 	}
 }
+
+// function my_acf_add_local_field_groups()
+// {
+// 	remove_filter('acf_the_content', 'wpautop');
+// }
+// add_action('acf/init', 'my_acf_add_local_field_groups');
 
 
 // add css & javascript

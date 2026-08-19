@@ -1,39 +1,34 @@
 @use "constants" as *;
 
-#project-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: $deepCoral;
-}
-
 main.artist-single {
+  background: linear-gradient($brightPurple, #5a25c0 100%);
   box-sizing: border-box;
   position: relative;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 6rem 1.5rem 0 1.5rem;
 
+  .page-title {
+    z-index: 0;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
   .project-img {
+    margin-top: -3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     width: calc(100vw - 3rem);
-    height: calc(100vw - 3rem);
-    // margin-top: -3rem;
-    z-index: -5;
-    background-position: center;
-    background-size: cover;
     div.image-mask {
-      width: 90%;
-      height: 90%;
-      border-radius: 100vw;
+      border-radius: 46px;
       overflow: hidden;
       display: flex;
       justify-content: center;
       img {
-        height: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
       }
     }
   }
@@ -50,6 +45,15 @@ main.artist-single {
       margin-bottom: 3rem;
       .project {
         margin-bottom: 2rem;
+      }
+      a {
+        color: $lightestBlue;
+        &:visited {
+          color: $darkBlue;
+        }
+        &:hover {
+          color: $lightBlue;
+        }
       }
     }
 

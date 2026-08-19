@@ -6,7 +6,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#public-programs
  *
  * @package WordPress
- * @subpackage AiOP_2026
+ * @subpackage AiOP_2025
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
@@ -17,39 +17,34 @@ get_header();
 ?>
 
 <div id="program-background"></div>
+<div id="fullpage-texture"></div>
 <main class="site-content public-programs" id="main-content">
 
     <h1 class="h1">Public Programs</h1>
     <section class="programs">
 
         <div class="program-container" id="program-01">
-            <h3>In Care Of</h3>
+            <h3>Voice</h3>
             <p>
-                Join us for this intimate conversation between the curators of Art in Odd Places 2024 CARE, and a select
-                group of its international and US artists about their 2024 CARE projects, artistic processes and the
-                role of CARE in their life and work.<br>
-                Featuring: Deirdre Macleode | Suh Amorim with Pedro Garcia | Theda Sandiford | Thomas Diafas | Victoria
-                Boulay
             </p>
             <div class="date-time">
                 <div class="date">
-                    <h4>Date</h4>
-                    <p>Friday, October 18th, 2024</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
                 <div class="location">
-                    <h4>Location</h4>
-                    <p>Bureau of General Services: Queer Division, LGBTQIA+ Center<br>
-                        208 W 13th Street<br>Room 210</p>
+                    <h4></h4>
+                    <p></p>
 
                 </div>
                 <div class="time">
-                    <h4>Time</h4>
-                    <p>7&ndash;9pm</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
             </div>
-            <a href="https://www.bgsqd.com/event/in-care-of/" target="_blank" title="Event Page"
+            <!-- <a href="https://www.bgsqd.com/event/in-care-of/" target="_blank" title="Event Page"
                 class="button beige">Event
-                Page</a>
+                Page</a> -->
         </div>
 
         <!-- <div class="program-container" id="program-02">
