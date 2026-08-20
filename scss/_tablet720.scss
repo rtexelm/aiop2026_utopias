@@ -76,10 +76,10 @@
             @include nav-links;
             // text-transform: uppercase;
             text-decoration: none;
-            color: $lightestBlue;
+            color: $lightest-blue;
             letter-spacing: 1px;
             &:hover {
-              color: $lightBlue;
+              color: $light-blue;
             }
             &:focus {
               border-top: 1px solid $black;
@@ -89,23 +89,23 @@
       }
     }
 
-    .menuFull {
-      // left: 120vw;
+    // .menuFull {
+    // left: 120vw;
 
-      // .bg-wrapper {
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     width: 100%;
-      //     overflow: hidden;
-      //     top: 0px;
-      //     right: 0px;
-      //     bottom: 0px;
-      //     left: 0px;
-      //     opacity: 0.6;
-      //   }
-      // }
-    }
+    // .bg-wrapper {
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     overflow: hidden;
+    //     top: 0px;
+    //     right: 0px;
+    //     bottom: 0px;
+    //     left: 0px;
+    //     opacity: 0.6;
+    //   }
+    // }
+    // }
   }
 
   // Front Page #########################################
@@ -155,7 +155,7 @@
       #title-shape-2 {
         width: 30%;
         max-width: 200px;
-        background: linear-gradient(180deg, $brightBlue, $brightPurple 100%);
+        background: linear-gradient(180deg, $bright-blue, $bright-purple 100%);
         border-radius: 16px;
       }
       #title-shape-3 {
@@ -164,36 +164,36 @@
         border-radius: 51px;
         background: linear-gradient(
           49deg,
-          $brightPurple,
+          $bright-purple,
           #5324ef 50%,
           #0079d5 100%
         );
       }
       #title-shape-4 {
         width: 30%;
-        background: linear-gradient(180deg, $lightPurple, $brightPurple 100%);
+        background: linear-gradient(180deg, $light-purple, $bright-purple 100%);
         mask: radial-gradient(16px at 16px 16px, #0000 98%, #000) -16px -16px;
       }
       #title-shape-5 {
         width: 30%;
         max-width: 100px;
-        background: linear-gradient($brightPurple, $deepBlue 100%);
+        background: linear-gradient($bright-purple, $deep-blue 100%);
         border-radius: 100%;
       }
       #title-shape-6 {
         width: 20%;
         max-width: 145px;
-        background: linear-gradient(180deg, $lightPurple, #0c47b0 100%);
+        background: linear-gradient(180deg, $light-purple, #0c47b0 100%);
         border-radius: 25px;
       }
       #title-shape-7 {
         width: 20%;
         max-width: 120px;
-        background: linear-gradient($brightBlue, #4e0dc8 100%);
+        background: linear-gradient($bright-blue, #4e0dc8 100%);
       }
       #title-shape-8 {
         width: 20%;
-        background: $brightBlue;
+        background: $bright-blue;
       }
     }
 
@@ -201,7 +201,7 @@
     #about,
     #artists,
     #mailing-list {
-      padding-bottom: $seciton-padding-720;
+      padding-bottom: $section-padding-720;
     }
 
     #dates {
@@ -598,7 +598,7 @@
         .artist-copy {
           position: relative;
           grid-column: 3/11;
-          border-top: 1px solid $brightBlue;
+          border-top: 1px solid $bright-blue;
           padding-top: 0.5rem;
         }
         a.button {
@@ -767,7 +767,7 @@
         left: 42%;
         z-index: 0;
         opacity: 60%;
-        background: linear-gradient(92deg, $lightPurple, $brightPurple 100%);
+        background: linear-gradient(92deg, $light-purple, $bright-purple 100%);
         mask: radial-gradient(32px at 32px 32px, #0000 98%, #000) -32px -32px;
       }
       .history {

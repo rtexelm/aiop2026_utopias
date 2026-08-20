@@ -5,7 +5,7 @@ main.home {
     @include page-slide;
   }
 
-  background: linear-gradient(180deg, $darkBlue 23%, $deepBlue 45%);
+  background: linear-gradient(180deg, $dark-blue 23%, $deep-blue 45%);
 
   .heading {
     position: relative;
@@ -13,10 +13,10 @@ main.home {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    background: $deepPurple;
+    background: $deep-purple;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    padding: 1rem 0 1rem;
+    padding: 1rem 0;
 
     .title-shape {
       display: none;
@@ -33,12 +33,12 @@ main.home {
 
     #top-shape-1 {
       flex-grow: 2;
-      background: linear-gradient(180deg, $brightBlue, $brightPurple 100%);
+      background: linear-gradient(180deg, $bright-blue, $bright-purple 100%);
       border-radius: 16px;
     }
     #top-shape-2 {
       flex-grow: 1;
-      background: linear-gradient(180deg, $lightPurple, #0c47b0 100%);
+      background: linear-gradient(180deg, $light-purple, #0c47b0 100%);
       border-radius: 25px;
     }
     #top-shape-3 {
@@ -56,7 +56,7 @@ main.home {
     }
     #bottom-shape-1 {
       flex-grow: 3;
-      background: linear-gradient(180deg, $lightPurple, $brightPurple 100%);
+      background: linear-gradient(180deg, $light-purple, $bright-purple 100%);
       mask: radial-gradient(16px at 16px 16px, #0000 98%, #000) -16px -16px;
     }
     #bottom-shape-2 {
@@ -64,7 +64,7 @@ main.home {
       border-radius: 51px;
       background: linear-gradient(
         49deg,
-        $brightPurple,
+        $bright-purple,
         #5324ef 50%,
         #0079d5 100%
       );
@@ -146,7 +146,7 @@ main.home {
     .about-frame {
       width: 100%;
       height: 100%;
-      background: #0b005099; // $darkBlue with 60% opacity
+      background: #0b005099; // $dark-blue with 60% opacity
       border-radius: 52px;
     }
 
@@ -177,8 +177,9 @@ main.home {
         position: absolute;
         z-index: -1;
         inset: 0;
-        background: $lightPurple;
-        mask: radial-gradient(
+        background: $light-purple;
+        mask:
+          radial-gradient(
               18px at 18px 18px,
               #0000 calc(98% - 3px),
               #000 calc(100% - 3px) 98%,
@@ -186,8 +187,8 @@ main.home {
             ) -18px -18px,
           linear-gradient(90deg, #000 6px, #0000 0) -3px 50% /100%
             calc(100% - 36px + 3px) repeat-x,
-          linear-gradient(#000 6px, #0000 0) 50% -3px / calc(100% - 36px + 3px) 100%
-            repeat-y;
+          linear-gradient(#000 6px, #0000 0) 50% -3px / calc(100% - 36px + 3px)
+            100% repeat-y;
       }
     }
     padding-bottom: 6rem;
@@ -232,7 +233,7 @@ main.home {
     column-gap: 0;
     row-gap: 1rem;
     padding-bottom: 6rem;
-    background: $brightBlue;
+    background: $bright-blue;
     .text {
       grid-area: 1/1/ 2/12;
     }
@@ -254,14 +255,14 @@ main.home {
           padding: 0.5rem;
         }
       }
-      .optionalParent {
+      .optional-parent {
         div {
           display: flex;
           input.button {
             font-size: 1.2rem;
             line-height: 1em;
-            border: 1px solid $navyBlue;
-            background: $navyBlue;
+            border: 1px solid $navy-blue;
+            background: $navy-blue;
             color: white;
             margin-top: 1rem;
             padding: 0.5rem 1rem 0.5rem 1rem;

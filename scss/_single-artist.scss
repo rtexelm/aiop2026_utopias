@@ -1,7 +1,7 @@
 @use "constants" as *;
 
 main.artist-single {
-  background: linear-gradient($brightPurple, #5a25c0 100%);
+  background: linear-gradient($bright-purple, #5a25c0 100%);
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -47,12 +47,12 @@ main.artist-single {
         margin-bottom: 2rem;
       }
       a {
-        color: $lightestBlue;
+        color: $lightest-blue;
         &:visited {
-          color: $darkBlue;
+          color: $dark-blue;
         }
         &:hover {
-          color: $lightBlue;
+          color: $light-blue;
         }
       }
     }

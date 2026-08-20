@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "fonts" as *;
+
 // Constant Colors
 $coal: #2c2c2c;
 $white: #fff;
@@ -14,36 +17,53 @@ $deep-green: #05633e;
 $beige: #f4d4a0;
 
 // 2024 Colors
-$darkBlueOld: #207dca;
-$brightBlueOld: #50b0c9;
-$navyBlue: #004056;
-$deepCoral: #f96e47;
-$lightCoral: #ff9676;
+$dark-blue-old: #207dca;
+$bright-blue-old: #50b0c9;
+$navy-blue: #004056;
+$deep-coral: #f96e47;
+$light-coral: #ff9676;
 $mustard: #e7a542;
 $pink: #ffa3bc;
 $beige: #f2dec4;
 
 // 2025 Colors
-$lightestBlue: #d2eff5;
-$brightBlue: #0fa5dc;
-$deepBlue: #0a008e;
-$darkBlue: #0b0050;
-$deepPurple: #320784;
-$brightPurple: #7d30be;
-$lightPurple: #cd44e8;
-$lightBlue: #a9efff;
+$lightest-blue: #d2eff5;
+$bright-blue: #0fa5dc;
+$deep-blue: #0a008e;
+$dark-blue: #0b0050;
+$deep-purple: #320784;
+$bright-purple: #7d30be;
+$light-purple: #cd44e8;
+$light-blue: #a9efff;
 
-$primary-type: "degular-variable", sans-serif;
-$display-type: "degular-variable", sans-serif;
-$text-type: "degular-text", sans-serif;
+// 2026 Colors
+$white: #fff;
+$light-blue: #bee9fd;
+$blue: #8ecdea;
+$pink: #e6597d;
+$dark-pink: #881a4e;
+$orange: #ef803f;
+$lemon-lime: #e1da64;
+$bright-green: #95ac56;
+$green: #348618;
+$dark-green: #0d4400;
+$dark-blue: #57a8ce;
 
-$seciton-padding-720: 5.5rem;
+// typefaces
+$primary-type: "oskon", sans-serif;
+$display-type: "oskon", sans-serif;
+$text-type: "oskon", sans-serif;
+$deg-text: "degular-text", sans-serif;
+
+// section padding
+$section-padding-720: 5.5rem;
 
 @keyframes slide-in {
   from {
     transform: translateY(10rem);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -56,7 +76,10 @@ $seciton-padding-720: 5.5rem;
 
 @mixin nav-links {
   font: 1rem $display-type;
-  font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
+  font-variation-settings:
+    "wght" 600,
+    "opsz" 40,
+    "ital" 0;
 }
 
 @mixin twelve-col-grid {
@@ -75,7 +98,11 @@ $seciton-padding-720: 5.5rem;
 
 @mixin title-display {
   font: 15vw $display-type;
-  font-variation-settings: "wght" 550, "opsz" 72, "ital" 0; //display
+  font-variation-settings:
+    "wght" 550,
+    "opsz" 72,
+    "ital" 0; // display
+
   line-height: 0.8em;
 }
 
@@ -84,13 +111,15 @@ $seciton-padding-720: 5.5rem;
     to left,
     transparent,
     transparent 50%,
-    hsla(344, 100%, 73%, 75%) 50%,
-    hsla(344, 100%, 73%, 75%)
+    hsl(344deg 100% 73% / 75%) 50%,
+    hsl(344deg 100% 73% / 75%)
   );
   background-position: 100% 0;
   background-size: 201% 100%;
+  transition:
+    background-position 0.5s ease-in-out,
+    border-color 1s ease;
 
-  transition: background-position 0.5s ease-in-out, border-color 1s ease;
   &:hover {
     background-position: 0 0;
     border-color: $neon-yellow;
@@ -120,5 +149,5 @@ $seciton-padding-720: 5.5rem;
 }
 
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return color.mix(white, $color, $percentage * 1%);
 }

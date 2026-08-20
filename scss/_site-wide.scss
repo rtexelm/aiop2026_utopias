@@ -7,8 +7,10 @@ body {
   overscroll-behavior-y: none;
 }
 
+// base styles
+
 body {
-  color: $lightestBlue;
+  color: red;
   padding: 0;
   margin: 0;
 }
@@ -35,45 +37,64 @@ h5,
   font-family: $primary-type;
   font-weight: normal;
   line-height: 1em;
-  margin: 0px;
-  color: $lightestBlue;
+  margin: 0;
+  color: red;
 }
 
 .d1 {
   font-size: 3.5rem;
-  font-variation-settings: "wght" 400, "opsz" 72, "ital" 0; //display
+  font-variation-settings:
+    "wght" 400,
+    "opsz" 72,
+    "ital" 0; // display
+
   line-height: 0.8em;
 }
 
 .d2 {
   font-size: 2.2rem;
   padding-bottom: 0.5em;
-  font-variation-settings: "wght" 400, "opsz" 72, "ital" 0; //display
+  font-variation-settings:
+    "wght" 400,
+    "opsz" 72,
+    "ital" 0; // display
+
   line-height: 0.8em;
 }
 
 h1,
 .h1 {
   font-size: 3rem;
-  font-variation-settings: "wght" 550, "opsz" 72;
+  font-variation-settings:
+    "wght" 550,
+    "opsz" 72;
   line-height: 0.8em;
   margin-bottom: 0.5rem;
 }
+
 h2,
 .h2 {
   font-size: 2.2rem;
-  font-variation-settings: "wght" 600, "opsz" 72;
+  font-variation-settings:
+    "wght" 600,
+    "opsz" 72;
 }
+
 h3,
 .h3 {
   font-size: 1.5rem;
-  font-variation-settings: "wght" 600, "opsz" 40;
+  font-variation-settings:
+    "wght" 600,
+    "opsz" 40;
   line-height: 1.5rem;
 }
+
 h4,
 .h4 {
   font-size: 1rem;
-  font-variation-settings: "wght" 400, "opsz" 20;
+  font-variation-settings:
+    "wght" 400,
+    "opsz" 20;
   line-height: normal;
 }
 
@@ -81,7 +102,9 @@ p,
 a,
 .p {
   font-family: $primary-type;
-  font-variation-settings: "wght" 300, "opsz" 6;
+  font-variation-settings:
+    "wght" 300,
+    "opsz" 6;
   margin: 0;
   margin-bottom: 0.25em;
   line-height: 1.1em;
@@ -97,7 +120,9 @@ span.p1,
 .p1r {
   font-size: 1.2rem;
   line-height: 1.1em;
-  font-variation-settings: "wght" 300, "opsz" 12;
+  font-variation-settings:
+    "wght" 300,
+    "opsz" 12;
 }
 
 span.highlight {
@@ -130,7 +155,7 @@ h1.hidden {
   border: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: rect(1px, 1px, 1px, 1px);
 }
 
 a.button,
@@ -140,7 +165,7 @@ div.button {
   gap: 0.2rem;
 
   &::after {
-    content: url(assets/arrow-right-dark.svg);
+    content: url("assets/arrow-right-dark.svg");
     margin-left: 0.5rem;
     transition: all 500ms;
   }
@@ -148,8 +173,6 @@ div.button {
   padding: 0.2rem 0.5rem 0.13rem 0.88rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: normal;
@@ -157,13 +180,14 @@ div.button {
   line-height: 1.125rem;
   width: fit-content;
   height: fit-content;
-
-  box-shadow: 0rem 0rem #00000000;
+  box-shadow: 0 0 #0000;
   transition: all 500ms;
+
   &:focus {
     border: 1px solid $white;
-    box-shadow: 0.4rem 0.4rem #000000ff;
+    box-shadow: 0.4rem 0.4rem #000f;
     outline: none;
+
     &::after {
       margin-left: 1rem;
     }
@@ -174,6 +198,7 @@ div.button {
       transform: rotate(90deg);
     }
   }
+
   &.up-arrow {
     &::after {
       transform: rotate(-90deg);
@@ -181,9 +206,10 @@ div.button {
   }
 
   &.lightblue {
-    background: $lightBlue;
-    border: 1px solid $lightBlue;
+    background: gold;
+    border: 1px solid gold;
     color: $black;
+
     &:hover {
       &::after {
         margin-left: 1rem;
@@ -192,9 +218,10 @@ div.button {
   }
 
   &.lightpurple {
-    background: $lightPurple;
-    border: 1px solid $lightPurple;
+    background: $light-purple;
+    border: 1px solid $light-purple;
     color: $black;
+
     &:hover {
       &::after {
         margin-left: 1rem;
@@ -203,8 +230,8 @@ div.button {
   }
 
   &.brightblue {
-    background: $brightBlue;
-    border: 1px solid $brightBlue;
+    background: $bright-blue;
+    border: 1px solid $bright-blue;
     color: $black;
 
     &:hover {
@@ -212,18 +239,22 @@ div.button {
         // content: url(assets/arrow-right-light.svg);
         margin-left: 1rem;
       }
-      border-color: $darkBlue;
-      // background: $darkBlue;
+
+      border-color: $dark-blue;
+
+      // background: $dark-blue;
     }
   }
 
   &.brightpurple {
-    border: 1px solid $brightPurple;
-    background: $brightPurple;
-    color: $lightestBlue;
-    &:after {
-      content: url(assets/arrow-right-light.svg);
+    border: 1px solid $bright-purple;
+    background: $bright-purple;
+    color: red;
+
+    &::after {
+      content: url("assets/arrow-right-light.svg");
     }
+
     &:hover {
       &::after {
         margin-left: 1rem;
@@ -241,6 +272,7 @@ div.button {
         // content: url(assets/arrow-right-light.svg);
         margin-left: 1rem;
       }
+
       border-color: $mustard;
       background: $mustard;
     }
@@ -256,6 +288,7 @@ div.button {
         // content: url(assets/arrow-right-light.svg);
         margin-left: 1rem;
       }
+
       border-color: $mustard;
       background: $mustard;
     }
@@ -271,20 +304,24 @@ div.button {
         // content: url(assets/arrow-right-light.svg);
         margin-left: 1rem;
       }
-      border-color: $deepCoral;
-      background: $deepCoral;
+
+      border-color: $deep-coral;
+      background: $deep-coral;
+
       // color: white;
     }
   }
 
   &.inline {
-    padding: 0 0 0.25rem 0;
+    padding: 0 0 0.25rem;
     border-radius: 0;
     color: $white;
+
     &::after {
       // content: url(assets/arrow-right-light.svg);
       margin-left: 1rem;
     }
+
     &:hover {
       opacity: 0.8;
     }
@@ -292,8 +329,9 @@ div.button {
 
   &.black {
     color: $black;
+
     &::after {
-      content: url(assets/arrow-right-dark.svg);
+      content: url("assets/arrow-right-dark.svg");
     }
   }
 }
@@ -353,7 +391,7 @@ div.button p {
 }
 
 // Stop mobile scrolling on menu view
-.stopScrollMenu {
+.stop-scroll-menu {
   height: 100vh;
   overflow: hidden;
 }
@@ -365,11 +403,12 @@ div.button p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 / 50%);
   z-index: 11;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+
   &.visible {
     opacity: 1;
     pointer-events: all;
@@ -380,17 +419,19 @@ div.button p {
 // Texture on all pages mobile style
 #fullpage-texture {
   position: relative;
+
   &::before {
     content: "";
     mix-blend-mode: color-dodge;
     position: fixed;
-    background: url(assets/Overlay_Mobile.jpg);
+    background: url("assets/Overlay_Mobile.jpg");
     background-size: cover;
-    top: 0px;
+    top: 0;
     width: 100%;
     height: 100%;
     opacity: 0.15;
   }
+
   z-index: 11;
   pointer-events: none;
 }

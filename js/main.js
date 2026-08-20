@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     moveMenuPosition();
     $hamburgerImage.toggleClass("display-none");
     $darkHamburgerImage.toggleClass("display-none");
-    if (onMobile) $body.toggleClass("stopScrollMenu");
+    if (onMobile) $body.toggleClass("stop-scroll-menu");
   }
 
   function moveMenuPosition() {

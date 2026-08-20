@@ -1,7 +1,11 @@
 @use "constants" as *;
 
 div#about-background {
-  background: linear-gradient(#0063af 0%, $brightPurple 80%, $lightPurple 100%);
+  background: linear-gradient(
+    #0063af 0%,
+    $bright-purple 80%,
+    $light-purple 100%
+  );
 }
 
 main.about {
@@ -64,7 +68,7 @@ main.about {
   }
 
   .people {
-    background: linear-gradient($lightBlue 0%, #5dd3ff 100%);
+    background: linear-gradient($light-blue 0%, #5dd3ff 100%);
 
     z-index: 1;
     position: relative;
@@ -75,20 +79,20 @@ main.about {
     }
 
     a {
-      color: $darkBlue;
+      color: $dark-blue;
       &:visited {
-        color: $brightPurple;
+        color: $bright-purple;
       }
     }
     h2 {
-      color: $darkBlue;
+      color: $dark-blue;
       margin-bottom: 1rem;
     }
     h3 {
-      color: $darkBlue;
+      color: $dark-blue;
     }
     .staff-item {
-      color: $darkBlue;
+      color: $dark-blue;
 
       .staff-links {
         display: block;
@@ -114,7 +118,7 @@ main.about {
     .staff-item,
     .thinker-item {
       margin-bottom: 1rem;
-      border-top: 1px solid $darkBlue;
+      border-top: 1px solid $dark-blue;
       padding-top: 0.5rem;
     }
 
@@ -138,13 +142,13 @@ main.about {
   }
 
   .partners {
-    background: linear-gradient($lightBlue 0%, #5dd3ff 100%);
+    background: linear-gradient($light-blue 0%, #5dd3ff 100%);
     position: relative;
     padding: 2rem 1.5rem;
     a,
     p,
     h2 {
-      color: $darkBlue;
+      color: $dark-blue;
     }
 
     &::before {
@@ -171,7 +175,7 @@ main.about {
       margin-bottom: 1rem;
     }
     .partner-container {
-      border-top: 1px solid $darkBlue;
+      border-top: 1px solid $dark-blue;
       img {
         max-width: 100%;
         height: auto;
@@ -191,15 +195,15 @@ main.about {
     }
     .button {
       margin-top: 1rem;
-      color: $lightestBlue;
+      color: $lightest-blue;
     }
   }
 
   .support-background {
     background: linear-gradient(
       #0063af 0%,
-      $brightPurple 80%,
-      $lightPurple 100%
+      $bright-purple 80%,
+      $light-purple 100%
     );
   }
   .support {

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "sass --watch style.scss:style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.102.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-standard-scss": "^17.0.0"
+  }
+}

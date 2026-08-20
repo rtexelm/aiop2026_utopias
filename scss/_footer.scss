@@ -2,7 +2,7 @@
 
 footer {
   box-sizing: border-box;
-  background: $deepPurple;
+  background: $deep-purple;
   z-index: 10;
   padding: 3rem 1.5rem;
   p,
@@ -20,15 +20,15 @@ footer {
 
   a {
     font-weight: 500;
-    color: tint($brightBlue, 60);
+    color: tint($bright-blue, 60);
     text-decoration: none;
     svg path {
       fill: white;
     }
     &:hover {
-      color: $brightBlue;
+      color: $bright-blue;
       svg path {
-        fill: $brightBlue;
+        fill: $bright-blue;
       }
     }
     img {

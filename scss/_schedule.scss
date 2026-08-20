@@ -1,7 +1,7 @@
 @use "constants" as *;
 
 main.schedule {
-  background: linear-gradient($deepBlue, $darkBlue 100%);
+  background: linear-gradient($deep-blue, $dark-blue 100%);
   padding: 6rem 1.5rem 2rem 1.5rem;
   .title {
     svg {
@@ -21,7 +21,7 @@ main.schedule {
     .day-header {
       margin-bottom: 0.5rem;
       h3 {
-        color: $brightBlue;
+        color: $bright-blue;
       }
     }
 
@@ -34,7 +34,7 @@ main.schedule {
     }
 
     .project-schedule {
-      border-top: 1px solid $brightBlue;
+      border-top: 1px solid $bright-blue;
       padding-top: 1rem;
       .fest-header {
         margin-bottom: 1.5rem;
@@ -54,7 +54,7 @@ main.schedule {
     //     display: none;
     //   }
 
-    //   border-top: 1px solid $brightBlue;
+    //   border-top: 1px solid $bright-blue;
     //   padding-top: 0.5rem;
     //   margin-bottom: 2rem;
     //   .button {

@@ -1,14 +1,56 @@
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-ExtraLtIta.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: oskon;
+  src: url("assets/fonts/ZTBrosOskon90s-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 @keyframes slide-in {
   from {
     transform: translateY(10rem);
@@ -20,15 +62,15 @@ Text Domain: aiop-voice
   }
 }
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 html,
 body {
@@ -36,7 +78,7 @@ body {
 }
 
 body {
-  color: #d2eff5;
+  color: red;
   padding: 0;
   margin: 0;
 }
@@ -60,11 +102,11 @@ h4,
 h5,
 .h5 {
   display: block;
-  font-family: "degular-variable", sans-serif;
+  font-family: "oskon", sans-serif;
   font-weight: normal;
   line-height: 1em;
-  margin: 0px;
-  color: #d2eff5;
+  margin: 0;
+  color: red;
 }
 
 .d1 {
@@ -111,7 +153,7 @@ h4,
 p,
 a,
 .p {
-  font-family: "degular-variable", sans-serif;
+  font-family: "oskon", sans-serif;
   font-variation-settings: "wght" 300, "opsz" 6;
   margin: 0;
   margin-bottom: 0.25em;
@@ -164,7 +206,7 @@ h1.hidden {
   border: 0 !important;
   padding: 0 !important;
   margin: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: rect(1px, 1px, 1px, 1px);
 }
 
 a.button,
@@ -172,27 +214,26 @@ div.button {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+}
+a.button::after,
+div.button::after {
+  content: url("assets/arrow-right-dark.svg");
+  margin-left: 0.5rem;
+  transition: all 500ms;
+}
+a.button,
+div.button {
   padding: 0.2rem 0.5rem 0.13rem 0.88rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: normal;
   font-variation-settings: "wght" 400;
   line-height: 1.125rem;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  box-shadow: 0rem 0rem rgba(0, 0, 0, 0);
-  transition: all 500ms;
-}
-a.button::after,
-div.button::after {
-  content: url(assets/arrow-right-dark.svg);
-  margin-left: 0.5rem;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   transition: all 500ms;
 }
 a.button:focus,
@@ -215,8 +256,8 @@ div.button.up-arrow::after {
 }
 a.button.lightblue,
 div.button.lightblue {
-  background: #a9efff;
-  border: 1px solid #a9efff;
+  background: gold;
+  border: 1px solid gold;
   color: #000;
 }
 a.button.lightblue:hover::after,
@@ -239,23 +280,23 @@ div.button.brightblue {
   border: 1px solid #0fa5dc;
   color: #000;
 }
-a.button.brightblue:hover,
-div.button.brightblue:hover {
-  border-color: #0b0050;
-}
 a.button.brightblue:hover::after,
 div.button.brightblue:hover::after {
   margin-left: 1rem;
+}
+a.button.brightblue:hover,
+div.button.brightblue:hover {
+  border-color: #57a8ce;
 }
 a.button.brightpurple,
 div.button.brightpurple {
   border: 1px solid #7d30be;
   background: #7d30be;
-  color: #d2eff5;
+  color: red;
 }
-a.button.brightpurple:after,
-div.button.brightpurple:after {
-  content: url(assets/arrow-right-light.svg);
+a.button.brightpurple::after,
+div.button.brightpurple::after {
+  content: url("assets/arrow-right-light.svg");
 }
 a.button.brightpurple:hover::after,
 div.button.brightpurple:hover::after {
@@ -263,18 +304,18 @@ div.button.brightpurple:hover::after {
 }
 a.button.pink,
 div.button.pink {
-  border: 1px solid #ffa3bc;
-  background: #ffa3bc;
+  border: 1px solid #e6597d;
+  background: #e6597d;
   color: #000;
+}
+a.button.pink:hover::after,
+div.button.pink:hover::after {
+  margin-left: 1rem;
 }
 a.button.pink:hover,
 div.button.pink:hover {
   border-color: #e7a542;
   background: #e7a542;
-}
-a.button.pink:hover::after,
-div.button.pink:hover::after {
-  margin-left: 1rem;
 }
 a.button.beige,
 div.button.beige {
@@ -282,14 +323,14 @@ div.button.beige {
   background: #f2dec4;
   color: #000;
 }
+a.button.beige:hover::after,
+div.button.beige:hover::after {
+  margin-left: 1rem;
+}
 a.button.beige:hover,
 div.button.beige:hover {
   border-color: #e7a542;
   background: #e7a542;
-}
-a.button.beige:hover::after,
-div.button.beige:hover::after {
-  margin-left: 1rem;
 }
 a.button.mustard,
 div.button.mustard {
@@ -297,18 +338,18 @@ div.button.mustard {
   background: #e7a542;
   color: #000;
 }
+a.button.mustard:hover::after,
+div.button.mustard:hover::after {
+  margin-left: 1rem;
+}
 a.button.mustard:hover,
 div.button.mustard:hover {
   border-color: #f96e47;
   background: #f96e47;
 }
-a.button.mustard:hover::after,
-div.button.mustard:hover::after {
-  margin-left: 1rem;
-}
 a.button.inline,
 div.button.inline {
-  padding: 0 0 0.25rem 0;
+  padding: 0 0 0.25rem;
   border-radius: 0;
   color: #fff;
 }
@@ -326,7 +367,7 @@ div.button.black {
 }
 a.button.black::after,
 div.button.black::after {
-  content: url(assets/arrow-right-dark.svg);
+  content: url("assets/arrow-right-dark.svg");
 }
 
 div.button p {
@@ -372,8 +413,7 @@ div.button p {
 .grid-container-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   max-width: 100%;
 }
 
@@ -382,7 +422,7 @@ div.button p {
   width: 100%;
 }
 
-.stopScrollMenu {
+.stop-scroll-menu {
   height: 100vh;
   overflow: hidden;
 }
@@ -407,31 +447,33 @@ div.button p {
 
 #fullpage-texture {
   position: relative;
-  z-index: 11;
-  pointer-events: none;
 }
 #fullpage-texture::before {
   content: "";
   mix-blend-mode: color-dodge;
   position: fixed;
-  background: url(assets/Overlay_Mobile.jpg);
+  background: url("assets/Overlay_Mobile.jpg");
   background-size: cover;
-  top: 0px;
+  top: 0;
   width: 100%;
   height: 100%;
   opacity: 0.15;
 }
+#fullpage-texture {
+  z-index: 11;
+  pointer-events: none;
+}
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 nav.top {
   position: fixed;
@@ -503,14 +545,14 @@ nav.top .menuFull::before {
   content: "";
   z-index: -1;
   position: absolute;
-  background: #a9efff;
+  background: #bee9fd;
   top: -72px;
   right: 0px;
   bottom: 0px;
   left: 0px;
 }
 nav.top .menuFull a {
-  color: #0b0050;
+  color: #57a8ce;
   text-decoration: none;
 }
 nav.top .menuFull ul {
@@ -521,7 +563,7 @@ nav.top .menuFull ul#menu-full-navigation li {
   display: block;
   list-style: none;
   font-size: 1.8rem;
-  border-top: 1px solid #0b0050;
+  border-top: 1px solid #57a8ce;
 }
 nav.top .menuFull ul#menu-full-navigation li:hover a {
   color: #0fa5dc;
@@ -531,11 +573,14 @@ nav.top .menuFull ul#menu-full-navigation li a {
   margin-bottom: 0;
   display: block;
   font-variation-settings: "opsz" 40;
-  font-family: "degular-variable", sans-serif;
+  font-family: "oskon", sans-serif;
   font-weight: 400;
 }
 nav.top .menuFull ul#menu-full-navigation li a:focus {
   background-color: #d2eff5;
+}
+nav.top .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
+  margin-top: -0.2rem;
 }
 nav.top .menuFull ul#menu-full-navigation .submenu {
   font-size: 1.4rem;
@@ -543,26 +588,23 @@ nav.top .menuFull ul#menu-full-navigation .submenu {
   list-style: none;
   margin: 0.6rem 1.5rem;
 }
-nav.top .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
-  margin-top: -0.2rem;
-}
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
-main.home {
-  background: linear-gradient(180deg, #0b0050 23%, #0a008e 45%);
-}
 main.home * :not(#frontpage-background) {
   animation: slide-in 1500ms;
+}
+main.home {
+  background: linear-gradient(180deg, #57a8ce 23%, #0a008e 45%);
 }
 main.home .heading {
   position: relative;
@@ -573,7 +615,7 @@ main.home .heading {
   background: #320784;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  padding: 1rem 0 1rem;
+  padding: 1rem 0;
 }
 main.home .heading .title-shape {
   display: none;
@@ -611,8 +653,7 @@ main.home .heading .bottom-shapes {
 main.home .heading #bottom-shape-1 {
   flex-grow: 3;
   background: linear-gradient(180deg, #cd44e8, #7d30be 100%);
-  -webkit-mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
-          mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
+  mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
 }
 main.home .heading #bottom-shape-2 {
   flex-grow: 2;
@@ -667,11 +708,11 @@ main.home #dates .date-locations {
   align-items: center;
   justify-content: space-between;
 }
-main.home #dates .date-locations li {
-  margin-top: 1rem;
-}
 main.home #dates .date-locations li:first-child {
   margin-top: 0;
+}
+main.home #dates .date-locations li {
+  margin-top: 1rem;
 }
 main.home #dates svg {
   position: absolute;
@@ -694,19 +735,18 @@ main.home #about .about-frame {
 }
 main.home #about .about-text {
   padding: 4rem 1.5rem;
-  max-width: 72vw;
 }
 main.home #about .about-text .byline {
   margin-bottom: 2rem;
+}
+main.home #about .about-text {
+  max-width: 72vw;
 }
 main.home #about .about-text div.curatorial p.sm {
   line-height: 1.2em;
 }
 main.home #about .about-text a {
   margin-top: 1rem;
-}
-main.home #artists {
-  padding-bottom: 6rem;
 }
 main.home #artists .artists-frame {
   padding: 4rem 1.5rem;
@@ -719,8 +759,10 @@ main.home #artists .artists-frame::before {
   z-index: -1;
   inset: 0;
   background: #cd44e8;
-  -webkit-mask: radial-gradient(18px at 18px 18px, rgba(0, 0, 0, 0) calc(98% - 3px), #000 calc(100% - 3px) 98%, rgba(0, 0, 0, 0)) -18px -18px, linear-gradient(90deg, #000 6px, rgba(0, 0, 0, 0) 0) -3px 50%/100% calc(100% - 36px + 3px) repeat-x, linear-gradient(#000 6px, rgba(0, 0, 0, 0) 0) 50% -3px/calc(100% - 36px + 3px) 100% repeat-y;
-          mask: radial-gradient(18px at 18px 18px, rgba(0, 0, 0, 0) calc(98% - 3px), #000 calc(100% - 3px) 98%, rgba(0, 0, 0, 0)) -18px -18px, linear-gradient(90deg, #000 6px, rgba(0, 0, 0, 0) 0) -3px 50%/100% calc(100% - 36px + 3px) repeat-x, linear-gradient(#000 6px, rgba(0, 0, 0, 0) 0) 50% -3px/calc(100% - 36px + 3px) 100% repeat-y;
+  mask: radial-gradient(18px at 18px 18px, rgba(0, 0, 0, 0) calc(98% - 3px), #000 calc(100% - 3px) 98%, rgba(0, 0, 0, 0)) -18px -18px, linear-gradient(90deg, #000 6px, rgba(0, 0, 0, 0) 0) -3px 50%/100% calc(100% - 36px + 3px) repeat-x, linear-gradient(#000 6px, rgba(0, 0, 0, 0) 0) 50% -3px/calc(100% - 36px + 3px) 100% repeat-y;
+}
+main.home #artists {
+  padding-bottom: 6rem;
 }
 main.home #artists .artists-heading h2 {
   padding-bottom: 1rem;
@@ -737,11 +779,9 @@ main.home #artists .artists-list li {
 main.home #volunteer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   max-width: 100%;
-  -moz-column-gap: 0;
-       column-gap: 0;
+  column-gap: 0;
   row-gap: 1rem;
   padding-bottom: 6rem;
 }
@@ -757,11 +797,9 @@ main.home #mailing-list {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   max-width: 100%;
-  -moz-column-gap: 0;
-       column-gap: 0;
+  column-gap: 0;
   row-gap: 1rem;
   padding-bottom: 6rem;
   background: #0fa5dc;
@@ -771,7 +809,7 @@ main.home #mailing-list .text {
 }
 main.home #mailing-list #mc_embed_shell {
   grid-area: 2/1/3/13;
-  font-family: "degular-variable", sans-serif;
+  font-family: "oskon", sans-serif;
 }
 main.home #mailing-list #mc_embed_shell .asterisk {
   color: red;
@@ -788,10 +826,10 @@ main.home #mailing-list #mc_embed_shell .mc-field-group {
 main.home #mailing-list #mc_embed_shell .mc-field-group input {
   padding: 0.5rem;
 }
-main.home #mailing-list #mc_embed_shell .optionalParent div {
+main.home #mailing-list #mc_embed_shell .optional-parent div {
   display: flex;
 }
-main.home #mailing-list #mc_embed_shell .optionalParent div input.button {
+main.home #mailing-list #mc_embed_shell .optional-parent div input.button {
   font-size: 1.2rem;
   line-height: 1em;
   border: 1px solid #004056;
@@ -801,21 +839,21 @@ main.home #mailing-list #mc_embed_shell .optionalParent div input.button {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1.875rem;
 }
-main.home #mailing-list #mc_embed_shell .optionalParent div p {
+main.home #mailing-list #mc_embed_shell .optional-parent div p {
   display: flex;
   padding-top: 1rem;
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 div#about-background {
   background: linear-gradient(#0063af 0%, #7d30be 80%, #cd44e8 100%);
@@ -832,15 +870,12 @@ main.about .voice {
   flex-flow: column nowrap;
   justify-content: center;
 }
-main.about .voice .title {
-  padding-bottom: 2rem;
-  z-index: 1;
-}
 main.about .voice .title svg {
   width: 100%;
   height: auto;
 }
-main.about .voice .c-statement {
+main.about .voice .title {
+  padding-bottom: 2rem;
   z-index: 1;
 }
 main.about .voice .c-statement p {
@@ -848,6 +883,9 @@ main.about .voice .c-statement p {
 }
 main.about .voice .c-statement .p1 {
   margin-bottom: 1rem;
+}
+main.about .voice .c-statement {
+  z-index: 1;
 }
 main.about .festival {
   position: relative;
@@ -875,7 +913,7 @@ main.about .festival .history h2 {
   margin-bottom: 0.5rem;
 }
 main.about .people {
-  background: linear-gradient(#a9efff 0%, #5dd3ff 100%);
+  background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
   z-index: 1;
   position: relative;
   padding: 4rem 1.5rem;
@@ -884,20 +922,20 @@ main.about .people > * {
   z-index: 10;
 }
 main.about .people a {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.about .people a:visited {
   color: #7d30be;
 }
 main.about .people h2 {
-  color: #0b0050;
+  color: #57a8ce;
   margin-bottom: 1rem;
 }
 main.about .people h3 {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.about .people .staff-item {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.about .people .staff-item .staff-links {
   display: block;
@@ -915,7 +953,7 @@ main.about .people .thinkers .thinker-item .thinker-links {
 main.about .people .staff-item,
 main.about .people .thinker-item {
   margin-bottom: 1rem;
-  border-top: 1px solid #0b0050;
+  border-top: 1px solid #57a8ce;
   padding-top: 0.5rem;
 }
 main.about .people #blog-button {
@@ -935,14 +973,14 @@ main.about .city-illustration svg {
   margin-right: 8vw;
 }
 main.about .partners {
-  background: linear-gradient(#a9efff 0%, #5dd3ff 100%);
+  background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
   position: relative;
   padding: 2rem 1.5rem;
 }
 main.about .partners a,
 main.about .partners p,
 main.about .partners h2 {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.about .partners::before {
   content: "";
@@ -959,13 +997,15 @@ main.about .partners h2 {
   margin-bottom: 1rem;
 }
 main.about .partners .partner-container {
-  border-top: 1px solid #0b0050;
-  margin-bottom: 3rem;
+  border-top: 1px solid #57a8ce;
 }
 main.about .partners .partner-container img {
   max-width: 100%;
   height: auto;
   padding: 0 0;
+}
+main.about .partners .partner-container {
+  margin-bottom: 3rem;
 }
 main.about .partners .partner-container .partner:last-child {
   margin-bottom: 0;
@@ -1053,29 +1093,29 @@ main.about .cloud#cloud-04 {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 main.artist-listing {
-  background: linear-gradient(#d2eff5, #a9efff 100%);
+  background: linear-gradient(#d2eff5, #bee9fd 100%);
   padding: 6rem 1.5rem;
-}
-main.artist-listing .page-title {
-  padding-bottom: 2rem;
 }
 main.artist-listing .page-title svg {
   width: 100%;
   height: auto;
 }
+main.artist-listing .page-title {
+  padding-bottom: 2rem;
+}
 main.artist-listing section.artists span.artist-letter {
-  color: #0b0050;
+  color: #57a8ce;
   margin-bottom: 1rem;
 }
 main.artist-listing section.artists .artist-container {
@@ -1090,7 +1130,7 @@ main.artist-listing section.artists .artist-container .list-thumb {
 }
 main.artist-listing section.artists .artist-container .artist-copy h3,
 main.artist-listing section.artists .artist-container .artist-copy h4 {
-  color: #0b0050;
+  color: #57a8ce;
   margin-top: 0.5rem;
 }
 main.artist-listing section.artists .container-link {
@@ -1098,15 +1138,15 @@ main.artist-listing section.artists .container-link {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 main.artist-single {
   background: linear-gradient(#7d30be, #5a25c0 100%);
@@ -1138,8 +1178,7 @@ main.artist-single .project-img div.image-mask {
 main.artist-single .project-img div.image-mask img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 main.artist-single div.project-info-grid {
   position: relative;
@@ -1159,10 +1198,10 @@ main.artist-single div.project-info-grid .info-area a {
   color: #d2eff5;
 }
 main.artist-single div.project-info-grid .info-area a:visited {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.artist-single div.project-info-grid .info-area a:hover {
-  color: #a9efff;
+  color: #bee9fd;
 }
 main.artist-single div.project-info-grid .performances {
   margin-bottom: 1rem;
@@ -1170,8 +1209,7 @@ main.artist-single div.project-info-grid .performances {
 main.artist-single div.project-info-grid .day {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   align-items: top;
   padding-bottom: 0.5rem;
 }
@@ -1217,26 +1255,26 @@ nav.artist-nav .arrow.next {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 main.schedule {
-  background: linear-gradient(#0a008e, #0b0050 100%);
+  background: linear-gradient(#0a008e, #57a8ce 100%);
   padding: 6rem 1.5rem 2rem 1.5rem;
-}
-main.schedule .title {
-  padding-bottom: 2rem;
 }
 main.schedule .title svg {
   width: 100%;
   height: auto;
+}
+main.schedule .title {
+  padding-bottom: 2rem;
 }
 main.schedule div.day .day-nav {
   display: flex;
@@ -1268,11 +1306,13 @@ main.schedule div.day .project-schedule .fest-header h2 {
 }
 main.schedule div.day .listing-container {
   position: relative;
-  margin-bottom: 1rem;
-  padding: 0.5rem 0;
 }
 main.schedule div.day .listing-container a.schedule-link {
   display: none;
+}
+main.schedule div.day .listing-container {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
 }
 main.schedule div.day .listing-container .button {
   margin-top: 0.5rem;
@@ -1285,15 +1325,15 @@ main.schedule .positioner {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 #program-background {
   position: fixed;
@@ -1323,7 +1363,7 @@ main.public-programs {
 }
 main.public-programs .program-container {
   margin-top: 2rem;
-  border-top: 1px solid #0b0050;
+  border-top: 1px solid #57a8ce;
   padding-top: 1rem;
 }
 main.public-programs .program-container h3 {
@@ -1336,7 +1376,7 @@ main.public-programs .program-container .date,
 main.public-programs .program-container .location,
 main.public-programs .program-container .time {
   padding: 0.5rem 0;
-  border-top: 1px dashed #0b0050;
+  border-top: 1px dashed #57a8ce;
 }
 main.public-programs .program-container .date h4,
 main.public-programs .program-container .location h4,
@@ -1351,25 +1391,25 @@ main.public-programs .program-container .time p {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 main.press {
   background: linear-gradient(#cd44e8 0%, #7d30be 100%);
 }
-main.press .title {
-  padding: 6rem 1.5rem 0 1.5rem;
-}
 main.press .title svg {
   width: 100%;
   height: auto;
+}
+main.press .title {
+  padding: 6rem 1.5rem 0 1.5rem;
 }
 main.press section.press-posts {
   padding: 4rem 1.5rem;
@@ -1394,30 +1434,30 @@ main.press section.press-posts .press-container a.button {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
-main.donate {
-  background: linear-gradient(#0fa5dc, #7d30be 100%);
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  color: #0b0050;
-}
 main.donate .page-title svg {
   width: 100%;
   height: auto;
 }
+main.donate {
+  background: linear-gradient(#0fa5dc, #7d30be 100%);
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  color: #57a8ce;
+}
 main.donate h3 {
-  color: #0b0050;
+  color: #57a8ce;
 }
 main.donate div.payment-method {
-  border-top: 1px solid #0b0050;
+  border-top: 1px solid #57a8ce;
   padding-top: 1rem;
   margin-top: 2rem;
 }
@@ -1426,15 +1466,15 @@ main.donate div.payment-method p {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 main.partners {
   width: calc(100% - 3rem);
@@ -1466,15 +1506,15 @@ main.partners .partner p {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 footer {
   box-sizing: border-box;
@@ -1486,7 +1526,7 @@ footer p,
 footer p a {
   margin: 0 0 0.5rem 0;
   font-weight: 500;
-  font-family: "degular-variable", sans-serif;
+  font-family: "oskon", sans-serif;
 }
 footer #footer-festival svg {
   padding: 1rem 0;
@@ -1528,15 +1568,15 @@ footer .social .social-icon svg {
 }
 
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 @media screen and (min-width: 720px) {
   h1,
@@ -1573,8 +1613,6 @@ Text Domain: aiop-voice
   }
   #fullpage-texture {
     position: relative;
-    z-index: 11;
-    pointer-events: none;
   }
   #fullpage-texture::before {
     content: "";
@@ -1586,6 +1624,10 @@ Text Domain: aiop-voice
     width: 100%;
     height: 100%;
     opacity: 0.15;
+  }
+  #fullpage-texture {
+    z-index: 11;
+    pointer-events: none;
   }
   nav.top .menuVisible {
     display: block;
@@ -1601,14 +1643,14 @@ Text Domain: aiop-voice
     align-items: center;
   }
   nav.top .menuVisible ul li a {
-    font: 1rem "degular-variable", sans-serif;
+    font: 1rem "oskon", sans-serif;
     font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
     text-decoration: none;
     color: #d2eff5;
     letter-spacing: 1px;
   }
   nav.top .menuVisible ul li a:hover {
-    color: #a9efff;
+    color: #bee9fd;
   }
   nav.top .menuVisible ul li a:focus {
     border-top: 1px solid #000;
@@ -1639,7 +1681,6 @@ Text Domain: aiop-voice
   main.home .heading #title .title-group p {
     text-align: left;
     align-self: center;
-    width: -moz-min-content;
     width: min-content;
   }
   main.home .heading #title svg {
@@ -1667,8 +1708,7 @@ Text Domain: aiop-voice
   main.home .heading #title-shape-4 {
     width: 30%;
     background: linear-gradient(180deg, #cd44e8, #7d30be 100%);
-    -webkit-mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
-            mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
+    mask: radial-gradient(16px at 16px 16px, rgba(0, 0, 0, 0) 98%, #000) -16px -16px;
   }
   main.home .heading #title-shape-5 {
     width: 30%;
@@ -1724,16 +1764,13 @@ Text Domain: aiop-voice
   main.home #about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     padding-top: 4rem;
   }
   main.home #about .about-frame {
     grid-column: 4/12;
-    width: -moz-fit-content;
     width: fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
   main.home #about .about-text {
@@ -1749,15 +1786,12 @@ Text Domain: aiop-voice
     padding-top: 4rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   main.home #artists .artists-frame {
     grid-column: 2/12;
-    width: -moz-fit-content;
     width: fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
   main.home #artists .artists-heading {
@@ -1769,8 +1803,7 @@ Text Domain: aiop-voice
   main.home #artists .artists-heading h2 {
     max-width: 100%;
     grid-template-columns: repeat(6, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     margin-bottom: -0.2em;
   }
   main.home #artists .artists-heading h2 #artists-count {
@@ -1786,12 +1819,10 @@ Text Domain: aiop-voice
     align-self: center;
   }
   main.home #artists .artists-list {
-    -moz-column-count: 3;
-         column-count: 3;
+    column-count: 3;
   }
   main.home #volunteer {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
   }
   main.home #volunteer p {
     grid-area: 1/3/2/8;
@@ -1802,8 +1833,7 @@ Text Domain: aiop-voice
     padding-right: 2rem;
   }
   main.home #mailing-list {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
   }
   main.home #mailing-list .text {
     grid-area: 1/3/2/7;
@@ -1811,26 +1841,25 @@ Text Domain: aiop-voice
   }
   main.home #mailing-list #mc_embed_shell {
     grid-area: 1/7/2/11;
-    font-family: "degular-variable", sans-serif;
+    font-family: "oskon", sans-serif;
   }
   main.artist-single {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     grid-auto-rows: auto;
+  }
+  main.artist-single .page-title svg {
+    width: 80%;
+    height: auto;
   }
   main.artist-single .page-title {
     padding-bottom: 0;
     display: flex;
     justify-content: center;
     grid-column: 1/13;
-  }
-  main.artist-single .page-title svg {
-    width: 80%;
-    height: auto;
   }
   main.artist-single .project-img {
     align-self: start;
@@ -1852,8 +1881,7 @@ Text Domain: aiop-voice
   main.artist-single div.project-info-grid .day {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     align-items: top;
     padding: 0.5rem 0;
   }
@@ -1895,15 +1923,16 @@ Text Domain: aiop-voice
   main.schedule div.day {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     margin-bottom: 4rem;
-    width: 100%;
   }
   main.schedule div.day:last-child {
     margin-bottom: 0;
     padding-bottom: 5rem;
+  }
+  main.schedule div.day {
+    width: 100%;
   }
   main.schedule div.day#saturday, main.schedule div.day#sunday {
     margin-top: 0;
@@ -1935,8 +1964,7 @@ Text Domain: aiop-voice
   main.schedule div.day .artist-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
   }
   main.schedule div.day .artist-container .button {
     display: none;
@@ -1981,22 +2009,21 @@ Text Domain: aiop-voice
     width: 80%;
     height: 80%;
     border-radius: 50%; /* Circular mask for the thumbnail */
-    -o-object-fit: cover;
-       object-fit: cover; /* Ensures the image covers the whole div */
+    object-fit: cover; /* Ensures the image covers the whole div */
   }
   main.schedule div.day .artist-container:hover .schedule-thumb {
     transform: scale(1);
     opacity: 0.65;
-  }
-  main.schedule div.day .pp-container {
-    display: flex;
-    gap: 1rem;
   }
   main.schedule div.day .pp-container a.program-link {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+  main.schedule div.day .pp-container {
+    display: flex;
+    gap: 1rem;
   }
   main.schedule .positioner {
     display: flex;
@@ -2012,8 +2039,7 @@ Text Domain: aiop-voice
   main.public-programs .program-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   main.public-programs .program-container h3 {
@@ -2033,21 +2059,20 @@ Text Domain: aiop-voice
     border: none;
     padding-top: 0;
   }
+  main.artist-listing .page-title svg {
+    width: 80%;
+    height: auto;
+  }
   main.artist-listing .page-title {
     padding-bottom: 0;
     display: flex;
     justify-content: center;
   }
-  main.artist-listing .page-title svg {
-    width: 80%;
-    height: auto;
-  }
   main.artist-listing section.artists {
     margin-top: -2rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   main.artist-listing section.artists span.page-title {
@@ -2060,8 +2085,7 @@ Text Domain: aiop-voice
     grid-column: 1/13;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     padding: 0 0 1rem;
     margin: 0;
   }
@@ -2127,8 +2151,7 @@ Text Domain: aiop-voice
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     z-index: 1;
   }
@@ -2166,8 +2189,7 @@ Text Domain: aiop-voice
     margin: 1rem 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   main.press section.press-posts .press-container .press-publication {
@@ -2194,8 +2216,7 @@ Text Domain: aiop-voice
   main.about .voice {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     align-items: center;
   }
@@ -2218,8 +2239,7 @@ Text Domain: aiop-voice
     padding: 5rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     grid-row-gap: 5rem;
   }
@@ -2238,8 +2258,7 @@ Text Domain: aiop-voice
     z-index: 0;
     opacity: 60%;
     background: linear-gradient(92deg, #cd44e8, #7d30be 100%);
-    -webkit-mask: radial-gradient(32px at 32px 32px, rgba(0, 0, 0, 0) 98%, #000) -32px -32px;
-            mask: radial-gradient(32px at 32px 32px, rgba(0, 0, 0, 0) 98%, #000) -32px -32px;
+    mask: radial-gradient(32px at 32px 32px, rgba(0, 0, 0, 0) 98%, #000) -32px -32px;
   }
   main.about .festival .history {
     z-index: 1;
@@ -2250,8 +2269,7 @@ Text Domain: aiop-voice
   main.about .people {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   main.about .people h2 {
@@ -2262,8 +2280,7 @@ Text Domain: aiop-voice
     grid-column: 2/12;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     align-items: baseline;
   }
   main.about .people .staff-item .staff-title {
@@ -2290,8 +2307,7 @@ Text Domain: aiop-voice
     margin-bottom: 0.3rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     align-items: baseline;
   }
   main.about .people .thinkers .thinker-item .thinker-name {
@@ -2315,8 +2331,7 @@ Text Domain: aiop-voice
   main.about .partners .partner-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     padding-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -2340,8 +2355,7 @@ Text Domain: aiop-voice
   main.about .support {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
     row-gap: 1rem;
     padding-bottom: 6rem;
@@ -2381,8 +2395,7 @@ Text Domain: aiop-voice
   footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     max-width: 100%;
   }
   footer p,
@@ -2416,15 +2429,15 @@ Text Domain: aiop-voice
   }
 }
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 @media screen and (min-width: 1080px) {
   h1,
@@ -2578,15 +2591,15 @@ Text Domain: aiop-voice
   }
 }
 /*
-Theme Name: AiOP 2025 VOICE
+Theme Name: AiOP 2026 UTOPIAS
 Theme URI: https://lauriewaxman.com
 Author: Laurie Waxman & Ross Mabbett
 Author URI: https://rossmabbett.com
-Description: The 2025 theme for Art in Odd Places
+Description: The 2026 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: voice, blue
-Text Domain: aiop-voice
+Tags: utopias, green, yellow
+Text Domain: aiop-utopias
 */
 @media screen and (min-width: 1400px) {
   h1,
@@ -2654,4 +2667,6 @@ Text Domain: aiop-voice
   #press-bg::before {
     background-size: 20%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

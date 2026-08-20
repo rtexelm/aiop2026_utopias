@@ -6,7 +6,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page
  *
  * @package WordPress
- * @subpackage AiOP_2025
+ * @subpackage AiOP_2026
  * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
@@ -256,7 +256,7 @@ get_header();
                             form bot signups */
                             <input type="text" name="b_59738127bacb34e4346674bbc_e45a88786c" tabindex="-1" value="">
                         </div>
-                        <div class="optionalParent">
+                        <div class="optional-parent">
                             <div class="clear foot">
                                 <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
                                     value="Subscribe">

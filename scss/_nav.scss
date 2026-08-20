@@ -17,7 +17,7 @@ nav.top {
     &:focus {
       padding: 1.5rem;
       text-align: center;
-      background: $navyBlue;
+      background: $navy-blue;
       color: white;
       left: 9rem;
       top: 0px;
@@ -62,7 +62,9 @@ nav.top {
     max-height: 100%;
     display: flex;
     flex-direction: column;
-    transition: transform 0.66s ease, opacity 0.3s ease;
+    transition:
+      transform 0.66s ease,
+      opacity 0.3s ease;
     transform: translateX(140vw); /* Off-screen initially */
     opacity: 0;
     pointer-events: none;
@@ -75,7 +77,7 @@ nav.top {
       content: "";
       z-index: -1;
       position: absolute;
-      background: $lightBlue;
+      background: $light-blue;
       top: -72px;
       right: 0px;
       bottom: 0px;
@@ -83,7 +85,7 @@ nav.top {
     }
 
     a {
-      color: $darkBlue;
+      color: $dark-blue;
       text-decoration: none;
     }
 
@@ -95,10 +97,10 @@ nav.top {
           display: block;
           list-style: none;
           font-size: 1.8rem;
-          border-top: 1px solid $darkBlue;
+          border-top: 1px solid $dark-blue;
           &:hover {
             a {
-              color: $brightBlue;
+              color: $bright-blue;
             }
           }
           a {
@@ -109,7 +111,7 @@ nav.top {
             font-family: $primary-type;
             font-weight: 400;
             &:focus {
-              background-color: $lightestBlue;
+              background-color: $lightest-blue;
             }
           }
         }

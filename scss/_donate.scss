@@ -7,15 +7,15 @@ main.donate {
       height: auto;
     }
   }
-  background: linear-gradient($brightBlue, $brightPurple 100%);
+  background: linear-gradient($bright-blue, $bright-purple 100%);
   padding: 6rem 1.5rem 2rem 1.5rem;
-  color: $darkBlue;
+  color: $dark-blue;
   h3 {
-    color: $darkBlue;
+    color: $dark-blue;
   }
 
   div.payment-method {
-    border-top: 1px solid $darkBlue;
+    border-top: 1px solid $dark-blue;
     padding-top: 1rem;
     margin-top: 2rem;
     p {

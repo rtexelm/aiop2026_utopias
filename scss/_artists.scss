@@ -1,7 +1,7 @@
 @use "constants" as *;
 
 main.artist-listing {
-  background: linear-gradient($lightestBlue, $lightBlue 100%);
+  background: linear-gradient($lightest-blue, $light-blue 100%);
   padding: 6rem 1.5rem;
   .page-title {
     svg {
@@ -12,11 +12,11 @@ main.artist-listing {
   }
   section.artists {
     span.artist-letter {
-      color: $darkBlue;
+      color: $dark-blue;
       margin-bottom: 1rem;
     }
     .artist-container {
-      border-top: 1px solid $brightBlue;
+      border-top: 1px solid $bright-blue;
       padding: 1rem 0;
       .button {
         margin-top: 0.5rem;
@@ -27,7 +27,7 @@ main.artist-listing {
       .artist-copy {
         h3,
         h4 {
-          color: $darkBlue;
+          color: $dark-blue;
           margin-top: 0.5rem;
         }
       }
