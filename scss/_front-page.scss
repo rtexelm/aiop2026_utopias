@@ -5,7 +5,7 @@ main.home {
     @include page-slide;
   }
 
-  background: linear-gradient(180deg, $dark-blue 23%, $deep-blue 45%);
+  background: $light-blue;
 
   .heading {
     position: relative;
@@ -36,11 +36,13 @@ main.home {
       background: linear-gradient(180deg, $bright-blue, $bright-purple 100%);
       border-radius: 16px;
     }
+
     #top-shape-2 {
       flex-grow: 1;
       background: linear-gradient(180deg, $light-purple, #0c47b0 100%);
       border-radius: 25px;
     }
+
     #top-shape-3 {
       flex-grow: 3;
       background: linear-gradient(-81deg, #007ee5, #3ba4ca 73%);
@@ -54,11 +56,13 @@ main.home {
       height: 100px;
       padding: 1rem 0;
     }
+
     #bottom-shape-1 {
       flex-grow: 3;
       background: linear-gradient(180deg, $light-purple, $bright-purple 100%);
       mask: radial-gradient(16px at 16px 16px, #0000 98%, #000) -16px -16px;
     }
+
     #bottom-shape-2 {
       flex-grow: 2;
       border-radius: 51px;
@@ -89,10 +93,12 @@ main.home {
         gap: 1rem;
         padding: 1rem 0;
       }
+
       .title-group {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
+
         p {
           text-align: center;
           margin-bottom: 0;
@@ -115,22 +121,27 @@ main.home {
     padding-top: 4rem;
     display: flex;
     flex-flow: column nowrap;
+
     .date-locations {
       z-index: 2;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
+
       li {
         &:first-child {
           margin-top: 0;
         }
+
         margin-top: 1rem;
       }
     }
+
     svg {
       position: absolute;
       z-index: 1;
+
       // margin-top: 2rem;
       bottom: 0;
       right: 0;
@@ -185,7 +196,7 @@ main.home {
               #000 calc(100% - 3px) 98%,
               #0000
             ) -18px -18px,
-          linear-gradient(90deg, #000 6px, #0000 0) -3px 50% /100%
+          linear-gradient(90deg, #000 6px, #0000 0) -3px 50% / 100%
             calc(100% - 36px + 3px) repeat-x,
           linear-gradient(#000 6px, #0000 0) 50% -3px / calc(100% - 36px + 3px)
             100% repeat-y;

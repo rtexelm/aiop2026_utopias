@@ -477,14 +477,12 @@ Text Domain: aiop-utopias
 */
 nav.top {
   position: fixed;
-  top: 18px;
-  left: 0.5rem;
+  box-sizing: border-box;
   transition: top 0.3s ease-in-out;
-  width: calc(100% - 4rem);
+  width: 100%;
   z-index: 100;
   padding: 0 1.5rem;
-  background-color: #0b0050;
-  border-radius: 27px;
+  background-color: #e1da64;
 }
 nav.top a#skip-content {
   position: absolute;
@@ -496,7 +494,7 @@ nav.top a#skip-content:focus {
   background: #004056;
   color: white;
   left: 9rem;
-  top: 0px;
+  top: 0;
 }
 nav.top .nav-bar-flex {
   display: flex;
@@ -545,35 +543,32 @@ nav.top .menuFull::before {
   content: "";
   z-index: -1;
   position: absolute;
-  background: #bee9fd;
-  top: -72px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  background: #0d4400;
+  inset: -72px 0 0;
 }
 nav.top .menuFull a {
-  color: #57a8ce;
+  color: #bee9fd;
   text-decoration: none;
 }
 nav.top .menuFull ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 nav.top .menuFull ul#menu-full-navigation li {
   display: block;
   list-style: none;
   font-size: 1.8rem;
-  border-top: 1px solid #57a8ce;
+  border-top: 1px solid #348618;
 }
 nav.top .menuFull ul#menu-full-navigation li:hover a {
-  color: #0fa5dc;
+  color: #348618;
 }
 nav.top .menuFull ul#menu-full-navigation li a {
   padding: 1rem 1.5rem;
   margin-bottom: 0;
   display: block;
   font-variation-settings: "opsz" 40;
-  font-family: "oskon", sans-serif;
+  font-family: "degular-display", sans-serif;
   font-weight: 400;
 }
 nav.top .menuFull ul#menu-full-navigation li a:focus {
@@ -604,7 +599,7 @@ main.home * :not(#frontpage-background) {
   animation: slide-in 1500ms;
 }
 main.home {
-  background: linear-gradient(180deg, #57a8ce 23%, #0a008e 45%);
+  background: #bee9fd;
 }
 main.home .heading {
   position: relative;
@@ -1518,32 +1513,32 @@ Text Domain: aiop-utopias
 */
 footer {
   box-sizing: border-box;
-  background: #320784;
+  background: #0d4400;
   z-index: 10;
   padding: 3rem 1.5rem;
 }
 footer p,
 footer p a {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   font-weight: 500;
-  font-family: "oskon", sans-serif;
+  font-family: "degular-variable", sans-serif;
 }
 footer #footer-festival svg {
   padding: 1rem 0;
 }
 footer a {
   font-weight: 500;
-  color: #9fdbf1;
+  color: #bee9fd;
   text-decoration: none;
 }
 footer a svg path {
-  fill: white;
+  fill: #bee9fd;
 }
 footer a:hover {
-  color: #0fa5dc;
+  color: #bee9fd;
 }
 footer a:hover svg path {
-  fill: #0fa5dc;
+  fill: #bee9fd;
 }
 footer a img {
   width: 8rem;

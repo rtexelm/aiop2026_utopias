@@ -85,7 +85,7 @@ jQuery(document).ready(function ($) {
     if (Math.abs(prevScroll - currentScroll) <= delta) return;
 
     if (menuOpen || currentScroll < prevScroll) {
-      $navTop.css("top", "18");
+      $navTop.css("top", "0");
     } else {
       $navTop.css("top", "-70");
     }

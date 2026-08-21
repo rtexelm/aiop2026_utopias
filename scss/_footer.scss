@@ -2,14 +2,15 @@
 
 footer {
   box-sizing: border-box;
-  background: $deep-purple;
+  background: $dark-green;
   z-index: 10;
   padding: 3rem 1.5rem;
+
   p,
   p a {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     font-weight: 500;
-    font-family: $primary-type;
+    font-family: $deg-variable;
   }
 
   #footer-festival {
@@ -20,17 +21,21 @@ footer {
 
   a {
     font-weight: 500;
-    color: tint($bright-blue, 60);
+    color: $light-blue;
     text-decoration: none;
+
     svg path {
-      fill: white;
+      fill: $light-blue;
     }
+
     &:hover {
-      color: $bright-blue;
+      color: $light-blue;
+
       svg path {
-        fill: $bright-blue;
+        fill: $light-blue;
       }
     }
+
     img {
       width: 8rem;
     }
@@ -46,9 +51,11 @@ footer {
 
   .social {
     margin-top: 0.5rem;
+
     .social-icon {
       display: inline-block;
       margin: 0 0.5rem 0.5rem 0;
+
       svg {
         width: 2rem;
         height: auto;

@@ -2,25 +2,24 @@
 
 nav.top {
   position: fixed;
-  top: 18px;
-  left: 0.5rem;
+  box-sizing: border-box;
   transition: top 0.3s ease-in-out;
-  width: calc(100% - 4rem);
+  width: 100%;
   z-index: 100;
   padding: 0 1.5rem;
-  background-color: #0b0050;
-  border-radius: 27px;
+  background-color: $lemon-lime;
 
   a#skip-content {
     position: absolute;
     top: -4rem;
+
     &:focus {
       padding: 1.5rem;
       text-align: center;
       background: $navy-blue;
       color: white;
       left: 9rem;
-      top: 0px;
+      top: 0;
     }
   }
 
@@ -35,6 +34,7 @@ nav.top {
   a#home {
     margin: 1rem 0 5px 5px;
     display: inline-block;
+
     img#aiopLogo {
       width: 5rem;
       z-index: 11;
@@ -77,48 +77,51 @@ nav.top {
       content: "";
       z-index: -1;
       position: absolute;
-      background: $light-blue;
-      top: -72px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
+      background: $dark-green;
+      inset: -72px 0 0;
     }
 
     a {
-      color: $dark-blue;
+      color: $light-blue;
       text-decoration: none;
     }
 
     ul {
-      margin: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
+
       &#menu-full-navigation {
         li {
           display: block;
           list-style: none;
           font-size: 1.8rem;
-          border-top: 1px solid $dark-blue;
+          border-top: 1px solid $green;
+
           &:hover {
             a {
-              color: $bright-blue;
+              color: $green;
             }
           }
+
           a {
             padding: 1rem 1.5rem;
             margin-bottom: 0;
             display: block;
             font-variation-settings: "opsz" 40;
-            font-family: $primary-type;
+            font-family: $deg-display;
             font-weight: 400;
+
             &:focus {
               background-color: $lightest-blue;
             }
           }
         }
+
         .submenu {
           &:not(.submenu ~ .submenu) {
             margin-top: -0.2rem;
           }
+
           font-size: 1.4rem;
           display: block;
           list-style: none;

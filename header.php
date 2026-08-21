@@ -7,11 +7,11 @@
 <html>
 
 <head>
-    <title>AiOP 2025 VOICE</title>
+    <title>AiOP 2026 UTOPIAS</title>
     <!-- meta data -->
     <meta charset="UTF-8">
-    <meta name="description" content="Art in Odd Places 2025 VOICE">
-    <meta name="keywords" content="AiOP, Festival, Performance, West Hollywood">
+    <meta name="description" content="Art in Odd Places 2026 UTOPIAS">
+    <meta name="keywords" content="AiOP, Festival, Performance, New York City, NYC, Art">
     <meta name="author" content="Laurie Waxman & Ross Mabbett">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <!-- Stop phones from turning dashes into phone numbers -->
@@ -29,7 +29,7 @@
         <a href="#main-content" id="skip-content">Skip to content</a>
         <section class="nav-bar-flex" id="navScroll">
             <a title="home" href="<?php echo get_home_url(); ?>" id="home">
-                <img src="<?php bloginfo('template_url'); ?>/assets/AiOP_nav-white.png" id="aiopLogo" alt="AIOP"
+                <img src="<?php bloginfo('template_url'); ?>/assets/aiop_nav_dark_green.png" id="aiopLogo" alt="AIOP"
                     aria-hidden="true">
             </a>
             <div class="flex-container just-flex-end align-items-center">
@@ -42,18 +42,16 @@
                     ?>
                 </div>
                 <a title="full menu" href="#menuFull" id="menuToggleAnchor">
-                    <img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/hamburger-icon-24.svg"
+                    <img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/hamburger-icon-24-dark.svg"
                         alt="view menu" aria-hidden="true">
                     <img id="menuToggleDark" class="display-none" src="
-                        <?php bloginfo('template_url'); ?>/assets/hamburger-icon-24-dark.svg" alt="view menu"
+                        <?php bloginfo('template_url'); ?>/assets/hamburger-icon-24.svg" alt="view menu"
                         aria-hidden="true">
                 </a>
             </div>
         </section>
         <div class="menuFull" id="menuFull">
 
-            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow-vert1440w.png" alt=""
-                class="vert-stitch" /> -->
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'full-navigation',
