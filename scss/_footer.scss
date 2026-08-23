@@ -5,11 +5,12 @@ footer {
   background: $dark-green;
   z-index: 10;
   padding: 3rem 1.5rem;
+  color: $light-blue;
 
   p,
   p a {
     margin: 0 0 0.5rem;
-    font-weight: 500;
+    font-weight: 400;
     font-family: $deg-variable;
   }
 
@@ -21,18 +22,18 @@ footer {
 
   a {
     font-weight: 500;
-    color: $light-blue;
+    color: $bright-green;
     text-decoration: none;
 
     svg path {
-      fill: $light-blue;
+      fill: $bright-green;
     }
 
     &:hover {
-      color: $light-blue;
+      color: $blue;
 
       svg path {
-        fill: $light-blue;
+        fill: $blue;
       }
     }
 

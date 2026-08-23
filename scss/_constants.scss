@@ -77,7 +77,7 @@ $section-padding-720: 5.5rem;
 }
 
 @mixin nav-links {
-  font: 1rem $display-type;
+  font: 1rem $deg-variable;
   font-variation-settings:
     "wght" 600,
     "opsz" 40,

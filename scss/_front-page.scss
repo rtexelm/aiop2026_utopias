@@ -13,66 +13,8 @@ main.home {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    background: $deep-purple;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    padding: 1rem 0;
-
-    .title-shape {
-      display: none;
-    }
-
-    .top-shapes {
-      display: flex;
-      flex-flow: row wrap;
-      gap: 0.5rem;
-      width: 100%;
-      height: 100px;
-      padding: 1rem 0;
-    }
-
-    #top-shape-1 {
-      flex-grow: 2;
-      background: linear-gradient(180deg, $bright-blue, $bright-purple 100%);
-      border-radius: 16px;
-    }
-
-    #top-shape-2 {
-      flex-grow: 1;
-      background: linear-gradient(180deg, $light-purple, #0c47b0 100%);
-      border-radius: 25px;
-    }
-
-    #top-shape-3 {
-      flex-grow: 3;
-      background: linear-gradient(-81deg, #007ee5, #3ba4ca 73%);
-    }
-
-    .bottom-shapes {
-      display: flex;
-      flex-flow: row wrap;
-      gap: 0.5rem;
-      width: 100%;
-      height: 100px;
-      padding: 1rem 0;
-    }
-
-    #bottom-shape-1 {
-      flex-grow: 3;
-      background: linear-gradient(180deg, $light-purple, $bright-purple 100%);
-      mask: radial-gradient(16px at 16px 16px, #0000 98%, #000) -16px -16px;
-    }
-
-    #bottom-shape-2 {
-      flex-grow: 2;
-      border-radius: 51px;
-      background: linear-gradient(
-        49deg,
-        $bright-purple,
-        #5324ef 50%,
-        #0079d5 100%
-      );
-    }
+    background: center / cover no-repeat url("assets/front-page-title.svg");
+    // padding: 1rem 0;
 
     #title {
       padding: 3rem 1.5rem;
@@ -81,18 +23,6 @@ main.home {
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
-
-      svg {
-        width: 100%;
-        height: auto;
-      }
-
-      .title-images {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 1rem;
-        padding: 1rem 0;
-      }
 
       .title-group {
         display: flex;
@@ -103,6 +33,10 @@ main.home {
           text-align: center;
           margin-bottom: 0;
         }
+
+        #masthead {
+          font-size: 24vw;
+        }
       }
     }
   }
@@ -111,6 +45,7 @@ main.home {
   #dates,
   #artists,
   #volunteer,
+  #support,
   #mailing-list {
     padding: 1.5rem;
     padding-top: 2rem;
@@ -121,6 +56,12 @@ main.home {
     padding-top: 4rem;
     display: flex;
     flex-flow: column nowrap;
+
+    .date-text {
+      span {
+        display: block;
+      }
+    }
 
     .date-locations {
       z-index: 2;
@@ -154,24 +95,22 @@ main.home {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    .about-frame {
-      width: 100%;
-      height: 100%;
-      background: #0b005099; // $dark-blue with 60% opacity
-      border-radius: 52px;
-    }
 
     .about-text {
-      padding: 4rem 1.5rem;
       .byline {
         margin-bottom: 2rem;
+
+        span {
+          display: block;
+        }
       }
-      max-width: 72vw;
+
       div.curatorial {
         p.sm {
           line-height: 1.2em;
         }
       }
+
       a {
         margin-top: 1rem;
       }
@@ -180,28 +119,10 @@ main.home {
 
   #artists {
     .artists-frame {
-      padding: 4rem 1.5rem;
       position: relative;
       z-index: 0;
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        inset: 0;
-        background: $light-purple;
-        mask:
-          radial-gradient(
-              18px at 18px 18px,
-              #0000 calc(98% - 3px),
-              #000 calc(100% - 3px) 98%,
-              #0000
-            ) -18px -18px,
-          linear-gradient(90deg, #000 6px, #0000 0) -3px 50% / 100%
-            calc(100% - 36px + 3px) repeat-x,
-          linear-gradient(#000 6px, #0000 0) 50% -3px / calc(100% - 36px + 3px)
-            100% repeat-y;
-      }
     }
+
     padding-bottom: 6rem;
 
     .artists-heading {
@@ -216,6 +137,7 @@ main.home {
       gap: 0.5rem;
       margin-bottom: 1rem;
     }
+
     .artists-list {
       li {
         margin-top: 0.5rem;
@@ -225,50 +147,95 @@ main.home {
 
   #volunteer {
     @include twelve-col-grid;
-    column-gap: 0;
-    row-gap: 1rem;
+
+    gap: 1rem 0;
     padding-bottom: 6rem;
+
     p {
       grid-area: 1/2/ 2/8;
       padding-right: 2rem;
     }
+
     div.text {
       grid-area: 1/8/ 1/13;
+    }
+  }
+
+  #support {
+    @include twelve-col-grid;
+
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+
+    #support-frame {
+      background-color: $lemon-lime;
+      position: absolute;
+      grid-column: 2/12;
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tshirt {
+      z-index: 1;
+      grid-area: 1/1/2/13;
+      justify-self: center;
+    }
+
+    #support-copy {
+      grid-column: 3/11;
+      grid-row: 2/3;
+      z-index: 1;
+
+      p {
+        margin: 1rem 0;
+      }
     }
   }
 
   #mailing-list {
     position: relative;
     z-index: 1;
+
     @include twelve-col-grid;
-    column-gap: 0;
-    row-gap: 1rem;
+
+    gap: 1rem 0;
     padding-bottom: 6rem;
     background: $bright-blue;
+
     .text {
       grid-area: 1/1/ 2/12;
     }
+
     #mc_embed_shell {
       grid-area: 2/1/ 3/13;
       font-family: $primary-type;
+
       .asterisk {
         color: red;
       }
+
       .indicates-required {
         text-align: right;
         font-size: 0.8rem;
       }
+
       .mc-field-group {
         display: flex;
         flex-direction: column;
         margin-top: 1em;
+
         input {
           padding: 0.5rem;
         }
       }
+
       .optional-parent {
         div {
           display: flex;
+
           input.button {
             font-size: 1.2rem;
             line-height: 1em;
@@ -276,9 +243,10 @@ main.home {
             background: $navy-blue;
             color: white;
             margin-top: 1rem;
-            padding: 0.5rem 1rem 0.5rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 1.875rem;
           }
+
           p {
             display: flex;
             padding-top: 1rem;

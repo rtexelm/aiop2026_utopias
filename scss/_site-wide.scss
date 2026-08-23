@@ -10,7 +10,7 @@ body {
 // base styles
 
 body {
-  color: red;
+  color: $dark-green;
   padding: 0;
   margin: 0;
 }
@@ -24,7 +24,15 @@ ul {
 
 .d1,
 h1,
-.h1,
+.h1 {
+  display: block;
+  font-family: $primary-type;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  color: $dark-green;
+}
+
 h2,
 .h2,
 h3,
@@ -34,41 +42,27 @@ h4,
 h5,
 .h5 {
   display: block;
-  font-family: $primary-type;
+  font-family: $deg-display;
   font-weight: normal;
   line-height: 1em;
   margin: 0;
-  color: red;
+  color: $dark-green;
 }
 
 .d1 {
   font-size: 3.5rem;
-  font-variation-settings:
-    "wght" 400,
-    "opsz" 72,
-    "ital" 0; // display
-
   line-height: 0.8em;
 }
 
 .d2 {
   font-size: 2.2rem;
   padding-bottom: 0.5em;
-  font-variation-settings:
-    "wght" 400,
-    "opsz" 72,
-    "ital" 0; // display
-
   line-height: 0.8em;
 }
 
 h1,
 .h1 {
   font-size: 3rem;
-  font-variation-settings:
-    "wght" 550,
-    "opsz" 72;
-  line-height: 0.8em;
   margin-bottom: 0.5rem;
 }
 
@@ -101,9 +95,9 @@ h4,
 p,
 a,
 .p {
-  font-family: $primary-type;
+  font-family: $deg-variable;
   font-variation-settings:
-    "wght" 300,
+    "wght" 400,
     "opsz" 6;
   margin: 0;
   margin-bottom: 0.25em;
@@ -121,7 +115,7 @@ span.p1,
   font-size: 1.2rem;
   line-height: 1.1em;
   font-variation-settings:
-    "wght" 300,
+    "wght" 400,
     "opsz" 12;
 }
 
@@ -156,6 +150,10 @@ h1.hidden {
   padding: 0 !important;
   margin: 0 !important;
   clip-path: rect(1px, 1px, 1px, 1px);
+}
+
+.espanol {
+  color: $green;
 }
 
 a.button,
@@ -205,10 +203,10 @@ div.button {
     }
   }
 
-  &.lightblue {
-    background: gold;
-    border: 1px solid gold;
-    color: $black;
+  &.lemon-lime {
+    background: $lemon-lime;
+    border: 1px solid $lemon-lime;
+    color: $dark-green;
 
     &:hover {
       &::after {
@@ -217,10 +215,10 @@ div.button {
     }
   }
 
-  &.lightpurple {
-    background: $light-purple;
-    border: 1px solid $light-purple;
-    color: $black;
+  &.bright-green {
+    background: $bright-green;
+    border: 1px solid $bright-green;
+    color: $dark-green;
 
     &:hover {
       &::after {
@@ -229,86 +227,14 @@ div.button {
     }
   }
 
-  &.brightblue {
-    background: $bright-blue;
-    border: 1px solid $bright-blue;
-    color: $black;
-
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-
-      border-color: $dark-blue;
-
-      // background: $dark-blue;
-    }
-  }
-
-  &.brightpurple {
-    border: 1px solid $bright-purple;
-    background: $bright-purple;
-    color: red;
-
-    &::after {
-      content: url("assets/arrow-right-light.svg");
-    }
+  &.secondary {
+    border: 1px solid $dark-green;
+    color: $dark-green;
 
     &:hover {
       &::after {
         margin-left: 1rem;
       }
-    }
-  }
-
-  &.pink {
-    border: 1px solid $pink;
-    background: $pink;
-    color: $black;
-
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-
-      border-color: $mustard;
-      background: $mustard;
-    }
-  }
-
-  &.beige {
-    border: 1px solid $beige;
-    background: $beige;
-    color: $black;
-
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-
-      border-color: $mustard;
-      background: $mustard;
-    }
-  }
-
-  &.mustard {
-    border: 1px solid $mustard;
-    background: $mustard;
-    color: $black;
-
-    &:hover {
-      &::after {
-        // content: url(assets/arrow-right-light.svg);
-        margin-left: 1rem;
-      }
-
-      border-color: $deep-coral;
-      background: $deep-coral;
-
-      // color: white;
     }
   }
 
