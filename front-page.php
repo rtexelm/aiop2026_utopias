@@ -54,16 +54,10 @@ get_header();
             </h2>
             <div class="curatorial">
                 <p class="p1">
-                    Presented by The City of West Hollywood and curated by Deborah Oliver, <span class="italic">AiOP
-                        2025 VOICE</span> celebrates the 40th year of West Hollywood's incorporation as an
-                    independent
-                    municipality and the 20th edition of this iconic public visual and performance art festival.
+                    Art in Odd Places 2026: <span class="italic">UTOPIAS</span> features visual and performance artists on 14th Street from Avenue C to  the Hudson River, September 20–22, 2026.
                 </p>
                 <p class="p1 espanol">
-                    Presented by The City of West Hollywood and curated by Deborah Oliver, <span class="italic">AiOP
-                        2025 VOICE</span> celebrates the 40th year of West Hollywood's incorporation as an
-                    independent
-                    municipality and the 20th edition of this iconic public visual and performance art festival.
+                    Art in Odd Places 2026: <span class="italic">UTOPIAS</span> features visual and performance artists on 14th Street from Avenue C to  the Hudson River, September 20–22, 2026.
                 </p>
             </div>
             <a class="button bright-green" href="<?php echo home_url(); ?>/about">About the festival</a>

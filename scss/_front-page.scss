@@ -106,13 +106,11 @@ main.home {
       }
 
       div.curatorial {
+        padding-bottom: 1rem;
+
         p.sm {
           line-height: 1.2em;
         }
-      }
-
-      a {
-        margin-top: 1rem;
       }
     }
   }
@@ -128,6 +126,7 @@ main.home {
     .artists-heading {
       h2 {
         padding-bottom: 1rem;
+        margin: 0;
       }
     }
 
@@ -135,7 +134,7 @@ main.home {
       display: flex;
       flex-flow: column wrap;
       gap: 0.5rem;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
     }
 
     .artists-list {
@@ -211,7 +210,7 @@ main.home {
 
     #mc_embed_shell {
       grid-area: 2/1/ 3/13;
-      font-family: $primary-type;
+      font-family: $deg-variable;
 
       .asterisk {
         color: red;

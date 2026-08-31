@@ -562,11 +562,11 @@ main.home #about .about-text .byline {
 main.home #about .about-text .byline span {
   display: block;
 }
+main.home #about .about-text div.curatorial {
+  padding-bottom: 1rem;
+}
 main.home #about .about-text div.curatorial p.sm {
   line-height: 1.2em;
-}
-main.home #about .about-text a {
-  margin-top: 1rem;
 }
 main.home #artists .artists-frame {
   position: relative;
@@ -577,12 +577,12 @@ main.home #artists {
 }
 main.home #artists .artists-heading h2 {
   padding-bottom: 1rem;
+  margin: 0;
 }
 main.home #artists .artists-buttons {
   display: flex;
   flex-flow: column wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 main.home #artists .artists-list li {
   margin-top: 0.5rem;
@@ -649,7 +649,7 @@ main.home #mailing-list .text {
 }
 main.home #mailing-list #mc_embed_shell {
   grid-area: 2/1/3/13;
-  font-family: "oskon", sans-serif;
+  font-family: "degular-variable", sans-serif;
 }
 main.home #mailing-list #mc_embed_shell .asterisk {
   color: red;
