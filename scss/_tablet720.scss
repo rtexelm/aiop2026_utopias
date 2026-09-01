@@ -70,6 +70,7 @@
         gap: 1.5rem;
         list-style: none;
         align-items: center;
+        text-align: center;
 
         li {
           a {
@@ -128,10 +129,12 @@
     #dates {
       @include twelve-col-grid;
 
+      padding-top: 0;
+      margin-top: -10vh;
       gap: 1rem 0;
 
       .date-text {
-        grid-area: 1/3/ 2/7;
+        grid-area: 1/2/ 2/6;
 
         #date-line-2 {
           text-align: center;
@@ -154,11 +157,15 @@
       padding-top: 4rem;
 
       .about-text {
-        grid-column: 3/9;
+        grid-column: 3/13;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 0 1rem;
 
         .byline {
+          grid-area: 1/1/ 2/6;
           margin: 0;
-          padding-bottom: 2rem;
+          padding-bottom: 7rem;
           display: flex;
           flex-flow: column nowrap;
 
@@ -175,8 +182,13 @@
           }
         }
 
-        // .curatorial {
-        // }
+        .curatorial {
+          grid-area: 2/2/3/9;
+        }
+
+        a {
+          grid-area: 3/2/4/6;
+        }
       }
     }
 
@@ -210,6 +222,20 @@
 
       .artists-list {
         column-count: 3;
+      }
+    }
+
+    #support {
+      margin-top: 4rem;
+      padding-bottom: 2rem;
+      align-items: center;
+
+      .tshirt {
+        grid-area: 1/1/2/7;
+      }
+
+      #support-copy {
+        grid-area: 1/7/2/11;
       }
     }
 

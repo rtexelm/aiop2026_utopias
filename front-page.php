@@ -34,12 +34,8 @@ get_header();
             <span id="date-line-3" class="espanol">de septiembre</span>
 
         </h2>
-        <div class="date-locations h3">
-            <ul>
-                <li>
-                    <a class="button bright-green" href="<?php echo home_url(); ?>/schedule">Schedule</a>
-                </li>
-            </ul>
+        <div class="date-locations">
+            <a class="button bright-green" href="<?php echo home_url(); ?>/schedule">Schedule</a>
         </div>
     </section>
 
@@ -93,8 +89,10 @@ get_header();
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a metus tristique, tincidunt dolor quis.
             </p>
 
-            <a class="button bright-green" href="">Visit our store</a>
-            <a class="button secondary" href="<?php echo home_url(); ?>/donate">Just donate</a>
+            <div id="support-copy-buttons">
+                <a class="button bright-green" href="">Visit our store</a>
+                <a class="button secondary" href="<?php echo home_url(); ?>/donate">Just donate</a>
+            </div>
         </div>
 
     </section>

@@ -35,7 +35,7 @@ main.home {
         }
 
         #masthead {
-          font-size: 24vw;
+          font-size: 28vw;
         }
       }
     }
@@ -58,6 +58,7 @@ main.home {
     flex-flow: column nowrap;
 
     .date-text {
+      padding-bottom: 1rem;
       span {
         display: block;
       }
@@ -106,10 +107,13 @@ main.home {
       }
 
       div.curatorial {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
         padding-bottom: 1rem;
 
-        p.sm {
-          line-height: 1.2em;
+        p:last-child {
+          margin-bottom: 0.5rem;
         }
       }
     }
@@ -126,7 +130,7 @@ main.home {
     .artists-heading {
       h2 {
         padding-bottom: 1rem;
-        margin: 0;
+        margin-bottom: 0.5rem;
       }
     }
 
@@ -165,8 +169,8 @@ main.home {
 
     overflow-x: hidden;
     position: relative;
-    padding-bottom: 4rem;
-    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 6rem;
 
     #support-frame {
       background-color: $lemon-lime;
@@ -178,19 +182,18 @@ main.home {
     }
 
     .tshirt {
+      width: 100%;
       z-index: 1;
       grid-area: 1/1/2/13;
       justify-self: center;
     }
 
     #support-copy {
-      grid-column: 3/11;
-      grid-row: 2/3;
+      grid-area: 2/3/3/11;
       z-index: 1;
-
-      p {
-        margin: 1rem 0;
-      }
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
     }
   }
 
