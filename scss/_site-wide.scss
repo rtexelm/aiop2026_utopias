@@ -316,6 +316,14 @@ div.button p {
   width: 100%;
 }
 
+// parallax base class
+
+.parallax {
+  z-index: 0;
+  position: absolute;
+  overflow-x: hidden;
+}
+
 // Stop mobile scrolling on menu view
 .stop-scroll-menu {
   height: 100vh;

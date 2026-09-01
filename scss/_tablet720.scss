@@ -135,19 +135,16 @@
 
       .date-text {
         grid-area: 1/2/ 2/6;
+        padding-bottom: 0;
 
         #date-line-2 {
           text-align: center;
         }
       }
 
-      .date-locations {
+      a {
         grid-area: 1/8/2/13;
-
-        ul {
-          margin: 0;
-          padding: 0;
-        }
+        align-self: center;
       }
     }
 

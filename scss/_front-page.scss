@@ -1,11 +1,97 @@
 @use "constants" as *;
 
 main.home {
-  * :not(#frontpage-background) {
-    @include page-slide;
+  // * :not(#frontpage-background) {
+  //   @include page-slide;
+  // }
+
+  overflow-x: hidden;
+  background: $light-blue;
+
+  // allow parallax z-indexing
+  .heading,
+  #about,
+  #dates,
+  #artists,
+  #volunteer,
+  #support {
+    position: relative;
+    z-index: 2;
   }
 
-  background: $light-blue;
+  .parallax.ellipse-dot {
+    z-index: 1;
+    height: 6vh;
+  }
+
+  section .parallax {
+    z-index: -2;
+
+    &.ellipse-dot {
+      z-index: -1;
+    }
+  }
+
+  .ellipse-image {
+    height: 22vh;
+  }
+
+  // position initial parallax elements
+  #ellipse-1 {
+    bottom: -62vh;
+    left: 5vw;
+  }
+
+  #ellipse-2 {
+    bottom: -31vh;
+    left: 34vw;
+  }
+
+  #ellipse-3 {
+    bottom: -60vh;
+    right: 2vw;
+  }
+
+  #ellipse-4 {
+    bottom: -40vh;
+    right: 32vw;
+  }
+
+  #ellipse-5 {
+    bottom: 20vh;
+    right: 16vw;
+  }
+
+  #ellipse-6 {
+    bottom: -120vh;
+    right: 6vw;
+  }
+
+  #ellipse-7 {
+    bottom: -40vh;
+    right: 6vw;
+  }
+
+  #ellipse-treeline {
+    bottom: -43vh;
+    left: -9vw;
+  }
+
+  #ellipse-canal {
+    bottom: -110vw;
+    right: 3vw;
+  }
+
+  #ellipse-dome {
+    bottom: -21vh;
+    right: -16vw;
+  }
+
+  #vector-map {
+    height: 89vh;
+    bottom: -98vh;
+    left: 42vw;
+  }
 
   .heading {
     position: relative;
@@ -14,7 +100,6 @@ main.home {
     flex-flow: column wrap;
     justify-content: center;
     background: center / cover no-repeat url("assets/front-page-title.svg");
-    // padding: 1rem 0;
 
     #title {
       padding: 3rem 1.5rem;
@@ -59,6 +144,7 @@ main.home {
 
     .date-text {
       padding-bottom: 1rem;
+
       span {
         display: block;
       }
@@ -94,11 +180,6 @@ main.home {
   }
 
   #artists {
-    .artists-frame {
-      position: relative;
-      z-index: 0;
-    }
-
     .artists-heading {
       h2 {
         padding-bottom: 1rem;
@@ -110,7 +191,6 @@ main.home {
       display: flex;
       flex-flow: column wrap;
       gap: 0.5rem;
-      // margin-bottom: 1rem;
     }
 
     .artists-list {
@@ -139,13 +219,13 @@ main.home {
   #support {
     @include twelve-col-grid;
 
-    overflow-x: hidden;
     position: relative;
     padding-bottom: 2rem;
     margin-top: 4rem;
     margin-bottom: 6rem;
 
     #support-frame {
+      z-index: -3;
       background-color: $lemon-lime;
       position: absolute;
       grid-column: 2/12;

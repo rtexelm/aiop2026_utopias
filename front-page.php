@@ -20,13 +20,13 @@ get_header();
     <div id="fullpage-texture"></div>
     <section class="heading">
         <div class="positioner">
-            <img class="parallax" id="ellipse-1" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+            <img class="parallax ellipse-dot" id="ellipse-1" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
         <div class="positioner">
-            <img class="parallax" id="ellipse-2" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+            <img class="parallax ellipse-dot" id="ellipse-2" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
         <div class="positioner">
-            <img class="parallax" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
+            <img class="parallax ellipse-image" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
         </div>
         <!-- Title text -->
         <article id="title">
@@ -36,10 +36,10 @@ get_header();
             </div>
         </article>
         <div class="positioner">
-            <img class="parallax" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
+            <img class="parallax ellipse-image" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
         </div>
         <div class="positioner">
-            <img class="parallax" id="ellipse-3" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+            <img class="parallax ellipse-dot" id="ellipse-3" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
     </section>
     <section id="dates">
@@ -52,7 +52,7 @@ get_header();
         <a id="schedule-button" class="button bright-green" href="<?php echo home_url(); ?>/schedule">Schedule</a>
     </section>
     <div class="positioner">
-        <img class="parallax" id="ellipse-4" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        <img class="parallax ellipse-dot" id="ellipse-4" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
     </div>
     <section id="about">
         <div class="about-text">
@@ -73,18 +73,18 @@ get_header();
             <a class="button bright-green" href="<?php echo home_url(); ?>/about">About the festival</a>
         </div>
         <div class="positioner">
-            <img class="parallax" id="ellipse-dome" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-dome.png" alt="" />
+            <img class="parallax ellipse-image" id="ellipse-dome" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-dome.png" alt="" />
         </div>
     </section>
     <div class="positioner">
-        <img class="parallax" id="ellipse-5" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        <img class="parallax ellipse-dot" id="ellipse-5" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
     </div>
     <div class="positioner">
         <img class="parallax" id="vector-map" src="<?php bloginfo('template_url'); ?>/assets/parallax/vector-map.png" alt="" />
     </div>
     <section id="artists">
         <div class="positioner">
-            <img class="parallax" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+            <img class="parallax ellipse-dot" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
         <div class="artists-heading">
 
@@ -98,15 +98,16 @@ get_header();
         </div>
     </section>
 
-    <div class="positioner">
-        <img class="parallax" id="ellipse-shrooms" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-shrooms.png" alt="" />
-    </div>
-
     <section id="support">
         <div class="positioner">
-            <img class="parallax" id="ellipse-7" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+            <img class="parallax ellipse-dot" id="ellipse-7" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
         <div id="support-frame"></div>
+
+        <div class="positioner">
+            <img class="parallax" id="ellipse-shrooms" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-shrooms.png" alt="" />
+        </div>
+
         <img class="tshirt" id="tshirt-blue" src="<?php bloginfo('template_url'); ?>/assets/tshirts-591.png" />
 
         <div id="support-copy">

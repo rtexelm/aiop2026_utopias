@@ -190,19 +190,18 @@ jQuery(document).ready(function ($) {
 
   // Define the elements and their respective speed coefficients
   const parallaxElements = [
-    { id: "#cloud-01", speed: -0.2 },
-    { id: "#cloud-02", speed: 0.3 },
-    { id: "#cloud-03", speed: 0.15 },
-    { id: "#cloud-04", speed: -0.09 },
-    // { id: "#about-ripple-5", speed: 0.09 },
-    // { id: "#about-ripple-6", speed: -0.1 },
-    // { id: "#about-ripple-7", speed: 0.07 },
-    // { id: "#schedule-bg-element1", speed: 0.3 },
-    // { id: "#schedule-bg-element2", speed: 0.2 },
-    // { id: "#schedule-bg-element3", speed: 0.2 },
-    // { id: "#schedule-bg-element4", speed: 0.2 },
-    // { id: "#schedule-bg-element5", speed: 0.2 },
-    // { id: "#donate-ripple-1", speed: -0.3 },
+    { id: "#ellipse-1", speed: 0.97 },
+    { id: "#ellipse-2", speed: 0.46 },
+    { id: "#ellipse-3", speed: 0.15 },
+    { id: "#ellipse-4", speed: 0.219 },
+    { id: "#ellipse-5", speed: 0.29 },
+    { id: "#ellipse-6", speed: 1.205 },
+    { id: "#ellipse-7", speed: 0.29 },
+    { id: "#ellipse-treeline", speed: 0.13 },
+    { id: "#ellipse-canal", speed: 0.32 },
+    { id: "#ellipse-dome", speed: 0.17 },
+    { id: "#ellipse-shrooms", speed: 0.09 },
+    { id: "#vector-map", speed: 0.034 },
   ];
 
   // Initialize the parallax for defined elements
