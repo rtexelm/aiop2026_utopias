@@ -533,26 +533,6 @@ main.home #dates .date-text {
 main.home #dates .date-text span {
   display: block;
 }
-main.home #dates .date-locations {
-  z-index: 2;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-main.home #dates .date-locations li:first-child {
-  margin-top: 0;
-}
-main.home #dates .date-locations li {
-  margin-top: 1rem;
-}
-main.home #dates svg {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  padding: 0 1.5rem 3.5rem;
-}
 main.home #about {
   display: flex;
   flex-flow: column nowrap;
@@ -577,9 +557,6 @@ main.home #about .about-text div.curatorial p:last-child {
 main.home #artists .artists-frame {
   position: relative;
   z-index: 0;
-}
-main.home #artists {
-  padding-bottom: 6rem;
 }
 main.home #artists .artists-heading h2 {
   padding-bottom: 1rem;
@@ -616,6 +593,7 @@ main.home #support {
   overflow-x: hidden;
   position: relative;
   padding-bottom: 2rem;
+  margin-top: 4rem;
   margin-bottom: 6rem;
 }
 main.home #support #support-frame {
@@ -1480,7 +1458,6 @@ footer .social .social-icon svg {
     column-count: 3;
   }
   main.home #support {
-    margin-top: 4rem;
     padding-bottom: 2rem;
     align-items: center;
   }

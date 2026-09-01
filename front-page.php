@@ -19,6 +19,15 @@ get_header();
 <main class="home" id="main-content">
     <div id="fullpage-texture"></div>
     <section class="heading">
+        <div class="positioner">
+            <img class="parallax" id="ellipse-1" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        </div>
+        <div class="positioner">
+            <img class="parallax" id="ellipse-2" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        </div>
+        <div class="positioner">
+            <img class="parallax" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
+        </div>
         <!-- Title text -->
         <article id="title">
             <div class="title-group" id="title-group-1">
@@ -26,6 +35,12 @@ get_header();
                 <h1 id="masthead">UTOPIAS<h1>
             </div>
         </article>
+        <div class="positioner">
+            <img class="parallax" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
+        </div>
+        <div class="positioner">
+            <img class="parallax" id="ellipse-3" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        </div>
     </section>
     <section id="dates">
         <h2 class="date-text h1">
@@ -34,13 +49,12 @@ get_header();
             <span id="date-line-3" class="espanol">de septiembre</span>
 
         </h2>
-        <div class="date-locations">
-            <a class="button bright-green" href="<?php echo home_url(); ?>/schedule">Schedule</a>
-        </div>
+        <a id="schedule-button" class="button bright-green" href="<?php echo home_url(); ?>/schedule">Schedule</a>
     </section>
-
+    <div class="positioner">
+        <img class="parallax" id="ellipse-4" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+    </div>
     <section id="about">
-        <!-- <div class="about-frame"> -->
         <div class="about-text">
             <h2 class="byline h1">
                 <span id="byline-1">Curated by</span>
@@ -58,10 +72,20 @@ get_header();
             </div>
             <a class="button bright-green" href="<?php echo home_url(); ?>/about">About the festival</a>
         </div>
-        <!-- </div> -->
+        <div class="positioner">
+            <img class="parallax" id="ellipse-dome" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-dome.png" alt="" />
+        </div>
     </section>
-
+    <div class="positioner">
+        <img class="parallax" id="ellipse-5" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+    </div>
+    <div class="positioner">
+        <img class="parallax" id="vector-map" src="<?php bloginfo('template_url'); ?>/assets/parallax/vector-map.png" alt="" />
+    </div>
     <section id="artists">
+        <div class="positioner">
+            <img class="parallax" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        </div>
         <div class="artists-heading">
 
             <h2 class="h1">
@@ -74,8 +98,14 @@ get_header();
         </div>
     </section>
 
-    <section id="support">
+    <div class="positioner">
+        <img class="parallax" id="ellipse-shrooms" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-shrooms.png" alt="" />
+    </div>
 
+    <section id="support">
+        <div class="positioner">
+            <img class="parallax" id="ellipse-7" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+        </div>
         <div id="support-frame"></div>
         <img class="tshirt" id="tshirt-blue" src="<?php bloginfo('template_url'); ?>/assets/tshirts-591.png" />
 
