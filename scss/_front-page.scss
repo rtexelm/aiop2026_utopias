@@ -9,12 +9,9 @@ main.home {
   background: $light-blue;
 
   // allow parallax z-indexing
-  .heading,
-  #about,
-  #dates,
-  #artists,
-  #volunteer,
-  #support {
+
+  // apply to all sections with exceptions below
+  section {
     position: relative;
     z-index: 2;
   }
@@ -93,7 +90,7 @@ main.home {
     left: 42vw;
   }
 
-  .heading {
+  #heading {
     position: relative;
     min-height: 80vh;
     display: flex;
@@ -126,19 +123,9 @@ main.home {
     }
   }
 
-  #about,
-  #dates,
-  #artists,
-  #volunteer,
-  #support,
-  #mailing-list {
-    padding: 1.5rem;
-    padding-top: 2rem;
-  }
-
   #dates {
+    margin-top: 2.25rem;
     position: relative;
-    padding-top: 4rem;
     display: flex;
     flex-flow: column nowrap;
 
@@ -204,7 +191,6 @@ main.home {
     @include twelve-col-grid;
 
     gap: 1rem 0;
-    padding-bottom: 6rem;
 
     p {
       grid-area: 1/2/ 2/8;

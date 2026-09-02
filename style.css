@@ -178,6 +178,9 @@ h1.hidden {
   color: #348618;
 }
 
+/*
+==== buttons =====
+*/
 a.button,
 div.button {
   display: flex;
@@ -277,6 +280,10 @@ div.button.black::after {
 
 div.button p {
   display: inline-block;
+}
+
+.content-section-padding {
+  padding: 1.75rem 1.5rem;
 }
 
 .display-none {
@@ -488,12 +495,7 @@ main.home {
   overflow-x: hidden;
   background: #bee9fd;
 }
-main.home .heading,
-main.home #about,
-main.home #dates,
-main.home #artists,
-main.home #volunteer,
-main.home #support {
+main.home section {
   position: relative;
   z-index: 2;
 }
@@ -555,7 +557,7 @@ main.home #vector-map {
   bottom: -98vh;
   left: 42vw;
 }
-main.home .heading {
+main.home #heading {
   position: relative;
   min-height: 80vh;
   display: flex;
@@ -563,7 +565,7 @@ main.home .heading {
   justify-content: center;
   background: center/cover no-repeat url("assets/front-page-title.svg");
 }
-main.home .heading #title {
+main.home #heading #title {
   padding: 3rem 1.5rem;
   position: relative;
   display: flex;
@@ -571,30 +573,21 @@ main.home .heading #title {
   justify-content: center;
   align-items: center;
 }
-main.home .heading #title .title-group {
+main.home #heading #title .title-group {
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
 }
-main.home .heading #title .title-group p {
+main.home #heading #title .title-group p {
   text-align: center;
   margin-bottom: 0;
 }
-main.home .heading #title .title-group #masthead {
+main.home #heading #title .title-group #masthead {
   font-size: 28vw;
 }
-main.home #about,
-main.home #dates,
-main.home #artists,
-main.home #volunteer,
-main.home #support,
-main.home #mailing-list {
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
 main.home #dates {
+  margin-top: 2.25rem;
   position: relative;
-  padding-top: 4rem;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -643,7 +636,6 @@ main.home #volunteer {
   column-gap: 1rem;
   max-width: 100%;
   gap: 1rem 0;
-  padding-bottom: 6rem;
 }
 main.home #volunteer p {
   grid-area: 1/2/2/8;
@@ -740,11 +732,16 @@ main.about {
   overflow-x: hidden;
   position: relative;
 }
-main.about section:not(#utopias) {
-  padding: 4rem 1.5rem;
+main.about section {
+  position: relative;
 }
 main.about section:not(#utopias) h2 {
   color: #fff;
+}
+main.about #headline-vector {
+  position: absolute;
+  max-width: 100%;
+  right: 0;
 }
 main.about #utopias {
   padding: 6rem 1.5rem 2rem;
@@ -752,15 +749,15 @@ main.about #utopias {
   flex-flow: column nowrap;
   justify-content: center;
 }
-main.about #utopias .headlines {
-  padding-bottom: 2rem;
+main.about #utopias #headline-eng {
+  color: #fff;
+}
+main.about #utopias #c-statement {
+  margin-top: 4rem;
   z-index: 1;
 }
-main.about #utopias .c-statement .p1 {
+main.about #utopias #c-statement .p1 {
   margin-bottom: 1rem;
-}
-main.about #utopias .c-statement {
-  z-index: 1;
 }
 main.about #people {
   z-index: 1;
@@ -797,17 +794,17 @@ main.about #people .thinker-item {
 main.about #people #blog-button {
   margin-top: 1.5rem;
 }
-main.about .partners {
+main.about #partners {
   background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
   position: relative;
   padding: 2rem 1.5rem;
 }
-main.about .partners a,
-main.about .partners p,
-main.about .partners h2 {
+main.about #partners a,
+main.about #partners p,
+main.about #partners h2 {
   color: #57a8ce;
 }
-main.about .partners::before {
+main.about #partners::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -815,42 +812,34 @@ main.about .partners::before {
   inset: 0;
   opacity: 0.3;
 }
-main.about .partners h2 {
+main.about #partners h2 {
   margin-bottom: 1rem;
 }
-main.about .partners .partner-container {
+main.about #partners .partner-container {
   border-top: 1px solid #57a8ce;
 }
-main.about .partners .partner-container img {
+main.about #partners .partner-container img {
   max-width: 100%;
   height: auto;
   padding: 0 0;
 }
-main.about .partners .partner-container {
+main.about #partners .partner-container {
   margin-bottom: 3rem;
 }
-main.about .partners .partner-container .partner:last-child {
+main.about #partners .partner-container .partner:last-child {
   margin-bottom: 0;
 }
-main.about .partners .partner-logo {
+main.about #partners .partner-logo {
   margin-bottom: 1.5rem;
   max-width: 100%;
 }
-main.about .partners .button {
+main.about #partners .button {
   margin-top: 1rem;
   color: #d2eff5;
 }
 main.about #support {
   z-index: 1;
   position: relative;
-  padding: 4rem 1.5rem;
-}
-main.about #support::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  opacity: 0.25;
 }
 main.about #support > * {
   z-index: 10;
@@ -868,20 +857,11 @@ main.about #support h3 {
   color: #fff;
   margin-bottom: 1rem;
 }
-main.about #support .dedication {
+main.about #support #dedication {
   margin-bottom: 2rem;
 }
-main.about #support .thanks {
+main.about #support #thanks {
   margin-bottom: 2rem;
-}
-main.about .desert-illustration {
-  position: relative;
-  z-index: 0;
-}
-main.about .desert-illustration svg {
-  width: 65vw;
-  height: auto;
-  margin-left: 8vw;
 }
 main.about .cloud {
   z-index: 0;

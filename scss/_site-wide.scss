@@ -156,6 +156,10 @@ h1.hidden {
   color: $green;
 }
 
+/*
+==== buttons =====
+*/
+
 a.button,
 div.button {
   display: flex;
@@ -266,6 +270,12 @@ div.button p {
   display: inline-block;
 }
 
+// helper classes ============================
+
+.content-section-padding {
+  padding: 1.75rem 1.5rem;
+}
+
 .display-none {
   display: none;
 }
@@ -351,6 +361,7 @@ div.button p {
 }
 
 // Texture on all pages mobile style
+
 #fullpage-texture {
   position: relative;
 

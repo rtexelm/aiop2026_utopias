@@ -33,23 +33,24 @@ $volunteers =   get_field('about_volunteers');
 
     <h1 class="hidden">ABOUT</h1>
 
-    <section id="utopias">
+    <img id="headline-vector" src="<?php bloginfo('template_url'); ?>/assets/about/headline-vector.svg" alt="" />
+
+    <section id="utopias" class="content-section-padding">
+
 
         <div class="positioner">
             <img class="cloud" id="cloud-01" src="<?php bloginfo('template_url'); ?>/assets/Cloud-01.png" />
         </div>
 
-        <div id="headlines">
 
-            <h2 class="h1" id="headline-eng">
-                What happens when we treat the street not as a corridor of consumption or control...
-            </h2>
+        <h2 class="h1" id="headline-eng">
+            What happens when we treat the street not as a corridor of consumption or control...
+        </h2>
 
-            <h2 class="h1 espanol" id="headline-esp">
-                ¿Qué sucede cuando tratamos la calle no como un corredor de consumo o control...?
-            </h2>
+        <h2 class="h1 espanol" id="headline-esp">
+            ¿Qué sucede cuando tratamos la calle no como un corredor de consumo o control...?
+        </h2>
 
-        </div>
 
         <div id="c-statement">
 
@@ -70,7 +71,7 @@ $volunteers =   get_field('about_volunteers');
     </section>
 
 
-    <section id="mission">
+    <section id="mission" class="content-section-padding">
 
         <h2>Mission</h2>
 
@@ -81,7 +82,7 @@ $volunteers =   get_field('about_volunteers');
     </section>
 
 
-    <section id="history">
+    <section id="history" class="content-section-padding">
 
         <h2>History</h2>
 
@@ -92,7 +93,7 @@ $volunteers =   get_field('about_volunteers');
     </section>
 
 
-    <section id="people">
+    <section id="people" class="content-section-padding">
         <h2>People</h2>
 
         <!-- <div class="p2" id="curator-bio">
@@ -241,7 +242,7 @@ $volunteers =   get_field('about_volunteers');
         <img class="cloud" id="cloud-04" src="<?php bloginfo('template_url'); ?>/assets/Cloud-04.png" />
     </div>
 
-    <!-- <section id="partners">
+    <!-- <section id="partners" class="content-section-padding">
 
         <h2>Partners</h2>
 
@@ -285,15 +286,15 @@ $volunteers =   get_field('about_volunteers');
     </section> -->
 
 
-    <section id="support">
+    <section id="support" class="content-section-padding">
 
         <h2>Support</h2>
 
-        <div class="dedication p2">
+        <div id="dedication" class="p2">
             <p class="p1"><?php echo $dedication; ?></p>
         </div>
 
-        <div class="thanks p2">
+        <div id="thanks" class="p2">
             <h3>Thanks</h3>
             <p><?php echo $thanks; ?></p>
         </div>

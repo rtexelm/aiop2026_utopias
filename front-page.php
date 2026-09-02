@@ -17,32 +17,42 @@ get_header();
 ?>
 
 <main class="home" id="main-content">
+
     <div id="fullpage-texture"></div>
-    <section class="heading">
+
+    <section id="heading">
+
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-1" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
+
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-2" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
+
         <div class="positioner">
             <img class="parallax ellipse-image" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
         </div>
+
         <!-- Title text -->
-        <article id="title">
+        <div id="title">
             <div class="title-group" id="title-group-1">
                 <p class="p1" id=" title-attribution">Art in Odd Places 2026</p>
                 <h1 id="masthead">UTOPIAS<h1>
             </div>
-        </article>
+        </div>
+
         <div class="positioner">
             <img class="parallax ellipse-image" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
         </div>
+
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-3" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
     </section>
-    <section id="dates">
+
+
+    <section id="dates" class="content-section-padding">
         <h2 class="date-text h1">
             <span id="date-line-1">September</span>
             <span id="date-line-2">20&ndash;22 2026</span>
@@ -54,7 +64,7 @@ get_header();
     <div class="positioner">
         <img class="parallax ellipse-dot" id="ellipse-4" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
     </div>
-    <section id="about">
+    <section id="about" class="content-section-padding">
         <div class="about-text">
             <h2 class="byline h1">
                 <span id="byline-1">Curated by</span>
@@ -82,7 +92,7 @@ get_header();
     <div class="positioner">
         <img class="parallax" id="vector-map" src="<?php bloginfo('template_url'); ?>/assets/parallax/vector-map.png" alt="" />
     </div>
-    <section id="artists">
+    <section id="artists" class="content-section-padding">
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
@@ -98,7 +108,7 @@ get_header();
         </div>
     </section>
 
-    <section id="support">
+    <section id="support" class="content-section-padding">
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-7" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
@@ -127,7 +137,7 @@ get_header();
         </div>
 
     </section>
-    <!-- <section id="volunteer">
+    <!-- <section id="volunteer" class="content-section-padding">
         <p class="p2">AiOP is a volunteer-run organization; we&rsquo;re always looking for people to help make the
             festival happen in a range of positions. Fill out our form and we&rsquo;ll help find the best spot for you
             on our volunteer team.</p>
@@ -139,7 +149,7 @@ get_header();
         </div>
     </section> -->
 
-    <section id="mailing-list">
+    <section id="mailing-list" class="content-section-padding">
         <div class="text">
             <h2 class="d2">Join our mailing list!</h2>
             <p class="p1">Sign up to keep informed of major festival events and announcements.</p>

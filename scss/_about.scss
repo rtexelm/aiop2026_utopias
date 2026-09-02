@@ -5,12 +5,20 @@ main.about {
   overflow-x: hidden;
   position: relative;
 
-  section:not(#utopias) {
-    padding: 4rem 1.5rem;
+  section {
+    position: relative;
 
-    h2 {
-      color: $white;
+    &:not(#utopias) {
+      h2 {
+        color: $white;
+      }
     }
+  }
+
+  #headline-vector {
+    position: absolute;
+    max-width: 100%;
+    right: 0;
   }
 
   #utopias {
@@ -19,17 +27,17 @@ main.about {
     flex-flow: column nowrap;
     justify-content: center;
 
-    .headlines {
-      padding-bottom: 2rem;
-      z-index: 1;
+    #headline-eng {
+      color: $white;
     }
 
-    .c-statement {
+    #c-statement {
+      margin-top: 4rem;
+      z-index: 1;
+
       .p1 {
         margin-bottom: 1rem;
       }
-
-      z-index: 1;
     }
   }
 
@@ -96,7 +104,7 @@ main.about {
     }
   }
 
-  .partners {
+  #partners {
     background: linear-gradient($light-blue 0%, #5dd3ff 100%);
     position: relative;
     padding: 2rem 1.5rem;
@@ -161,15 +169,14 @@ main.about {
   #support {
     z-index: 1;
     position: relative;
-    padding: 4rem 1.5rem;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      inset: 0;
-      opacity: 0.25;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   width: 100%;
+    //   inset: 0;
+    //   opacity: 0.25;
+    // }
 
     & > * {
       z-index: 10;
@@ -192,23 +199,12 @@ main.about {
       margin-bottom: 1rem;
     }
 
-    .dedication {
+    #dedication {
       margin-bottom: 2rem;
     }
 
-    .thanks {
+    #thanks {
       margin-bottom: 2rem;
-    }
-  }
-
-  .desert-illustration {
-    position: relative;
-    z-index: 0;
-
-    svg {
-      width: 65vw;
-      height: auto;
-      margin-left: 8vw;
     }
   }
 
