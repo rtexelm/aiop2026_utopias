@@ -1,111 +1,80 @@
 @use "constants" as *;
 
-div#about-background {
-  background: linear-gradient(
-    #0063af 0%,
-    $bright-purple 80%,
-    $light-purple 100%
-  );
-}
-
 main.about {
+  background: $blue;
   overflow-x: hidden;
   position: relative;
 
-  .voice {
-    padding: 6rem 1.5rem 2rem 1.5rem;
-    min-height: 60%;
+  section:not(#utopias) {
+    padding: 4rem 1.5rem;
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  #utopias {
+    padding: 6rem 1.5rem 2rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 
-    .title {
-      svg {
-        width: 100%;
-        height: auto;
-      }
+    .headlines {
       padding-bottom: 2rem;
       z-index: 1;
     }
 
     .c-statement {
-      p {
-        color: $white;
-      }
       .p1 {
         margin-bottom: 1rem;
       }
+
       z-index: 1;
     }
   }
 
-  .festival {
-    position: relative;
-    margin: -1.1vh 0 0;
-    padding: 4rem 1.5rem;
-
-    & > * {
-      z-index: 10;
-    }
-
-    .mission {
-      padding: 2rem 1.5rem;
-      background: #7d30beb3;
-      border-radius: 40px;
-      h2 {
-        margin-bottom: 0.5rem;
-      }
-    }
-    .history {
-      padding: 2rem 1.5rem;
-      background: #0fa5dccc;
-      border-radius: 40px;
-      margin-top: 2rem;
-      h2 {
-        margin-bottom: 0.5rem;
-      }
-    }
+  #mission {
   }
 
-  .people {
-    background: linear-gradient($light-blue 0%, #5dd3ff 100%);
+  #history {
+  }
 
+  #people {
     z-index: 1;
     position: relative;
-    padding: 4rem 1.5rem;
 
     & > * {
       z-index: 10;
     }
 
     a {
-      color: $dark-blue;
-      &:visited {
-        color: $bright-purple;
-      }
+      color: $dark-green;
     }
+
     h2 {
-      color: $dark-blue;
       margin-bottom: 1rem;
     }
-    h3 {
-      color: $dark-blue;
-    }
-    .staff-item {
-      color: $dark-blue;
 
+    h3 {
+    }
+
+    .staff-item {
       .staff-links {
         display: block;
       }
     }
+
     .thinkers {
       margin-top: 3rem;
+
       .thinkers-title {
         margin-bottom: 0.5rem;
       }
+
       .thinker-item {
         .thinker-name {
         }
+
         .thinker-links {
           display: flex;
           gap: 1rem;
@@ -127,24 +96,11 @@ main.about {
     }
   }
 
-  .city-illustration {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 0;
-    svg {
-      width: 65vw;
-      height: auto;
-      margin-right: 8vw;
-    }
-  }
-
   .partners {
     background: linear-gradient($light-blue 0%, #5dd3ff 100%);
     position: relative;
     padding: 2rem 1.5rem;
+
     a,
     p,
     h2 {
@@ -158,10 +114,7 @@ main.about {
       z-index: -1;
       position: absolute;
       width: 100%;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
+      inset: 0;
       opacity: 0.3;
     }
 
@@ -174,14 +127,18 @@ main.about {
     h2 {
       margin-bottom: 1rem;
     }
+
     .partner-container {
       border-top: 1px solid $dark-blue;
+
       img {
         max-width: 100%;
         height: auto;
         padding: 0 0;
       }
+
       margin-bottom: 3rem;
+
       .partner {
         &:last-child {
           // Set no margin on the last partner area
@@ -189,24 +146,19 @@ main.about {
         }
       }
     }
+
     .partner-logo {
       margin-bottom: 1.5rem;
       max-width: 100%;
     }
+
     .button {
       margin-top: 1rem;
       color: $lightest-blue;
     }
   }
 
-  .support-background {
-    background: linear-gradient(
-      #0063af 0%,
-      $bright-purple 80%,
-      $light-purple 100%
-    );
-  }
-  .support {
+  #support {
     z-index: 1;
     position: relative;
     padding: 4rem 1.5rem;
@@ -215,10 +167,7 @@ main.about {
       content: "";
       position: absolute;
       width: 100%;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
+      inset: 0;
       opacity: 0.25;
     }
 
@@ -228,6 +177,7 @@ main.about {
 
     a {
       color: $black;
+
       &:visited {
         color: #443f43;
       }
@@ -236,12 +186,16 @@ main.about {
     h2 {
       margin-bottom: 2rem;
     }
+
     h3 {
+      color: $white;
       margin-bottom: 1rem;
     }
+
     .dedication {
       margin-bottom: 2rem;
     }
+
     .thanks {
       margin-bottom: 2rem;
     }
@@ -250,6 +204,7 @@ main.about {
   .desert-illustration {
     position: relative;
     z-index: 0;
+
     svg {
       width: 65vw;
       height: auto;

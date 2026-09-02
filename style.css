@@ -735,122 +735,67 @@ main.home #mailing-list #mc_embed_shell .optional-parent div p {
   padding-top: 1rem;
 }
 
-div#about-background {
-  background: linear-gradient(#0063af 0%, #7d30be 80%, #cd44e8 100%);
-}
-
 main.about {
+  background: #8ecdea;
   overflow-x: hidden;
   position: relative;
 }
-main.about .voice {
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  min-height: 60%;
+main.about section:not(#utopias) {
+  padding: 4rem 1.5rem;
+}
+main.about section:not(#utopias) h2 {
+  color: #fff;
+}
+main.about #utopias {
+  padding: 6rem 1.5rem 2rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
-main.about .voice .title svg {
-  width: 100%;
-  height: auto;
-}
-main.about .voice .title {
+main.about #utopias .headlines {
   padding-bottom: 2rem;
   z-index: 1;
 }
-main.about .voice .c-statement p {
-  color: #fff;
-}
-main.about .voice .c-statement .p1 {
+main.about #utopias .c-statement .p1 {
   margin-bottom: 1rem;
 }
-main.about .voice .c-statement {
+main.about #utopias .c-statement {
   z-index: 1;
 }
-main.about .festival {
-  position: relative;
-  margin: -1.1vh 0 0;
-  padding: 4rem 1.5rem;
-}
-main.about .festival > * {
-  z-index: 10;
-}
-main.about .festival .mission {
-  padding: 2rem 1.5rem;
-  background: rgba(125, 48, 190, 0.7019607843);
-  border-radius: 40px;
-}
-main.about .festival .mission h2 {
-  margin-bottom: 0.5rem;
-}
-main.about .festival .history {
-  padding: 2rem 1.5rem;
-  background: rgba(15, 165, 220, 0.8);
-  border-radius: 40px;
-  margin-top: 2rem;
-}
-main.about .festival .history h2 {
-  margin-bottom: 0.5rem;
-}
-main.about .people {
-  background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
+main.about #people {
   z-index: 1;
   position: relative;
-  padding: 4rem 1.5rem;
 }
-main.about .people > * {
+main.about #people > * {
   z-index: 10;
 }
-main.about .people a {
-  color: #57a8ce;
+main.about #people a {
+  color: #0d4400;
 }
-main.about .people a:visited {
-  color: #7d30be;
-}
-main.about .people h2 {
-  color: #57a8ce;
+main.about #people h2 {
   margin-bottom: 1rem;
 }
-main.about .people h3 {
-  color: #57a8ce;
-}
-main.about .people .staff-item {
-  color: #57a8ce;
-}
-main.about .people .staff-item .staff-links {
+main.about #people .staff-item .staff-links {
   display: block;
 }
-main.about .people .thinkers {
+main.about #people .thinkers {
   margin-top: 3rem;
 }
-main.about .people .thinkers .thinkers-title {
+main.about #people .thinkers .thinkers-title {
   margin-bottom: 0.5rem;
 }
-main.about .people .thinkers .thinker-item .thinker-links {
+main.about #people .thinkers .thinker-item .thinker-links {
   display: flex;
   gap: 1rem;
 }
-main.about .people .staff-item,
-main.about .people .thinker-item {
+main.about #people .staff-item,
+main.about #people .thinker-item {
   margin-bottom: 1rem;
   border-top: 1px solid #57a8ce;
   padding-top: 0.5rem;
 }
-main.about .people #blog-button {
+main.about #people #blog-button {
   margin-top: 1.5rem;
-}
-main.about .city-illustration {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 0;
-}
-main.about .city-illustration svg {
-  width: 65vw;
-  height: auto;
-  margin-right: 8vw;
 }
 main.about .partners {
   background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
@@ -867,10 +812,7 @@ main.about .partners::before {
   z-index: -1;
   position: absolute;
   width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  inset: 0;
   opacity: 0.3;
 }
 main.about .partners h2 {
@@ -898,43 +840,38 @@ main.about .partners .button {
   margin-top: 1rem;
   color: #d2eff5;
 }
-main.about .support-background {
-  background: linear-gradient(#0063af 0%, #7d30be 80%, #cd44e8 100%);
-}
-main.about .support {
+main.about #support {
   z-index: 1;
   position: relative;
   padding: 4rem 1.5rem;
 }
-main.about .support::before {
+main.about #support::before {
   content: "";
   position: absolute;
   width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  inset: 0;
   opacity: 0.25;
 }
-main.about .support > * {
+main.about #support > * {
   z-index: 10;
 }
-main.about .support a {
+main.about #support a {
   color: #000;
 }
-main.about .support a:visited {
+main.about #support a:visited {
   color: #443f43;
 }
-main.about .support h2 {
+main.about #support h2 {
   margin-bottom: 2rem;
 }
-main.about .support h3 {
+main.about #support h3 {
+  color: #fff;
   margin-bottom: 1rem;
 }
-main.about .support .dedication {
+main.about #support .dedication {
   margin-bottom: 2rem;
 }
-main.about .support .thanks {
+main.about #support .thanks {
   margin-bottom: 2rem;
 }
 main.about .desert-illustration {
