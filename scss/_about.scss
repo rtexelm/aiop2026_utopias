@@ -11,6 +11,7 @@ main.about {
     &:not(#utopias) {
       h2 {
         color: $white;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -29,6 +30,7 @@ main.about {
 
     #headline-eng {
       color: $white;
+      margin-bottom: 2rem;
     }
 
     #c-statement {
@@ -59,82 +61,58 @@ main.about {
       color: $dark-green;
     }
 
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-    }
-
-    .staff-item {
-      .staff-links {
-        display: block;
-      }
-    }
-
-    .thinkers {
-      margin-top: 3rem;
-
-      .thinkers-title {
-        margin-bottom: 0.5rem;
-      }
-
-      .thinker-item {
-        .thinker-name {
-        }
-
-        .thinker-links {
-          display: flex;
-          gap: 1rem;
-        }
-      }
-    }
-
-    // color: $l;
-
     .staff-item,
     .thinker-item {
       margin-bottom: 1rem;
-      border-top: 1px solid $dark-blue;
+      border-top: 1px solid $light-blue;
       padding-top: 0.5rem;
     }
 
-    #blog-button {
-      margin-top: 1.5rem;
+    .staff-item .staff-links,
+    .thinker-item .thinker-links {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0 1rem;
     }
+
+    #thinkers {
+      margin-top: 3rem;
+
+      #thinkers-title {
+        color: $white;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    // #blog-button {
+    //   margin-top: 1.5rem;
+    // }
   }
 
-  #partners {
-    background: linear-gradient($light-blue 0%, #5dd3ff 100%);
+  #dedication {
     position: relative;
-    padding: 2rem 1.5rem;
 
     a,
-    p,
-    h2 {
-      color: $dark-blue;
+    p {
+      color: $dark-green;
     }
 
-    &::before {
-      content: "";
-
-      // Z-index on children causing glitch with body background, necessitates a z-index on ::before
-      z-index: -1;
-      position: absolute;
-      width: 100%;
-      inset: 0;
-      opacity: 0.3;
-    }
+    // &::before {
+    //   content: "";
+    //
+    //   // Z-index on children causing glitch with body background, necessitates a z-index on ::before
+    //   z-index: -1;
+    //   position: absolute;
+    //   width: 100%;
+    //   inset: 0;
+    //   opacity: 0.3;
+    // }
 
     // The following works on every other section
 
     // & > * {
     //   z-index: 10;
     // }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
 
     .partner-container {
       border-top: 1px solid $dark-blue;
@@ -147,11 +125,9 @@ main.about {
 
       margin-bottom: 3rem;
 
-      .partner {
-        &:last-child {
-          // Set no margin on the last partner area
-          margin-bottom: 0;
-        }
+      &:last-child {
+        // Set no margin on the last partner area
+        margin-bottom: 0;
       }
     }
 
@@ -162,21 +138,12 @@ main.about {
 
     .button {
       margin-top: 1rem;
-      color: $lightest-blue;
     }
   }
 
   #support {
     z-index: 1;
     position: relative;
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   width: 100%;
-    //   inset: 0;
-    //   opacity: 0.25;
-    // }
 
     & > * {
       z-index: 10;
@@ -190,16 +157,12 @@ main.about {
       }
     }
 
-    h2 {
-      margin-bottom: 2rem;
-    }
-
     h3 {
       color: $white;
       margin-bottom: 1rem;
     }
 
-    #dedication {
+    #support-copy {
       margin-bottom: 2rem;
     }
 

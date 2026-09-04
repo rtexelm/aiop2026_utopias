@@ -5,7 +5,7 @@ main.home {
   //   @include page-slide;
   // }
 
-  overflow-x: hidden;
+  overflow: hidden;
   background: $light-blue;
 
   // allow parallax z-indexing
@@ -16,11 +16,6 @@ main.home {
     z-index: 2;
   }
 
-  .parallax.ellipse-dot {
-    z-index: 1;
-    height: 6vh;
-  }
-
   section .parallax {
     z-index: -2;
 
@@ -29,65 +24,77 @@ main.home {
     }
   }
 
+  // parallax standard sizing
   .ellipse-image {
-    height: 22vh;
+    height: clamp(5rem, 19vh, 13rem);
+  }
+
+  .parallax.ellipse-dot {
+    z-index: 1;
+    height: clamp(1rem, 5vh, 5rem);
   }
 
   // position initial parallax elements
   #ellipse-1 {
-    bottom: -62vh;
-    left: 5vw;
+    bottom: -400vh;
+    left: 19vh;
   }
 
   #ellipse-2 {
     bottom: -31vh;
-    left: 34vw;
+    left: 12vh;
   }
 
   #ellipse-3 {
-    bottom: -60vh;
-    right: 2vw;
+    bottom: -75vh;
+    right: 6vh;
   }
 
   #ellipse-4 {
-    bottom: -40vh;
-    right: 32vw;
+    bottom: -17vh;
+    right: 13vh;
   }
 
   #ellipse-5 {
-    bottom: 20vh;
-    right: 16vw;
+    bottom: 8vh;
+    right: 10vh;
   }
 
   #ellipse-6 {
-    bottom: -120vh;
-    right: 6vw;
+    bottom: -160vh;
+    right: 7vh;
   }
 
   #ellipse-7 {
     bottom: -40vh;
-    right: 6vw;
+    left: 6vh;
   }
 
   #ellipse-treeline {
     bottom: -43vh;
-    left: -9vw;
+    left: -4vh;
   }
 
   #ellipse-canal {
-    bottom: -110vw;
-    right: 3vw;
+    bottom: -55vh;
+    right: 3vh;
   }
 
   #ellipse-dome {
-    bottom: -21vh;
-    right: -16vw;
+    bottom: -38vh;
+    right: -10vh;
+  }
+
+  #ellipse-shrooms {
+    height: clamp(6rem, 32vh, 19rem);
+    top: 22vh;
+    left: -3vh;
   }
 
   #vector-map {
-    height: 89vh;
-    bottom: -98vh;
-    left: 42vw;
+    height: clamp(25rem, 80vh, 45rem);
+    bottom: -176vh;
+    right: -18vh;
   }
 
   #heading {
@@ -213,6 +220,7 @@ main.home {
     #support-frame {
       z-index: -3;
       background-color: $lemon-lime;
+      opacity: 0.88;
       position: absolute;
       grid-column: 2/12;
       border-radius: 16px;

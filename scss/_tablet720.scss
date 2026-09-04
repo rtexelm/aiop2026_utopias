@@ -39,18 +39,15 @@
 
   // Texture on all pages desktop style
   #fullpage-texture {
-    position: relative;
     &::before {
       content: "";
-      mix-blend-mode: color-dodge;
+      mix-blend-mode: overlay;
       position: fixed;
-      background: url(assets/Overlay-desktop-New.jpg);
-      background-size: cover;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      opacity: 0.15;
+      background: url("assets/texture-overlay-2026.png");
+      opacity: 0.3;
     }
+
+    position: relative;
     z-index: 11;
     pointer-events: none;
   }
@@ -112,6 +109,69 @@
   // Front Page #########################################
 
   main.home {
+    // reposition parallaxes
+    #ellipse-1 {
+      bottom: -450vh;
+      left: 19vh;
+    }
+
+    #ellipse-2 {
+      bottom: -31vh;
+      left: 19vh;
+    }
+
+    #ellipse-3 {
+      bottom: -68vh;
+      right: 12vh;
+    }
+
+    #ellipse-4 {
+      bottom: -40vh;
+      right: 20vh;
+    }
+
+    #ellipse-5 {
+      bottom: 8vh;
+      right: 10vh;
+    }
+
+    #ellipse-6 {
+      bottom: -160vh;
+      right: 7vh;
+    }
+
+    #ellipse-7 {
+      bottom: -40vh;
+      left: 6vh;
+    }
+
+    #ellipse-treeline {
+      bottom: -49vh;
+      left: 2vh;
+    }
+
+    #ellipse-canal {
+      bottom: -55vh;
+      right: 19vh;
+    }
+
+    #ellipse-dome {
+      bottom: -38vh;
+      left: 80vh;
+    }
+
+    #ellipse-shrooms {
+      height: clamp(6rem, 28vh, 19rem);
+      top: 6vh;
+      left: -3vh;
+    }
+
+    #vector-map {
+      height: clamp(25rem, 55vh, 45rem);
+      bottom: -69vh;
+      right: 0;
+    }
+
     .heading {
       #title {
         padding: 4rem 1.5rem;

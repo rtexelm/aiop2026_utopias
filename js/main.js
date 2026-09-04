@@ -168,6 +168,22 @@ jQuery(document).ready(function ($) {
 
   // Parallax effect
 
+  // Define the elements and their respective speed coefficients
+  const parallaxElements = [
+    { id: "#ellipse-1", speed: 0.97 },
+    { id: "#ellipse-2", speed: 0.46 },
+    { id: "#ellipse-3", speed: 0.15 },
+    { id: "#ellipse-4", speed: 0.219 },
+    { id: "#ellipse-5", speed: 0.31 },
+    { id: "#ellipse-6", speed: 1.205 },
+    { id: "#ellipse-7", speed: 0.29 },
+    { id: "#ellipse-treeline", speed: 0.13 },
+    { id: "#ellipse-canal", speed: 0.32 },
+    { id: "#ellipse-dome", speed: 0.17 },
+    { id: "#ellipse-shrooms", speed: 0.19 },
+    { id: "#vector-map", speed: 0.054 },
+  ];
+
   // Function to handle the parallax effect for multiple elements
   function applyParallaxEffect($element, speedCoefficient) {
     const scrollPos = $(window).scrollTop(); // Get the current scroll position
@@ -179,30 +195,22 @@ jQuery(document).ready(function ($) {
 
   // Initialize parallax effect for elements
   function initParallax(elements) {
-    $(window).on("scroll", function () {
+    function updateAll() {
       elements.forEach(function (parallaxItem) {
         const $element = $(parallaxItem.id);
         if ($element.length === 0) return; // Skip if element not found
         applyParallaxEffect($element, parallaxItem.speed);
       });
-    });
-  }
+    }
 
-  // Define the elements and their respective speed coefficients
-  const parallaxElements = [
-    { id: "#ellipse-1", speed: 0.97 },
-    { id: "#ellipse-2", speed: 0.46 },
-    { id: "#ellipse-3", speed: 0.15 },
-    { id: "#ellipse-4", speed: 0.219 },
-    { id: "#ellipse-5", speed: 0.29 },
-    { id: "#ellipse-6", speed: 1.205 },
-    { id: "#ellipse-7", speed: 0.29 },
-    { id: "#ellipse-treeline", speed: 0.13 },
-    { id: "#ellipse-canal", speed: 0.32 },
-    { id: "#ellipse-dome", speed: 0.17 },
-    { id: "#ellipse-shrooms", speed: 0.09 },
-    { id: "#vector-map", speed: 0.034 },
-  ];
+    $(window).on("scroll", updateAll);
+
+    $(function () {
+      updateAll();
+    });
+
+    $(window).on("load", updateAll);
+  }
 
   // Initialize the parallax for defined elements
   initParallax(parallaxElements);

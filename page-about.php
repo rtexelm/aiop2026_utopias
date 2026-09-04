@@ -39,7 +39,6 @@ $volunteers =   get_field('about_volunteers');
 
 
         <div class="positioner">
-            <img class="cloud" id="cloud-01" src="<?php bloginfo('template_url'); ?>/assets/Cloud-01.png" />
         </div>
 
 
@@ -65,7 +64,6 @@ $volunteers =   get_field('about_volunteers');
         </div>
 
         <div class="positioner">
-            <img class="cloud" id="cloud-02" src="<?php bloginfo('template_url'); ?>/assets/Cloud-02.png" />
         </div>
 
     </section>
@@ -96,9 +94,9 @@ $volunteers =   get_field('about_volunteers');
     <section id="people" class="content-section-padding">
         <h2>People</h2>
 
-        <!-- <div class="p2" id="curator-bio">
-                <?php echo $curator_bio ?>
-            </div> -->
+        <div class="p2" id="curator-bio">
+            <?php echo $curator_bio ?>
+        </div>
 
         <?php
 
@@ -186,48 +184,48 @@ $volunteers =   get_field('about_volunteers');
                 <?php endif ?>
             <?php endwhile ?>
         <?php endif ?>
-        <!-- <section class="thinkers">
-                <h3 class="thinkers-title">Thinkers in Residence</h3>
+        <section id="thinkers">
+            <h3 id="thinkers-title">Thinkers in Residence</h3>
 
-                <?php if ($thinkerQuery->have_posts()): ?>
+            <?php if ($thinkerQuery->have_posts()): ?>
                 <?php while ($thinkerQuery->have_posts()): $thinkerQuery->the_post(); ?>
-                <?php if (function_exists('get_field')):
+                    <?php if (function_exists('get_field')):
 
-                            $full_name            = get_field('full_name');
-                            $thinklink1            = get_field('web_link_1');
-                            $thinklink2         = get_field('web_link_2');
-                            $thinklink3            = get_field('web_link_3');
+                        $full_name            = get_field('full_name');
+                        $thinklink1            = get_field('web_link_1');
+                        $thinklink2         = get_field('web_link_2');
+                        $thinklink3            = get_field('web_link_3');
 
-                            // $thinkcomma1 = $thinklink2 ? "," : "";
-                            // $thinkcomma2 = $thinklink3 ? "," : "";
-                ?>
+                        // $thinkcomma1 = $thinklink2 ? "," : "";
+                        // $thinkcomma2 = $thinklink3 ? "," : "";
+                    ?>
 
-                <div class="thinker-item">
-                    <h3 class="thinker-name"><?php echo $full_name ?></h3>
-                    <div class="thinker-links">
-                        <?php
-                            if ($thinklink1) {
-                                echo "<a target='blank' href='" . esc_url($thinklink1['url']) . "'>" . esc_attr($thinklink1['title']) . "</a>";
-                            }
-                        ?>
-                        <?php
-                            if ($thinklink2) {
-                                echo "<a target='blank' href='" . esc_url($thinklink2['url']) . "'>" . esc_attr($thinklink2['title']) . "</a>";
-                            }
-                        ?>
-                        <?php
-                            if ($thinklink3) {
-                                echo "<a target='blank' href='" . esc_url($thinklink3['url']) . "'>" . esc_attr($thinklink3['title']) . "</a>";
-                            }
-                        ?>
-                    </div>
-                </div>
-                <?php endif ?>
+                        <div class="thinker-item">
+                            <h3 class="thinker-name"><?php echo $full_name ?></h3>
+                            <div class="thinker-links">
+                                <?php
+                                if ($thinklink1) {
+                                    echo "<a target='blank' href='" . esc_url($thinklink1['url']) . "'>" . esc_attr($thinklink1['title']) . "</a>";
+                                }
+                                ?>
+                                <?php
+                                if ($thinklink2) {
+                                    echo "<a target='blank' href='" . esc_url($thinklink2['url']) . "'>" . esc_attr($thinklink2['title']) . "</a>";
+                                }
+                                ?>
+                                <?php
+                                if ($thinklink3) {
+                                    echo "<a target='blank' href='" . esc_url($thinklink3['url']) . "'>" . esc_attr($thinklink3['title']) . "</a>";
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    <?php endif ?>
                 <?php endwhile ?>
                 <?php wp_reset_postdata(); ?>
-                <?php endif ?>
+            <?php endif ?>
 
-            </section> -->
+        </section>
         <!-- <div id="blog-button">
                 <a target="_blank" href="https://artinoddplaces.org/blog/" class="button brightblue">AiOP Blog</a>
             </div> -->
@@ -235,16 +233,14 @@ $volunteers =   get_field('about_volunteers');
 
 
     <div class="positioner">
-        <img class="cloud" id="cloud-03" src="<?php bloginfo('template_url'); ?>/assets/Cloud-03.png" />
     </div>
 
     <div class="positioner">
-        <img class="cloud" id="cloud-04" src="<?php bloginfo('template_url'); ?>/assets/Cloud-04.png" />
     </div>
 
-    <!-- <section id="partners" class="content-section-padding">
+    <section id="dedication" class="content-section-padding">
 
-        <h2>Partners</h2>
+        <h2>Dedication</h2>
 
         <?php
         wp_reset_query();
@@ -260,37 +256,37 @@ $volunteers =   get_field('about_volunteers');
         $partnerQuery = new WP_Query($partnerArgs);
         ?>
         <?php if ($partnerQuery->have_posts()): ?>
-        <?php while ($partnerQuery->have_posts()): $partnerQuery->the_post(); ?>
-        <?php
+            <?php while ($partnerQuery->have_posts()): $partnerQuery->the_post(); ?>
+                <?php
                 if (function_exists('get_field')):
                     $partner_image          = get_field('partner_image');
                     $partner_description    = get_field('partner_description');
                     $partner_link           = get_field('partner_link');
-        ?>
+                ?>
 
-        <div class="partner-container">
+                    <div class="partner-container">
 
-            <img src="<?php echo esc_url($partner_image['url']); ?>" class="partner-logo"
-                alt="\<?php echo esc_attr($partner_image['alt']); ?>" />
+                        <img src="<?php echo esc_url($partner_image['url']); ?>" class="partner-logo"
+                            alt="\<?php echo esc_attr($partner_image['alt']); ?>" />
 
-            <div class="partner">
-                <p class="partner-text p2"><?php echo $partner_description; ?></p>
-                <a target="_blank" href=<?php echo esc_url($partner_link['url']); ?>
-                    class="button brightpurple"><?php echo esc_attr($partner_link['title']); ?></a>
-            </div>
-        </div>
+                        <div class="partner">
+                            <p class="partner-text p2"><?php echo $partner_description; ?></p>
+                            <a target="_blank" href=<?php echo esc_url($partner_link['url']); ?>
+                                class="button lemon-lime"><?php echo esc_attr($partner_link['title']); ?></a>
+                        </div>
+                    </div>
+                <?php endif ?>
+            <?php endwhile ?>
+            <?php wp_reset_postdata(); ?>
         <?php endif ?>
-        <?php endwhile ?>
-        <?php wp_reset_postdata(); ?>
-        <?php endif ?>
-    </section> -->
+    </section>
 
 
     <section id="support" class="content-section-padding">
 
         <h2>Support</h2>
 
-        <div id="dedication" class="p2">
+        <div id="support-copy" class="p2">
             <p class="p1"><?php echo $dedication; ?></p>
         </div>
 

@@ -492,16 +492,12 @@ nav.top .menuFull ul#menu-full-navigation .submenu {
 }
 
 main.home {
-  overflow-x: hidden;
+  overflow: hidden;
   background: #bee9fd;
 }
 main.home section {
   position: relative;
   z-index: 2;
-}
-main.home .parallax.ellipse-dot {
-  z-index: 1;
-  height: 6vh;
 }
 main.home section .parallax {
   z-index: -2;
@@ -510,52 +506,61 @@ main.home section .parallax.ellipse-dot {
   z-index: -1;
 }
 main.home .ellipse-image {
-  height: 22vh;
+  height: clamp(5rem, 19vh, 13rem);
+}
+main.home .parallax.ellipse-dot {
+  z-index: 1;
+  height: clamp(1rem, 5vh, 5rem);
 }
 main.home #ellipse-1 {
-  bottom: -62vh;
-  left: 5vw;
+  bottom: -400vh;
+  left: 19vh;
 }
 main.home #ellipse-2 {
   bottom: -31vh;
-  left: 34vw;
+  left: 12vh;
 }
 main.home #ellipse-3 {
-  bottom: -60vh;
-  right: 2vw;
+  bottom: -75vh;
+  right: 6vh;
 }
 main.home #ellipse-4 {
-  bottom: -40vh;
-  right: 32vw;
+  bottom: -17vh;
+  right: 13vh;
 }
 main.home #ellipse-5 {
-  bottom: 20vh;
-  right: 16vw;
+  bottom: 8vh;
+  right: 10vh;
 }
 main.home #ellipse-6 {
-  bottom: -120vh;
-  right: 6vw;
+  bottom: -160vh;
+  right: 7vh;
 }
 main.home #ellipse-7 {
   bottom: -40vh;
-  right: 6vw;
+  left: 6vh;
 }
 main.home #ellipse-treeline {
   bottom: -43vh;
-  left: -9vw;
+  left: -4vh;
 }
 main.home #ellipse-canal {
-  bottom: -110vw;
-  right: 3vw;
+  bottom: -55vh;
+  right: 3vh;
 }
 main.home #ellipse-dome {
-  bottom: -21vh;
-  right: -16vw;
+  bottom: -38vh;
+  right: -10vh;
+}
+main.home #ellipse-shrooms {
+  height: clamp(6rem, 32vh, 19rem);
+  top: 22vh;
+  left: -3vh;
 }
 main.home #vector-map {
-  height: 89vh;
-  bottom: -98vh;
-  left: 42vw;
+  height: clamp(25rem, 80vh, 45rem);
+  bottom: -176vh;
+  right: -18vh;
 }
 main.home #heading {
   position: relative;
@@ -657,6 +662,7 @@ main.home #support {
 main.home #support #support-frame {
   z-index: -3;
   background-color: #e1da64;
+  opacity: 0.88;
   position: absolute;
   grid-column: 2/12;
   border-radius: 16px;
@@ -737,6 +743,7 @@ main.about section {
 }
 main.about section:not(#utopias) h2 {
   color: #fff;
+  margin-bottom: 1rem;
 }
 main.about #headline-vector {
   position: absolute;
@@ -751,6 +758,7 @@ main.about #utopias {
 }
 main.about #utopias #headline-eng {
   color: #fff;
+  margin-bottom: 2rem;
 }
 main.about #utopias #c-statement {
   margin-top: 4rem;
@@ -769,73 +777,52 @@ main.about #people > * {
 main.about #people a {
   color: #0d4400;
 }
-main.about #people h2 {
-  margin-bottom: 1rem;
-}
-main.about #people .staff-item .staff-links {
-  display: block;
-}
-main.about #people .thinkers {
-  margin-top: 3rem;
-}
-main.about #people .thinkers .thinkers-title {
-  margin-bottom: 0.5rem;
-}
-main.about #people .thinkers .thinker-item .thinker-links {
-  display: flex;
-  gap: 1rem;
-}
 main.about #people .staff-item,
 main.about #people .thinker-item {
   margin-bottom: 1rem;
-  border-top: 1px solid #57a8ce;
+  border-top: 1px solid #bee9fd;
   padding-top: 0.5rem;
 }
-main.about #people #blog-button {
-  margin-top: 1.5rem;
+main.about #people .staff-item .staff-links,
+main.about #people .thinker-item .thinker-links {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 1rem;
 }
-main.about #partners {
-  background: linear-gradient(#bee9fd 0%, #5dd3ff 100%);
+main.about #people #thinkers {
+  margin-top: 3rem;
+}
+main.about #people #thinkers #thinkers-title {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+main.about #dedication {
   position: relative;
-  padding: 2rem 1.5rem;
 }
-main.about #partners a,
-main.about #partners p,
-main.about #partners h2 {
-  color: #57a8ce;
+main.about #dedication a,
+main.about #dedication p {
+  color: #0d4400;
 }
-main.about #partners::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  opacity: 0.3;
-}
-main.about #partners h2 {
-  margin-bottom: 1rem;
-}
-main.about #partners .partner-container {
+main.about #dedication .partner-container {
   border-top: 1px solid #57a8ce;
 }
-main.about #partners .partner-container img {
+main.about #dedication .partner-container img {
   max-width: 100%;
   height: auto;
   padding: 0 0;
 }
-main.about #partners .partner-container {
+main.about #dedication .partner-container {
   margin-bottom: 3rem;
 }
-main.about #partners .partner-container .partner:last-child {
+main.about #dedication .partner-container:last-child {
   margin-bottom: 0;
 }
-main.about #partners .partner-logo {
+main.about #dedication .partner-logo {
   margin-bottom: 1.5rem;
   max-width: 100%;
 }
-main.about #partners .button {
+main.about #dedication .button {
   margin-top: 1rem;
-  color: #d2eff5;
 }
 main.about #support {
   z-index: 1;
@@ -850,14 +837,11 @@ main.about #support a {
 main.about #support a:visited {
   color: #443f43;
 }
-main.about #support h2 {
-  margin-bottom: 2rem;
-}
 main.about #support h3 {
   color: #fff;
   margin-bottom: 1rem;
 }
-main.about #support #dedication {
+main.about #support #support-copy {
   margin-bottom: 2rem;
 }
 main.about #support #thanks {
@@ -1310,21 +1294,15 @@ footer .social .social-icon svg {
   div.button {
     padding: 0.2em 0.5em 0.1em 0.8em;
   }
-  #fullpage-texture {
-    position: relative;
-  }
   #fullpage-texture::before {
     content: "";
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: overlay;
     position: fixed;
-    background: url(assets/Overlay-desktop-New.jpg);
-    background-size: cover;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.15;
+    background: url("assets/texture-overlay-2026.png");
+    opacity: 0.3;
   }
   #fullpage-texture {
+    position: relative;
     z-index: 11;
     pointer-events: none;
   }
@@ -1354,6 +1332,56 @@ footer .social .social-icon svg {
   }
   nav.top .menuVisible ul li a:focus {
     border-bottom: 1px solid #0d4400;
+  }
+  main.home #ellipse-1 {
+    bottom: -450vh;
+    left: 19vh;
+  }
+  main.home #ellipse-2 {
+    bottom: -31vh;
+    left: 19vh;
+  }
+  main.home #ellipse-3 {
+    bottom: -68vh;
+    right: 12vh;
+  }
+  main.home #ellipse-4 {
+    bottom: -40vh;
+    right: 20vh;
+  }
+  main.home #ellipse-5 {
+    bottom: 8vh;
+    right: 10vh;
+  }
+  main.home #ellipse-6 {
+    bottom: -160vh;
+    right: 7vh;
+  }
+  main.home #ellipse-7 {
+    bottom: -40vh;
+    left: 6vh;
+  }
+  main.home #ellipse-treeline {
+    bottom: -49vh;
+    left: 2vh;
+  }
+  main.home #ellipse-canal {
+    bottom: -55vh;
+    right: 19vh;
+  }
+  main.home #ellipse-dome {
+    bottom: -38vh;
+    left: 80vh;
+  }
+  main.home #ellipse-shrooms {
+    height: clamp(6rem, 28vh, 19rem);
+    top: 6vh;
+    left: -3vh;
+  }
+  main.home #vector-map {
+    height: clamp(25rem, 55vh, 45rem);
+    bottom: -69vh;
+    right: 0;
   }
   main.home .heading #title {
     padding: 4rem 1.5rem;

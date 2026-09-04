@@ -38,7 +38,7 @@ get_header();
         <div id="title">
             <div class="title-group" id="title-group-1">
                 <p class="p1" id=" title-attribution">Art in Odd Places 2026</p>
-                <h1 id="masthead">UTOPIAS<h1>
+                <h1 id="masthead">UTOPIAS</h1>
             </div>
         </div>
 
@@ -90,12 +90,12 @@ get_header();
         <img class="parallax ellipse-dot" id="ellipse-5" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
     </div>
     <div class="positioner">
+        <img class="parallax ellipse-dot" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
+    </div>
+    <div class="positioner">
         <img class="parallax" id="vector-map" src="<?php bloginfo('template_url'); ?>/assets/parallax/vector-map.png" alt="" />
     </div>
     <section id="artists" class="content-section-padding">
-        <div class="positioner">
-            <img class="parallax ellipse-dot" id="ellipse-6" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
-        </div>
         <div class="artists-heading">
 
             <h2 class="h1">
@@ -108,15 +108,16 @@ get_header();
         </div>
     </section>
 
+    <div class="positioner">
+        <img class="parallax" id="ellipse-shrooms" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-shrooms.png" alt="" />
+    </div>
+
+
     <section id="support" class="content-section-padding">
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-7" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>
         <div id="support-frame"></div>
-
-        <div class="positioner">
-            <img class="parallax" id="ellipse-shrooms" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-shrooms.png" alt="" />
-        </div>
 
         <img class="tshirt" id="tshirt-blue" src="<?php bloginfo('template_url'); ?>/assets/tshirts-591.png" />
 
