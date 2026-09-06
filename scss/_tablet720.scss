@@ -55,11 +55,26 @@
   // Nav header ###########################################################
 
   nav.top {
+    transition: background-color 0.3s ease-in-out;
+
+    &.nav-green {
+      .menuVisible ul > li > a {
+        color: $light-blue;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
     .menuVisible {
       display: block;
       margin-right: 1rem;
 
       ul {
+        &.display-none {
+          display: none;
+        }
         margin: 0;
         padding: 0;
         display: flex;
@@ -327,63 +342,69 @@
   // Single Artist page #######################################
 
   main.artist-single {
-    margin: 0;
-    @include twelve-col-grid;
-    grid-auto-rows: auto;
-    .page-title {
-      svg {
-        width: 80%;
-        height: auto;
-      }
-      padding-bottom: 0;
-      display: flex;
-      justify-content: center;
-      grid-column: 1/13;
+    #sa-ellipse-headline {
+      left: 7vh;
     }
 
-    .project-img {
-      align-self: start;
-      justify-self: center;
-      grid-column: 1/8;
-      margin: -8rem 1.5rem 0 1.5rem;
-      padding-top: 3rem;
-      padding-bottom: 6rem;
-      position: sticky;
-      width: auto;
-      height: auto;
-      top: 3rem;
-      z-index: 11;
+    #sa-ellipse-dot-1 {
+      right: 16vh;
     }
 
-    div.project-info-grid {
-      grid-column: 8/13;
-      margin-top: -8rem;
-      .day {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 1rem;
-        align-items: top;
-        padding: 0.5rem 0;
-        h4 {
-          grid-column: 1/6;
-          grid-row: 1;
-        }
-        p.time {
-          grid-column: 1/3;
-          grid-row: 2;
-          margin: 0px;
-          padding: 0 1rem 0 0;
-        }
-        p.location {
-          grid-column: 3/6;
-          grid-row: 2;
-          margin: 0px;
-          padding: 0 1rem 0 0;
-        }
+    #sa-ellipse-cell {
+      right: 12vh;
+      bottom: 0;
+    }
+
+    #project-img {
+      @include twelve-col-grid;
+
+      #image-mask {
+        grid-area: 1/3/2/11;
+        place-self: center;
       }
+    }
+
+    #project-info-grid {
+      @include twelve-col-grid;
+
+      #primary-info {
+        grid-area: 1/3/2/11;
+      }
+
+      #description {
+        grid-area: 2/3/3/10;
+      }
+
       .info-area {
         margin-bottom: 0;
       }
+
+      // .day {
+      //   display: grid;
+      //   grid-template-columns: repeat(6, 1fr);
+      //   column-gap: 1rem;
+      //   align-items: top;
+      //   padding: 0.5rem 0;
+      //
+      //   h4 {
+      //     grid-column: 1/6;
+      //     grid-row: 1;
+      //   }
+      //
+      //   p.time {
+      //     grid-column: 1/3;
+      //     grid-row: 2;
+      //     margin: 0px;
+      //     padding: 0 1rem 0 0;
+      //   }
+      //
+      //   p.location {
+      //     grid-column: 3/6;
+      //     grid-row: 2;
+      //     margin: 0px;
+      //     padding: 0 1rem 0 0;
+      //   }
+      // }
     }
   }
 
@@ -563,54 +584,60 @@
   // Artist listing page ####################################################
 
   main.artist-listing {
-    .page-title {
-      svg {
-        width: 80%;
-        height: auto;
-      }
-      padding-bottom: 0;
-      display: flex;
-      justify-content: center;
-    }
-    section.artists {
-      margin-top: -2rem;
-      @include twelve-col-grid;
-      span.page-title {
-        grid-column: 1/13;
-        margin-bottom: 1rem;
-      }
+    #artists {
       .artist-container {
         border-top: 0;
         position: relative;
-        grid-column: 1/13;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 1rem;
         padding: 0 0 1rem;
         margin: 0;
 
+        &.new-index:not(:first-child) {
+          margin-top: 2rem;
+        }
+
         span.artist-letter {
+          place-self: self-end;
           position: absolute;
-          grid-column: 1/3;
+          height: 100%;
+          grid-column: 1/4;
           font-size: 6rem;
+          line-height: 1em;
           padding-left: 1rem;
+          margin: 0;
+          display: block;
         }
 
         .artist-copy {
+          grid-column: 4/11;
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 0 1rem;
           position: relative;
-          grid-column: 3/11;
-          border-top: 1px solid $bright-blue;
+          border-top: 1px solid $bright-green;
           padding-top: 0.5rem;
+
+          .artist-title {
+            grid-column: 1/4;
+          }
+
+          .project-title {
+            grid-column: 4/8;
+          }
         }
         a.button {
           display: none;
         }
 
         .list-thumb {
-          // border: 3px solid $mustard;
+          width: clamp(10rem, 22vh, 19rem);
+          height: clamp(10rem, 22vh, 19rem);
+          background-color: $bright-green;
+          border-radius: 50%; /* Make the background circular */
           overflow: hidden; /* Ensure the image fits within the circle */
           display: flex;
-          border-radius: 46px; /* Make the background circular */
           justify-content: center;
           align-items: center;
           grid-column: 10/13;
@@ -622,17 +649,16 @@
         }
 
         .list-thumb-image {
-          // border: 3px solid red;
-          width: 100%;
-          height: auto;
-          // object-fit: cover; /* Ensures the image covers the whole div */
-          border-radius: 46px; /* Make the background circular */
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          border-radius: 50%;
         }
 
         &:hover {
           .list-thumb {
             transform: scale(1); /* Initially small */
-            opacity: 0.65;
+            opacity: 0.85;
           }
         }
       }

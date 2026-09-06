@@ -36,7 +36,7 @@ get_header();
         </div>
 
         <div class="positioner">
-            <img class="parallax ellipse-image" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
+            <img class="parallax ellipse-cell" id="ellipse-treeline" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-treeline.png" alt="" />
         </div>
 
         <!-- Title text -->
@@ -48,7 +48,7 @@ get_header();
         </div>
 
         <div class="positioner">
-            <img class="parallax ellipse-image" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
+            <img class="parallax ellipse-cell" id="ellipse-canal" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-canal.png" alt="" />
         </div>
 
         <div class="positioner">
@@ -88,7 +88,7 @@ get_header();
             <a class="button bright-green" href="<?php echo home_url(); ?>/about">About the festival</a>
         </div>
         <div class="positioner">
-            <img class="parallax ellipse-image" id="ellipse-dome" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-dome.png" alt="" />
+            <img class="parallax ellipse-cell" id="ellipse-dome" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-dome.png" alt="" />
         </div>
     </section>
     <div class="positioner">

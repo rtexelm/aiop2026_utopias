@@ -13,6 +13,10 @@ jQuery(document).ready(function ($) {
   // Scroll variables
 
   const $navTop = $("nav.top");
+  const $navTopMenu = $("#menu-top-navigation");
+  // add check for nav bar color switching
+  $navTop.data("navGreen", $navTop.hasClass("nav-green"));
+
   let scrollCheck;
   let prevScroll = window.scrollY;
   let delta = 5;
@@ -25,7 +29,14 @@ jQuery(document).ready(function ($) {
     moveMenuPosition();
     $hamburgerImage.toggleClass("display-none");
     $darkHamburgerImage.toggleClass("display-none");
+    $navTopMenu.toggleClass("display-none");
+
     if (onMobile) $body.toggleClass("stop-scroll-menu");
+
+    // change nav menu bg-color on menu open
+    if (!$navTop.data("navGreen")) {
+      $navTop.toggleClass("nav-green");
+    }
   }
 
   function moveMenuPosition() {
