@@ -35,11 +35,11 @@ $volunteers =   get_field('about_volunteers');
 
     <img id="headline-vector" src="<?php bloginfo('template_url'); ?>/assets/about/headline-vector.svg" alt="" />
 
+    <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-headline.png" alt="" class="parallax" id="ellipse-headline">
+    </div>
+
     <section id="utopias" class="content-section-padding">
-
-
-        <div class="positioner">
-        </div>
 
 
         <h2 class="h1" id="headline-eng">
@@ -63,10 +63,11 @@ $volunteers =   get_field('about_volunteers');
 
         </div>
 
-        <div class="positioner">
-        </div>
-
     </section>
+
+    <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/pink-dot.svg" alt="" class="parallax ellipse-dot" id="about-ellipse-1">
+    </div>
 
 
     <section id="mission" class="content-section-padding">
@@ -79,6 +80,9 @@ $volunteers =   get_field('about_volunteers');
 
     </section>
 
+    <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-lake.png" alt="" class="parallax" id="ellipse-lake">
+    </div>
 
     <section id="history" class="content-section-padding">
 
@@ -89,6 +93,11 @@ $volunteers =   get_field('about_volunteers');
         </div>
 
     </section>
+
+
+    <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-pink-yellow.png" alt="" class="parallax ellipse-cell" id="ellipse-yellow-pink">
+    </div>
 
 
     <section id="people" class="content-section-padding">
@@ -233,10 +242,13 @@ $volunteers =   get_field('about_volunteers');
 
 
     <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-blue-green.png" alt="" class="parallax ellipse-cell" id="ellipse-blue-green">
     </div>
 
     <div class="positioner">
+        <img src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-city.png" alt="" class="parallax" id="ellipse-city">
     </div>
+
 
     <section id="dedication" class="content-section-padding">
 
@@ -297,6 +309,25 @@ $volunteers =   get_field('about_volunteers');
 
     </section>
 
+    <div class="positioner">
+        <img class="parallax" id="ellipse-dark-blue" src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-dark-blue.png" alt="" />
+    </div>
+
+    <div class="positioner">
+        <img class="parallax ellipse-dot" id="about-ellipse-2" src="<?php bloginfo('template_url'); ?>/assets/parallax/pink-dot.svg" alt="" />
+    </div>
+
+    <div class="positioner">
+        <img class="parallax ellipse-dot" id="about-ellipse-3" src="<?php bloginfo('template_url'); ?>/assets/parallax/pink-dot.svg" alt="" />
+    </div>
+
+    <div class="positioner">
+        <img class="parallax ellipse-cell" id="ellipse-yellow-orng" src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-yellow-orng.png" alt="" />
+    </div>
+
+    <div class="positioner">
+        <img class="parallax" id="ellipse-flowers" src="<?php bloginfo('template_url'); ?>/assets/parallax/about/ellipse-flowers.png" alt="" />
+    </div>
 
 </main><!-- #primary -->
 

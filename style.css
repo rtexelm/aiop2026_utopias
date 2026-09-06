@@ -71,7 +71,7 @@ h4,
 h5,
 .h5 {
   display: block;
-  font-family: "degular-display", sans-serif;
+  font-family: "degular-variable", sans-serif;
   font-weight: normal;
   line-height: 1em;
   margin: 0;
@@ -340,6 +340,14 @@ div.button p {
   overflow-x: hidden;
 }
 
+.parallax.ellipse-dot {
+  height: clamp(1rem, 5vh, 5rem);
+}
+
+.parallax.ellipse-cell {
+  height: clamp(5rem, 19vh, 13rem);
+}
+
 .stop-scroll-menu {
   height: 100vh;
   overflow: hidden;
@@ -505,13 +513,6 @@ main.home section .parallax {
 main.home section .parallax.ellipse-dot {
   z-index: -1;
 }
-main.home .ellipse-image {
-  height: clamp(5rem, 19vh, 13rem);
-}
-main.home .parallax.ellipse-dot {
-  z-index: 1;
-  height: clamp(1rem, 5vh, 5rem);
-}
 main.home #ellipse-1 {
   bottom: -400vh;
   left: 19vh;
@@ -568,7 +569,7 @@ main.home #heading {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  background: center/cover no-repeat url("assets/front-page-title.svg");
+  background: 40% 100%/cover no-repeat url("assets/front-page-title.svg");
 }
 main.home #heading #title {
   padding: 3rem 1.5rem;
@@ -735,20 +736,71 @@ main.home #mailing-list #mc_embed_shell .optional-parent div p {
 
 main.about {
   background: #8ecdea;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
+  padding-bottom: 12rem;
 }
 main.about section {
   position: relative;
+  z-index: 1;
 }
 main.about section:not(#utopias) h2 {
   color: #fff;
   margin-bottom: 1rem;
 }
+main.about section .parallax {
+  z-index: -2;
+}
+main.about section .parallax.ellipse-dot {
+  z-index: -1;
+}
+main.about #about-ellipse-1 {
+  right: 10vh;
+}
+main.about #about-ellipse-2 {
+  display: none;
+}
+main.about #about-ellipse-3 {
+  right: 18vh;
+}
+main.about #ellipse-headline {
+  height: clamp(6rem, 30vh, 19rem);
+  left: -9vh;
+}
+main.about #ellipse-lake {
+  height: clamp(5rem, 33vh, 19rem);
+  right: 10vh;
+  bottom: -40vh;
+  opacity: 0.6;
+}
+main.about #ellipse-yellow-pink {
+  right: 4vh;
+  bottom: -50vh;
+}
+main.about #ellipse-blue-green {
+  left: 15vh;
+}
+main.about #ellipse-city {
+  height: clamp(5rem, 28vh, 19rem);
+  opacity: 0.6;
+  left: 25vh;
+}
+main.about #ellipse-dark-blue {
+  right: -15vh;
+}
+main.about #ellipse-yellow-orng {
+  left: 8vh;
+  bottom: -58vh;
+}
+main.about #ellipse-flowers {
+  left: 16vh;
+  bottom: -30vh;
+}
 main.about #headline-vector {
   position: absolute;
   max-width: 100%;
-  right: 0;
+  min-width: 75%;
+  right: -2px;
 }
 main.about #utopias {
   padding: 6rem 1.5rem 2rem;
@@ -781,7 +833,7 @@ main.about #people .staff-item,
 main.about #people .thinker-item {
   margin-bottom: 1rem;
   border-top: 1px solid #bee9fd;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 main.about #people .staff-item .staff-links,
 main.about #people .thinker-item .thinker-links {
@@ -908,109 +960,133 @@ main.artist-listing section.artists .container-link {
 }
 
 main.artist-single {
-  background: linear-gradient(#7d30be, #5a25c0 100%);
+  overflow: hidden;
+  background: #bee9fd;
   box-sizing: border-box;
   position: relative;
-  width: 100%;
-  padding: 6rem 1.5rem 0 1.5rem;
+  padding: 6rem 0 12rem;
 }
-main.artist-single .page-title {
-  z-index: 0;
+main.artist-single section {
+  position: relative;
+  z-index: 1;
 }
-main.artist-single .page-title svg {
-  width: 100%;
-  height: auto;
+main.artist-single section .parallax {
+  z-index: -2;
 }
-main.artist-single .project-img {
-  margin-top: -3rem;
+main.artist-single section .parallax.ellipse-dot {
+  z-index: -1;
+}
+main.artist-single #sa-ellipse-headline {
+  z-index: 1;
+  width: clamp(5rem, 25vh, 19rem);
+  left: -9vh;
+  bottom: 12vh;
+}
+main.artist-single #sa-ellipse-dot-1 {
+  z-index: 1;
+  right: 2vh;
+  bottom: 5vh;
+}
+main.artist-single #sa-ellipse-cell {
+  right: -10vh;
+  bottom: 18rem;
+}
+main.artist-single #sa-ellipse-dot-2 {
+  left: 10vh;
+  top: 80vh;
+}
+main.artist-single #sa-ellipse-dot-3 {
+  left: 18vh;
+  bottom: -10vh;
+}
+main.artist-single #project-img {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100vw - 3rem);
+  place-items: center;
 }
-main.artist-single .project-img div.image-mask {
-  border-radius: 46px;
+main.artist-single #project-img #image-mask {
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
-main.artist-single .project-img div.image-mask img {
+main.artist-single #project-img #image-mask img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
-main.artist-single div.project-info-grid {
+main.artist-single #project-info-grid {
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
 }
-main.artist-single div.project-info-grid h3.project-artists {
+main.artist-single #project-info-grid h3#project-artists {
   margin-bottom: 1em;
 }
-main.artist-single div.project-info-grid .info-area {
+main.artist-single #project-info-grid .info-area {
   margin-bottom: 3rem;
 }
-main.artist-single div.project-info-grid .info-area .project {
+main.artist-single #project-info-grid .info-area #project {
   margin-bottom: 2rem;
 }
-main.artist-single div.project-info-grid .info-area a {
-  color: #d2eff5;
+main.artist-single #project-info-grid .info-area #project a {
+  display: inline-block;
+  margin-top: 0.5rem;
 }
-main.artist-single div.project-info-grid .info-area a:visited {
-  color: #57a8ce;
+main.artist-single #project-info-grid .info-area a {
+  color: #0d4400;
 }
-main.artist-single div.project-info-grid .info-area a:hover {
-  color: #bee9fd;
+main.artist-single #project-info-grid .info-area a:visited {
+  color: #348618;
 }
-main.artist-single div.project-info-grid .performances {
+main.artist-single #project-info-grid .info-area a:hover {
+  color: #e1da64;
+}
+main.artist-single #project-info-grid .performances {
   margin-bottom: 1rem;
 }
-main.artist-single div.project-info-grid .day {
+main.artist-single #project-info-grid .day {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1rem;
   align-items: top;
   padding-bottom: 0.5rem;
 }
-main.artist-single div.project-info-grid .day h4 {
+main.artist-single #project-info-grid .day h4 {
   border-top: 1px solid #000;
   grid-column: 1/7;
   grid-row: 1;
   padding: 0.5rem 0;
 }
-main.artist-single div.project-info-grid .day p.time {
+main.artist-single #project-info-grid .day p.time {
   grid-column: 1/3;
   grid-row: 2;
-  margin: 0px;
+  margin: 0;
   padding: 0 1rem 0 0;
 }
-main.artist-single div.project-info-grid .day p.location {
+main.artist-single #project-info-grid .day p.location {
   grid-column: 3/7;
   grid-row: 2;
-  margin: 0px;
+  margin: 0;
   padding: 0 1rem 0 0;
 }
-main.artist-single div.project-info-grid .day.performance2 {
+main.artist-single #project-info-grid .day.performance2 {
   border-top: none;
   padding-top: 0;
 }
 
-nav.artist-nav {
+#artist-nav {
+  z-index: 2;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  top: 90vh;
 }
-nav.artist-nav .arrow {
+#artist-nav .arrow {
   z-index: 0;
   padding: 0.5rem;
 }
-nav.artist-nav .arrow.prev {
+#artist-nav .arrow#prev {
   transform: rotate(180deg);
 }
-nav.artist-nav .arrow.next {
-  right: 0px;
+#artist-nav .arrow#next {
+  right: 0;
 }
 
 main.schedule {
@@ -1268,7 +1344,7 @@ footer .social .social-icon svg {
   }
   h2,
   .h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   h3,
   .h3 {
@@ -1869,122 +1945,117 @@ footer .social .social-icon svg {
     justify-self: end;
     grid-row: 1/2;
   }
-  main.about .voice {
+  main.about #ellipse-headline {
+    bottom: -45vh;
+  }
+  main.about #utopias {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
     max-width: 100%;
     align-items: center;
   }
-  main.about .voice .title {
-    grid-column: 1/13;
+  main.about #utopias #headline-eng {
+    grid-column: 3/11;
     grid-row: 1/2;
-    width: 80%;
-    align-self: center;
-    justify-self: center;
+    place-self: center;
   }
-  main.about .voice .c-statement {
-    grid-column: 5/13;
+  main.about #utopias #headline-esp {
+    grid-column: 2/10;
     grid-row: 2/3;
-    justify-self: end;
   }
-  main.about .voice .c-statement p {
+  main.about #utopias #c-statement {
+    grid-column: 3/11;
+    grid-row: 3/4;
+  }
+  main.about #utopias #c-statement p {
     margin-bottom: 1rem;
   }
-  main.about .festival {
-    padding: 5rem 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 1rem;
-    max-width: 100%;
-    grid-row-gap: 5rem;
-  }
-  main.about .festival .mission {
-    z-index: 1;
-    margin-right: 2rem;
-    grid-column: 2/9;
-    grid-row: 1/2;
-  }
-  main.about .festival .festival-shape {
-    width: 50vw;
-    height: 42vh;
-    position: absolute;
-    top: 36%;
-    left: 42%;
-    z-index: 0;
-    opacity: 60%;
-    background: linear-gradient(92deg, #cd44e8, #7d30be 100%);
-    mask: radial-gradient(32px at 32px 32px, rgba(0, 0, 0, 0) 98%, #000) -32px -32px;
-  }
-  main.about .festival .history {
-    z-index: 1;
-    grid-column: 5/12;
-    grid-row: 2/3;
-    margin: 0;
-  }
-  main.about .people {
+  main.about #mission {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
     max-width: 100%;
   }
-  main.about .people h2 {
+  main.about #mission * {
+    grid-column: 2/8;
+  }
+  main.about #history {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.about #history * {
+    grid-column: 4/10;
+  }
+  main.about #people {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.about #people h2 {
     grid-area: 1/2/2/13;
   }
-  main.about .people .staff-item {
+  main.about #people #curator-bio {
+    grid-area: 2/2/3/9;
+    margin-bottom: 2rem;
+  }
+  main.about #people .staff-item {
+    grid-template-columns: repeat(10, 1fr);
     margin-bottom: 0.2rem;
     grid-column: 2/12;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
     column-gap: 1rem;
     align-items: baseline;
   }
-  main.about .people .staff-item .staff-title {
+  main.about #people .staff-item .staff-title {
     grid-column: 1/4;
     grid-row: 1/2;
   }
-  main.about .people .staff-item .staff-name {
+  main.about #people .staff-item .staff-name {
     grid-column: 4/7;
     grid-row: 1/2;
   }
-  main.about .people .staff-item .staff-links {
+  main.about #people .staff-item .staff-links {
     display: flex;
     flex-flow: column nowrap;
     grid-column: 7/11;
     grid-row: 1/2;
   }
-  main.about .people .thinkers {
+  main.about #people #thinkers {
     grid-column: 5/12;
   }
-  main.about .people .thinkers .thinkers-title {
+  main.about #people #thinkers .thinkers-title {
     margin-bottom: 1rem;
   }
-  main.about .people .thinkers .thinker-item {
+  main.about #people #thinkers .thinker-item {
     margin-bottom: 0.3rem;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     column-gap: 1rem;
     align-items: baseline;
   }
-  main.about .people .thinkers .thinker-item .thinker-name {
+  main.about #people #thinkers .thinker-item .thinker-name {
     grid-column: 1/5;
   }
-  main.about .people .thinkers .thinker-item .thinker-links {
+  main.about #people #thinkers .thinker-item .thinker-links {
     display: flex;
-    gap: 1.5rem;
+    grid-column: 5/8;
+    flex-flow: column;
+  }
+  main.about #people #blog-button {
     grid-column: 5/8;
   }
-  main.about .people #blog-button {
-    grid-column: 5/8;
-  }
-  main.about .partners {
+  main.about #dedication {
     padding-top: 4rem;
   }
-  main.about .partners h2 {
+  main.about #dedication h2 {
     grid-column: 1/13;
     grid-row: 1;
   }
-  main.about .partners .partner-container {
+  main.about #dedication .partner-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
@@ -1992,12 +2063,12 @@ footer .social .social-icon svg {
     padding-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  main.about .partners .partner-container img.partner-logo {
+  main.about #dedication .partner-container img.partner-logo {
     grid-column: 1/4;
     width: 100%;
     max-width: 200px;
   }
-  main.about .partners .partner-container .partner {
+  main.about #dedication .partner-container .partner {
     grid-column: 4/13;
     display: flex;
     flex-flow: row nowrap;
@@ -2005,10 +2076,10 @@ footer .social .social-icon svg {
     gap: 1rem;
     margin-bottom: 3rem;
   }
-  main.about .partners .partner-container .partner .button {
+  main.about #dedication .partner-container .partner .button {
     margin-top: 0;
   }
-  main.about .support {
+  main.about #support {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
@@ -2016,37 +2087,22 @@ footer .social .social-icon svg {
     row-gap: 1rem;
     padding-bottom: 6rem;
   }
-  main.about .support h2 {
+  main.about #support h2 {
     grid-column: 2/12;
     grid-row: 1/2;
     margin-bottom: 0;
   }
-  main.about .support div.dedication {
+  main.about #support #support-copy {
     grid-column: 2/9;
     grid-row: 2/3;
   }
-  main.about .support div.consultation {
-    margin-right: 2rem;
-    grid-column: 2/5;
-    grid-row: 3/4;
-  }
-  main.about .support div.thanks {
+  main.about #support #thanks {
     grid-column: 5/12;
     grid-row: 3/4;
   }
-  main.about .support div.volunteers {
+  main.about #support #volunteers {
     grid-column: 5/12;
     grid-row: 4/5;
-  }
-  main.about .cloud#cloud-01 {
-    top: -28vw;
-    left: -24vw;
-    height: 26vw;
-  }
-  main.about .cloud#cloud-02 {
-    height: 15vw;
-    top: 16vw;
-    left: -7vw;
   }
   footer {
     display: grid;
@@ -2084,14 +2140,10 @@ footer .social .social-icon svg {
     grid-column: 11/13;
   }
 }
-@media screen and (min-width: 1080px) {
+@media screen and (1080px <= width <= 1400px) {
   h1,
   .h1 {
     font-size: 4rem;
-  }
-  h2,
-  .h2 {
-    font-size: 3rem;
   }
   .p2,
   span.p2,
@@ -2101,7 +2153,6 @@ footer .social .social-icon svg {
   }
   nav.top {
     padding: 0 3rem;
-    width: calc(100% - 7rem);
   }
   main.home .header #title {
     padding-left: 3rem;

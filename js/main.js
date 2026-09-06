@@ -93,19 +93,25 @@ jQuery(document).ready(function ($) {
     prevScroll = currentScroll;
   }
 
-  // Artist page nave arrows
+  // Artist page nav arrows
 
-  const $artistNav = $(".artist-nav");
-  const artistNavHeight = $artistNav.outerHeight();
-  const footerHeight = $footer.outerHeight();
+  const $artistNav = $("#artist-nav");
+  const artistNavHeight = $artistNav.outerHeight() * 2; // NOTE: no idea why this needs multiplier
+  // const footerHeight = $footer.outerHeight();
   const footerOffset = $footer.offset().top;
   const stickyTop = window.innerHeight * 0.9;
 
-  $(window).on("scroll", function () {
+  $(window).on("scroll resize load orientationchange", function () {
+    if ($artistNav.length === 0 || $footer.length === 0) return;
+
     let scrollTop = $(window).scrollTop();
 
+    const defaultTop = 90;
+
+    const stopPoint = footerOffset - artistNavHeight - stickyTop;
+
     // Calculate when the sidebar should stop being sticky
-    if (scrollTop + artistNavHeight + stickyTop >= footerOffset) {
+    if (scrollTop >= stopPoint) {
       // Sidebar reaches the footer, unstick it and make it absolute
       $artistNav.css({
         position: "absolute",
@@ -115,7 +121,7 @@ jQuery(document).ready(function ($) {
       // Sidebar is still in sticky mode
       $artistNav.css({
         position: "fixed",
-        top: "90vh",
+        top: defaultTop + "vh",
       });
     }
   });
@@ -182,6 +188,21 @@ jQuery(document).ready(function ($) {
     { id: "#ellipse-dome", speed: 0.17 },
     { id: "#ellipse-shrooms", speed: 0.19 },
     { id: "#vector-map", speed: 0.054 },
+    { id: "#about-ellipse-1", speed: 0.61 },
+    { id: "#about-ellipse-3", speed: 0.52 },
+    { id: "#ellipse-headline", speed: 0.354 },
+    { id: "#ellipse-lake", speed: 0.354 },
+    { id: "#ellipse-yellow-pink", speed: 0.6 },
+    { id: "#ellipse-blue-green", speed: 0.2 },
+    { id: "#ellipse-city", speed: 0.1 },
+    { id: "#ellipse-dark-blue", speed: 0.4202 },
+    { id: "#ellipse-yellow-orng", speed: 0.33 },
+    { id: "#ellipse-flowers", speed: 0.23 },
+    { id: "#sa-ellipse-headline", speed: 1.33 },
+    { id: "#sa-ellipse-dot-1", speed: 0.33 },
+    { id: "#sa-ellipse-cell", speed: 0.63 },
+    { id: "#sa-ellipse-dot-2", speed: 0.93 },
+    { id: "#sa-ellipse-dot-3", speed: 0.23 },
   ];
 
   // Function to handle the parallax effect for multiple elements

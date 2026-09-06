@@ -22,6 +22,11 @@ get_header();
 
     <section id="heading">
 
+
+        <!-- <div id="heading-background"> -->
+        <!--     <img src="<?php bloginfo('template_url'); ?>/assets/front-page-title.svg" alt=""> -->
+        <!-- </div> -->
+
         <div class="positioner">
             <img class="parallax ellipse-dot" id="ellipse-1" src="<?php bloginfo('template_url'); ?>/assets/parallax/ellipse-1.svg" alt="" />
         </div>

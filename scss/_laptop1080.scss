@@ -1,13 +1,9 @@
 @use "constants" as *;
 
-@media screen and (min-width: 1080px) {
+@media screen and (1080px <= width <= 1400px) {
   h1,
   .h1 {
     font-size: 4rem;
-  }
-  h2,
-  .h2 {
-    font-size: 3rem;
   }
 
   .p2,
@@ -26,7 +22,6 @@
 
   nav.top {
     padding: 0 3rem;
-    width: calc(100% - 7rem);
   }
 
   // Front Page ##########################################################

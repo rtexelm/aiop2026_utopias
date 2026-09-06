@@ -2,11 +2,13 @@
 
 main.about {
   background: $blue;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
+  padding-bottom: 12rem;
 
   section {
     position: relative;
+    z-index: 1;
 
     &:not(#utopias) {
       h2 {
@@ -14,12 +16,76 @@ main.about {
         margin-bottom: 1rem;
       }
     }
+
+    .parallax {
+      z-index: -2;
+
+      &.ellipse-dot {
+        z-index: -1;
+      }
+    }
+  }
+
+  // position parallax elements
+
+  #about-ellipse-1 {
+    right: 10vh;
+  }
+
+  #about-ellipse-2 {
+    display: none;
+  }
+
+  #about-ellipse-3 {
+    right: 18vh;
+  }
+
+  #ellipse-headline {
+    height: clamp(6rem, 30vh, 19rem);
+    left: -9vh;
+  }
+
+  #ellipse-lake {
+    height: clamp(5rem, 33vh, 19rem);
+    right: 10vh;
+    bottom: -40vh;
+    opacity: 0.6;
+  }
+
+  #ellipse-yellow-pink {
+    right: 4vh;
+    bottom: -50vh;
+  }
+
+  #ellipse-blue-green {
+    left: 15vh;
+  }
+
+  #ellipse-city {
+    height: clamp(5rem, 28vh, 19rem);
+    opacity: 0.6;
+    left: 25vh;
+  }
+
+  #ellipse-dark-blue {
+    right: -15vh;
+  }
+
+  #ellipse-yellow-orng {
+    left: 8vh;
+    bottom: -58vh;
+  }
+
+  #ellipse-flowers {
+    left: 16vh;
+    bottom: -30vh;
   }
 
   #headline-vector {
     position: absolute;
     max-width: 100%;
-    right: 0;
+    min-width: 75%;
+    right: -2px;
   }
 
   #utopias {
@@ -65,7 +131,7 @@ main.about {
     .thinker-item {
       margin-bottom: 1rem;
       border-top: 1px solid $light-blue;
-      padding-top: 0.5rem;
+      padding-top: 1rem;
     }
 
     .staff-item .staff-links,

@@ -42,7 +42,7 @@ h4,
 h5,
 .h5 {
   display: block;
-  font-family: $deg-display;
+  font-family: $deg-variable;
   font-weight: normal;
   line-height: 1em;
   margin: 0;
@@ -332,6 +332,15 @@ div.button p {
   z-index: 0;
   position: absolute;
   overflow-x: hidden;
+}
+
+// consistent size of common dots
+.parallax.ellipse-dot {
+  height: clamp(1rem, 5vh, 5rem);
+}
+// consistent size of nodes
+.parallax.ellipse-cell {
+  height: clamp(5rem, 19vh, 13rem);
 }
 
 // Stop mobile scrolling on menu view

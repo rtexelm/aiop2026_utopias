@@ -24,16 +24,6 @@ main.home {
     }
   }
 
-  // parallax standard sizing
-  .ellipse-image {
-    height: clamp(5rem, 19vh, 13rem);
-  }
-
-  .parallax.ellipse-dot {
-    z-index: 1;
-    height: clamp(1rem, 5vh, 5rem);
-  }
-
   // position initial parallax elements
   #ellipse-1 {
     bottom: -400vh;
@@ -103,7 +93,7 @@ main.home {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    background: center / cover no-repeat url("assets/front-page-title.svg");
+    background: 40% 100% / cover no-repeat url("assets/front-page-title.svg");
 
     #title {
       padding: 3rem 1.5rem;
