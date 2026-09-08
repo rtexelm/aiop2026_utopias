@@ -89,4 +89,3 @@ if (is_page('artists')) {
             ?>
         </div>
     </nav>
-    <!-- <div id="spacer"></div> -->

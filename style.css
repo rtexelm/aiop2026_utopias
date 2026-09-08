@@ -33,6 +33,10 @@ Text Domain: aiop-utopias
     opacity: 1;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   overscroll-behavior-y: none;
@@ -338,6 +342,7 @@ div.button p {
   z-index: 0;
   position: absolute;
   overflow-x: hidden;
+  pointer-events: none;
 }
 
 .parallax.ellipse-dot {
@@ -393,7 +398,7 @@ div.button p {
 nav.top {
   position: fixed;
   box-sizing: border-box;
-  transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
   width: 100%;
   z-index: 100;
   padding: 0 1.5rem;
@@ -422,7 +427,7 @@ nav.top .nav-bar-flex {
   align-items: center;
 }
 nav.top a#home {
-  margin: 1rem 0 5px 5px;
+  margin: 1rem 0 5px;
   display: inline-block;
 }
 nav.top a#home img#aiopLogo {
@@ -1084,170 +1089,212 @@ main.artist-single #project-info-grid .day.performance2 {
 }
 
 main.schedule {
-  background: linear-gradient(#0a008e, #57a8ce 100%);
-  padding: 6rem 1.5rem 2rem 1.5rem;
+  background: #95ac56;
+  padding: 6rem 0;
 }
-main.schedule .title svg {
-  width: 100%;
-  height: auto;
-}
-main.schedule .title {
-  padding-bottom: 2rem;
-}
-main.schedule div.day .day-nav {
+main.schedule .day .day-nav {
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
-main.schedule div.day .day-header {
+main.schedule .day .day-header,
+main.schedule .day .fest-header {
   margin-bottom: 0.5rem;
+  color: #fff;
 }
-main.schedule div.day .day-header h3 {
-  color: #0fa5dc;
+main.schedule .day .day-header h2,
+main.schedule .day .fest-header h2 {
+  color: #fff;
 }
-main.schedule div.day#saturday, main.schedule div.day#sunday {
-  margin-top: 3rem;
-}
-main.schedule div.day h2 {
-  margin-bottom: 1.5rem;
-}
-main.schedule div.day .project-schedule {
-  border-top: 1px solid #0fa5dc;
-  padding-top: 1rem;
-}
-main.schedule div.day .project-schedule .fest-header {
-  margin-bottom: 1.5rem;
-}
-main.schedule div.day .project-schedule .fest-header h2 {
-  margin-bottom: 0rem;
-}
-main.schedule div.day .listing-container {
+main.schedule .day .artist-container {
+  border-top: 1px solid #bee9fd;
   position: relative;
 }
-main.schedule div.day .listing-container a.schedule-link {
+main.schedule .day .artist-container a.schedule-link {
   display: none;
 }
-main.schedule div.day .listing-container {
+main.schedule .day .artist-container p.location {
+  font-variation-settings: "wght" 300;
+}
+main.schedule .day .artist-container {
   margin-bottom: 1rem;
   padding: 0.5rem 0;
 }
-main.schedule div.day .listing-container .button {
+main.schedule .day .artist-container .button {
+  margin-top: 0.5rem;
+  justify-self: end;
+}
+main.schedule .day .artist-container .schedule-thumb {
+  display: none;
+}
+main.schedule .day .pp-container {
+  position: relative;
+}
+main.schedule .day .pp-container a.program-link {
+  display: none;
+}
+main.schedule .day .pp-container {
+  border-top: 1px solid #bee9fd;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+main.schedule .day .pp-container .button {
   margin-top: 0.5rem;
 }
-main.schedule div.day .listing-container .schedule-thumb {
-  display: none;
+main.schedule #map-link {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
 }
-main.schedule .positioner {
-  display: none;
-}
-
-#program-background {
-  position: fixed;
-  top: 0;
-  left: 0;
+main.schedule #map-link #map-frame {
+  z-index: -1;
+  grid-column: 2/12;
+  border-radius: 16px;
+  background-color: #e1da64;
   width: 100%;
   height: 100%;
-  background: #0fa5dc;
-  z-index: -10;
-}
-#program-background::before {
-  content: "";
+  opacity: 0.88;
   position: absolute;
-  background: url(assets/dress/textures/fabric-texture_woven-01.jpg);
-  mix-blend-mode: multiply;
-  background-size: 15%;
-  opacity: 0.3;
+}
+main.schedule #map-link #map-image-link {
   width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  grid-area: 1/3/2/11;
+  place-self: center;
+}
+main.schedule #map-link #map-image-link img {
+  width: 100%;
+}
+main.schedule #map-link #map-copy {
+  justify-self: center;
+  margin-top: 1rem;
+  grid-area: 2/3/3/11;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
 
 main.public-programs {
-  padding: 5rem 1.5rem 4rem 1.5rem;
+  padding: 6rem 0;
+  background-color: #348618;
+}
+main.public-programs .program-container:not(:first-child) {
+  margin-top: 2rem;
 }
 main.public-programs .program-container {
-  margin-top: 2rem;
-  border-top: 1px solid #57a8ce;
+  border-top: 1px solid #e1da64;
   padding-top: 1rem;
 }
 main.public-programs .program-container h3 {
+  color: #fff;
   margin-bottom: 0.75rem;
 }
 main.public-programs .program-container p {
-  color: #000;
+  color: #fff;
 }
 main.public-programs .program-container .date,
 main.public-programs .program-container .location,
 main.public-programs .program-container .time {
   padding: 0.5rem 0;
-  border-top: 1px dashed #57a8ce;
+  border-top: 1px dashed #e1da64;
 }
 main.public-programs .program-container .date h4,
 main.public-programs .program-container .location h4,
 main.public-programs .program-container .time h4 {
   display: none;
-  color: #000;
+  color: #fff;
 }
 main.public-programs .program-container .date p,
 main.public-programs .program-container .location p,
 main.public-programs .program-container .time p {
-  color: #000;
+  color: #fff;
 }
 
 main.press {
-  background: linear-gradient(#cd44e8 0%, #7d30be 100%);
+  background: #348618;
+  padding: 6rem 0;
 }
-main.press .title svg {
-  width: 100%;
-  height: auto;
+main.press .press-container h3,
+main.press .press-container p {
+  color: #fff;
 }
-main.press .title {
-  padding: 6rem 1.5rem 0 1.5rem;
+main.press .press-container:not(:first-child) {
+  margin-top: 2rem;
 }
-main.press section.press-posts {
-  padding: 4rem 1.5rem;
+main.press .press-container {
+  border-top: 1px solid #e1da64;
 }
-main.press section.press-posts .press-container {
-  border-top: 1px solid #d2eff5;
-  margin: 2rem 0;
+main.press .press-container .press-publication {
+  padding: 1rem 0 0.5rem;
 }
-main.press section.press-posts .press-container .press-publication {
-  padding: 1rem 0 0.5rem 0;
-}
-main.press section.press-posts .press-container p.press-title {
+main.press .press-container .press-title {
   padding: 0.5rem 0;
+  border-top: 1px dashed #e1da64;
 }
-main.press section.press-posts .press-container p.press-date {
+main.press .press-container .press-date {
   padding: 0.5rem 0;
+  border-top: 1px dashed #e1da64;
   margin-bottom: 0.5rem;
 }
-main.press section.press-posts .press-container a.button {
+main.press .press-container .button {
   margin-top: 1rem;
-  color: #000;
 }
 
-main.donate .page-title svg {
-  width: 100%;
-  height: auto;
-}
 main.donate {
-  background: linear-gradient(#0fa5dc, #7d30be 100%);
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  color: #57a8ce;
+  background: #8ecdea;
+  padding: 6rem 0;
 }
-main.donate h3 {
-  color: #57a8ce;
+main.donate #donate-proclaim {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
 }
 main.donate div.payment-method {
-  border-top: 1px solid #57a8ce;
+  border-top: 1px solid #0d4400;
   padding-top: 1rem;
+}
+main.donate div.payment-method:not(:first-child) {
   margin-top: 2rem;
 }
 main.donate div.payment-method p {
   margin: 1rem 0;
+}
+main.donate div.payment-method #aiop {
+  font-style: italic;
+}
+main.donate #support {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
+}
+main.donate #support #support-frame {
+  z-index: -3;
+  background-color: #e1da64;
+  opacity: 0.88;
+  position: absolute;
+  grid-column: 2/12;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+}
+main.donate #support .tshirt {
+  width: 100%;
+  z-index: 1;
+  grid-area: 1/1/2/13;
+  justify-self: center;
+}
+main.donate #support #support-copy {
+  grid-area: 2/3/3/11;
+  z-index: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
 
 main.partners {
@@ -1375,9 +1422,6 @@ footer .social .social-icon svg {
     position: relative;
     z-index: 11;
     pointer-events: none;
-  }
-  nav.top {
-    transition: background-color 0.3s ease-in-out;
   }
   nav.top.nav-green .menuVisible ul > li > a {
     color: #bee9fd;
@@ -1616,137 +1660,116 @@ footer .social .social-icon svg {
   main.artist-single #project-info-grid .info-area {
     margin-bottom: 0;
   }
-  main.schedule {
-    padding-bottom: 0;
-  }
-  main.schedule .title {
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-  }
-  main.schedule .title svg {
-    width: 80%;
-    height: auto;
-  }
-  main.schedule .schedule-container {
-    margin: 0;
-    margin-top: -2rem;
-  }
-  main.schedule div.day {
+  main.schedule .day {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
     max-width: 100%;
-    margin-bottom: 4rem;
   }
-  main.schedule div.day:last-child {
+  main.schedule .day:last-child {
     margin-bottom: 0;
     padding-bottom: 5rem;
   }
-  main.schedule div.day {
-    width: 100%;
-  }
-  main.schedule div.day#saturday, main.schedule div.day#sunday {
-    margin-top: 0;
-  }
-  main.schedule div.day .day-header {
+  main.schedule .day .day-header {
     grid-column: 1/5;
-    grid-row: 1/2;
-    align-self: flex-end;
+    grid-row: 2/3;
   }
-  main.schedule div.day .day-nav {
+  main.schedule .day .day-nav {
     grid-column: 5/13;
     grid-row: 1/2;
-    display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
     gap: 1rem;
   }
-  main.schedule div.day .public-program {
-    grid-column: 1/5;
-    min-height: 18rem;
+  main.schedule .day .public-program {
+    grid-column: 5/13;
   }
-  main.schedule div.day .pp-time,
-  main.schedule div.day .artist-time {
+  main.schedule .day .pp-time,
+  main.schedule .day .artist-time {
     margin: 0;
     flex-shrink: 0;
   }
-  main.schedule div.day .project-schedule {
-    grid-column: 1/13;
+  main.schedule .day .project-schedule {
+    grid-column: 5/13;
   }
-  main.schedule div.day .artist-container {
+  main.schedule .day .artist-container {
+    z-index: 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     column-gap: 1rem;
   }
-  main.schedule div.day .artist-container .button {
+  main.schedule .day .artist-container .button {
     display: none;
   }
-  main.schedule div.day .artist-container a.schedule-link {
+  main.schedule .day .artist-container a.schedule-link {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
   }
-  main.schedule div.day .artist-container .artist-time {
-    grid-column: 1/3;
+  main.schedule .day .artist-container .artist-time {
+    grid-column: 1/2;
   }
-  main.schedule div.day .artist-container .artist-name {
-    grid-column: 3/6;
+  main.schedule .day .artist-container .artist-name {
+    grid-column: 2/5;
   }
-  main.schedule div.day .artist-container .title-location {
-    grid-column: 6/9;
+  main.schedule .day .artist-container .title-location {
+    grid-column: 5/9;
     display: flex;
     flex-flow: column nowrap;
     gap: 0.5rem;
   }
-  main.schedule div.day .artist-container .schedule-thumb {
-    width: 200px; /* Adjust as necessary */
-    height: 200px; /* Adjust as necessary */
+  main.schedule .day .artist-container .schedule-thumb {
+    z-index: -1;
+    grid-column: 1/1;
+    width: clamp(10rem, 22vh, 19rem);
+    height: clamp(10rem, 22vh, 19rem);
     border-radius: 50%; /* Make the background circular */
     overflow: hidden; /* Ensure the image fits within the circle */
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    z-index: -1;
     opacity: 0;
-    top: -45;
-    left: -14vw;
     transform: scale(0); /* Initially small */
-    transition: all ease-in-out 0.3s;
+    top: -45;
+    right: 100%;
+    transition: all ease-out 0.3s;
   }
-  main.schedule div.day .artist-container .sched-thumb-image {
+  main.schedule .day .artist-container .sched-thumb-image {
+    border: 1rem solid #e1da64;
     width: 80%;
     height: 80%;
-    border-radius: 50%; /* Circular mask for the thumbnail */
-    object-fit: cover; /* Ensures the image covers the whole div */
+    border-radius: 50%;
+    object-fit: cover;
   }
-  main.schedule div.day .artist-container:hover .schedule-thumb {
+  main.schedule .day .artist-container:hover .schedule-thumb {
     transform: scale(1);
     opacity: 0.65;
   }
-  main.schedule div.day .pp-container a.program-link {
+  main.schedule .day .pp-container a.program-link {
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
   }
-  main.schedule div.day .pp-container {
+  main.schedule .day .pp-container {
     display: flex;
     gap: 1rem;
   }
-  main.schedule .positioner {
-    display: flex;
+  main.schedule #map-link {
+    align-items: center;
+    column-gap: 0;
   }
-  main.schedule .positioner svg {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 20vw;
-    width: auto;
-    padding-right: 3rem;
+  main.schedule #map-link #map-image-link {
+    grid-area: 1/3/2/6;
+  }
+  main.schedule #map-link #map-copy {
+    grid-area: 1/7/2/11;
+  }
+  main.public-programs {
+    min-height: 50%;
   }
   main.public-programs .program-container {
     display: grid;
@@ -1847,19 +1870,9 @@ footer .social .social-icon svg {
   main.donate {
     position: relative;
     min-height: 50%;
+    padding-top: 8rem;
   }
-  main.donate .page-title {
-    position: relative;
-    z-index: 0;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-  }
-  main.donate .page-title svg {
-    max-width: 70%;
-    height: auto;
-  }
-  main.donate div.payment-method {
+  main.donate .payment-method {
     position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1867,60 +1880,55 @@ footer .social .social-icon svg {
     max-width: 100%;
     z-index: 1;
   }
-  main.donate div.payment-method h3 {
+  main.donate .payment-method h3 {
     grid-column: 1/6;
   }
-  main.donate div.payment-method p {
+  main.donate .payment-method p {
     grid-column: 7/12;
   }
-  main.donate div.payment-method a {
+  main.donate .payment-method a {
     grid-column: 7/12;
     justify-self: end;
   }
-  main.donate div.payment-method.paypal {
+  main.donate .payment-method.paypal {
     margin-top: -2rem;
+  }
+  main.donate #support {
+    align-items: center;
+  }
+  main.donate #support .tshirt {
+    grid-area: 1/1/2/7;
+  }
+  main.donate #support #support-copy {
+    grid-area: 1/7/2/11;
   }
   main.press {
-    min-height: calc(100vh - 20rem);
+    min-height: 50%;
   }
-  main.press .title {
-    position: relative;
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-  }
-  main.press .title svg {
-    max-width: 50%;
-    height: auto;
-  }
-  main.press section.press-posts {
-    margin-top: -2rem;
-    padding-top: 0;
-  }
-  main.press section.press-posts .press-container {
-    margin: 1rem 0;
+  main.press .press-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 1rem;
     max-width: 100%;
   }
-  main.press section.press-posts .press-container .press-publication {
-    grid-column: 1/6;
+  main.press .press-container .press-publication {
+    grid-column: 1/5;
     grid-row: 1/2;
   }
-  main.press section.press-posts .press-container .press-title {
+  main.press .press-container .press-title {
+    border-top: none;
     margin-top: 0.5rem;
-    grid-column: 4/8;
+    grid-column: 5/9;
     grid-row: 1/2;
   }
-  main.press section.press-posts .press-container p.press-date {
+  main.press .press-container .press-date {
     margin-top: 1rem;
     border-top: 0;
     padding-top: 0;
-    grid-column: 9/12;
+    grid-column: 9/11;
     grid-row: 1/2;
   }
-  main.press section.press-posts .press-container .button {
+  main.press .press-container .button {
     grid-column: 11/13;
     justify-self: end;
     grid-row: 1/2;

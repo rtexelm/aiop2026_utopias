@@ -60,7 +60,7 @@ get_header();
     <section id="dates" class="content-section-padding">
         <h2 class="date-text h1">
             <span id="date-line-1">September</span>
-            <span id="date-line-2">20&ndash;22 2026</span>
+            <span id="date-line-2">26&ndash;27 2026</span>
             <span id="date-line-3" class="espanol">de septiembre</span>
 
         </h2>
@@ -79,7 +79,7 @@ get_header();
             </h2>
             <div class="curatorial">
                 <p class="p1">
-                    Art in Odd Places 2026: <span class="italic">UTOPIAS</span> features visual and performance artists on 14th Street from Avenue C to  the Hudson River, September 20–22, 2026.
+                    <span class="italic">Art in Odd Places 2026: UTOPIAS</span> features visual and performance artists on 14th Street, on Saturday the performances will take place from 1st to 3rd Avenues, on Sunday the artists will be between 6th & 10th Avenues.
                 </p>
                 <p class="p1 espanol">
                     Art in Odd Places 2026: <span class="italic">UTOPIAS</span> features visual and performance artists on 14th Street from Avenue C to  the Hudson River, September 20–22, 2026.
@@ -104,8 +104,8 @@ get_header();
         <div class="artists-heading">
 
             <h2 class="h1">
-                <span id="artists-count-1">35+ Artists&rsquo; Projects</span></br>
-                <span id="artists-count-2" class="espanol">35+ proyectos de artistas</span>
+                <span id="artists-count-1">45+ Artists&rsquo; Projects</span></br>
+                <span id="artists-count-2" class="espanol">45+ proyectos de artistas</span>
             </h2>
         </div>
         <div class="artists-buttons">
@@ -132,12 +132,11 @@ get_header();
             </h2>
 
             <p>
-                Lorem ipsum brief description of our store
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a metus tristique, tincidunt dolor quis.
+                Every purchase directly supports the festival's artists, with 100% of proceeds going toward artist fees for AiOP's 21st annual festival.
             </p>
 
             <div id="support-copy-buttons">
-                <a class="button bright-green" href="">Visit our store</a>
+                <a class="button bright-green" href="https://www.bonfire.com/store/aiop/">Visit our store</a>
                 <a class="button secondary" href="<?php echo home_url(); ?>/donate">Just donate</a>
             </div>
         </div>

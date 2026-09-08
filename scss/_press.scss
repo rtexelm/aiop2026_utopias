@@ -1,34 +1,38 @@
 @use "constants" as *;
 
 main.press {
-  background: linear-gradient($light-purple 0%, $bright-purple 100%);
-  .title {
-    svg {
-      width: 100%;
-      height: auto;
+  background: $green;
+  padding: 6rem 0;
+
+  .press-container {
+    h3,
+    p {
+      color: $white;
     }
-    padding: 6rem 1.5rem 0 1.5rem;
-  }
-  section.press-posts {
-    padding: 4rem 1.5rem;
-    .press-container {
-      border-top: 1px solid $lightest-blue;
-      margin: 2rem 0;
-      .press-publication {
-        padding: 1rem 0 0.5rem 0;
-      }
-      p.press-title {
-        padding: 0.5rem 0;
-      }
-      p.press-date {
-        padding: 0.5rem 0;
-        // border-top: 1px dashed $primary-magenta;
-        margin-bottom: 0.5rem;
-      }
-      a.button {
-        margin-top: 1rem;
-        color: $black;
-      }
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+
+    border-top: 1px solid $lemon-lime;
+
+    .press-publication {
+      padding: 1rem 0 0.5rem;
+    }
+
+    .press-title {
+      padding: 0.5rem 0;
+      border-top: 1px dashed $lemon-lime;
+    }
+
+    .press-date {
+      padding: 0.5rem 0;
+      border-top: 1px dashed $lemon-lime;
+      margin-bottom: 0.5rem;
+    }
+
+    .button {
+      margin-top: 1rem;
     }
   }
 }

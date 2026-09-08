@@ -1,25 +1,62 @@
 @use "constants" as *;
 
 main.donate {
-  .page-title {
-    svg {
-      width: 100%;
-      height: auto;
-    }
-  }
-  background: linear-gradient($bright-blue, $bright-purple 100%);
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  color: $dark-blue;
-  h3 {
-    color: $dark-blue;
+  background: $blue;
+  padding: 6rem 0;
+
+  #donate-proclaim {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
   }
 
   div.payment-method {
-    border-top: 1px solid $dark-blue;
+    border-top: 1px solid $dark-green;
     padding-top: 1rem;
-    margin-top: 2rem;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+
     p {
       margin: 1rem 0;
+    }
+
+    #aiop {
+      font-style: italic;
+    }
+  }
+
+  #support {
+    @include twelve-col-grid;
+
+    position: relative;
+    z-index: 0;
+
+    #support-frame {
+      z-index: -3;
+      background-color: $lemon-lime;
+      opacity: 0.88;
+      position: absolute;
+      grid-column: 2/12;
+      border-radius: 16px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tshirt {
+      width: 100%;
+      z-index: 1;
+      grid-area: 1/1/2/13;
+      justify-self: center;
+    }
+
+    #support-copy {
+      grid-area: 2/3/3/11;
+      z-index: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
     }
   }
 }

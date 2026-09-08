@@ -16,12 +16,12 @@ get_header();
 
 ?>
 
-<div id="program-background"></div>
 <div id="fullpage-texture"></div>
 <main class="site-content public-programs" id="main-content">
 
-    <h1 class="h1">Public Programs</h1>
-    <section class="programs">
+    <h1 class="hidden">Public Programs</h1>
+
+    <section class="programs content-section-padding">
 
         <div class="program-container" id="program-01">
             <h3>Voice</h3>

@@ -1,6 +1,9 @@
 @use "constants" as *;
 
 // Stop overscroll on all but Safari
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -332,6 +335,7 @@ div.button p {
   z-index: 0;
   position: absolute;
   overflow-x: hidden;
+  pointer-events: none;
 }
 
 // consistent size of common dots

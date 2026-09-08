@@ -1,16 +1,10 @@
 @use "constants" as *;
 
 main.schedule {
-  background: linear-gradient($deep-blue, $dark-blue 100%);
-  padding: 6rem 1.5rem 2rem 1.5rem;
-  .title {
-    svg {
-      width: 100%;
-      height: auto;
-    }
-    padding-bottom: 2rem;
-  }
-  div.day {
+  background: $bright-green;
+  padding: 6rem 0;
+
+  .day {
     .day-nav {
       display: flex;
       flex-flow: column nowrap;
@@ -18,54 +12,26 @@ main.schedule {
       margin-bottom: 2rem;
     }
 
-    .day-header {
+    .day-header,
+    .fest-header {
       margin-bottom: 0.5rem;
-      h3 {
-        color: $bright-blue;
+      color: $white;
+
+      h2 {
+        color: $white;
       }
     }
 
-    &#saturday,
-    &#sunday {
-      margin-top: 3rem;
-    }
-    h2 {
-      margin-bottom: 1.5rem;
-    }
-
-    .project-schedule {
-      border-top: 1px solid $bright-blue;
-      padding-top: 1rem;
-      .fest-header {
-        margin-bottom: 1.5rem;
-        h2 {
-          margin-bottom: 0rem;
-        }
-      }
-    }
-
-    // .pp-container {
-    //   h3,
-    //   h4 {
-    //     color: $black;
-    //   }
-    //   position: relative;
-    //   a.program-link {
-    //     display: none;
-    //   }
-
-    //   border-top: 1px solid $bright-blue;
-    //   padding-top: 0.5rem;
-    //   margin-bottom: 2rem;
-    //   .button {
-    //     margin-top: 0.5rem;
-    //   }
-    // }
-
-    .listing-container {
+    .artist-container {
+      border-top: 1px solid $light-blue;
       position: relative;
+
       a.schedule-link {
         display: none;
+      }
+
+      p.location {
+        font-variation-settings: "wght" 300;
       }
 
       margin-bottom: 1rem;
@@ -73,14 +39,65 @@ main.schedule {
 
       .button {
         margin-top: 0.5rem;
+        justify-self: end;
       }
 
       .schedule-thumb {
         display: none;
       }
     }
+
+    .pp-container {
+      position: relative;
+
+      a.program-link {
+        display: none;
+      }
+
+      border-top: 1px solid $light-blue;
+      padding-top: 0.5rem;
+      margin-bottom: 2rem;
+
+      .button {
+        margin-top: 0.5rem;
+      }
+    }
   }
-  .positioner {
-    display: none;
+
+  #map-link {
+    @include twelve-col-grid;
+
+    position: relative;
+    z-index: 0;
+
+    #map-frame {
+      z-index: -1;
+      grid-column: 2/12;
+      border-radius: 16px;
+      background-color: $lemon-lime;
+      width: 100%;
+      height: 100%;
+      opacity: 0.88;
+      position: absolute;
+    }
+
+    #map-image-link {
+      width: 100%;
+      grid-area: 1/3/2/11;
+      place-self: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    #map-copy {
+      justify-self: center;
+      margin-top: 1rem;
+      grid-area: 2/3/3/11;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+    }
   }
 }
